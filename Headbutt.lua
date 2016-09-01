@@ -6,9 +6,11 @@ function onPause()
 	log("Debugging... Checking logs")
 	log("Dig count: "..digcount)
 	log("Map name: "..getMapName())
+end
 function onStop()
 	log("ERROR! Checking logs")
 	log("--- "..getMapName().. ", Dig count: "..digcount)
+end
 function onDialogMesssage()
 	if stringContains("Select a Pokemon that has Dig.") then
 		digcount = digcount + 1
