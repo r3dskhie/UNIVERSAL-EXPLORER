@@ -5,7 +5,8 @@ funtion onPathAction()
 
   if isPokemonUsable(1) then
     
-    if getMapName() == then
+    if KantoHeadbutt() then
+      reurn
     elseif getMapName() == "Pallet Town" then
       moveToMap("Route 1")
     elseif getMapName() == "Route 1" then
