@@ -1,40 +1,79 @@
 	
 	if getMapName() == "Pallet Town" then
-  	if isNpcOnCell() then
-  		return talkToNpcOnCell(, )
-  	elseif isNpcOnCell(, ) then
-			return talkToNpcOnCell(, )
+  		if isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 1
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 2
 		elseif isNpcOnCell(, ) then
-			return talkToNpcOnCell(, )
-  	elseif isNpcOnCell(, ) then
-	  	return talkToNpcOnCell(, )
-	  elseif isNpcOnCell(, ) then
-	  	return talkToNpcOnCell(, )
-  	end
-elseif getMapName() == "Viridian Forest" then
-  elseif getMapName() == "Viridian Forest" then
-	  elseif getMapName() == "Viridian Forest" then
-	  	  elseif getMapName() == "Viridian Forest" then
-
-
-Kanto = {}
-
-Kanto = ["Pallet Town"] = {(x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Viridian Forest"] = {(x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y)(x,y), (x,y), (x,y)}
-Kanto = ["Viridian City"] = {(x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Pewter City"] = {(x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Cerulean City"] = {(x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Lavender Town"] = {(x,y), (x,y), (x,y)}
-Kanto = ["Route 1"] = {(x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Route 2"] = {(x,y), (x,y), (x,y)}
-Kanto = ["Route 3"] = {(x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Route 4"] = {(x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Route 7"] = {(x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Route 8"] = {(x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Route 11"] = {(x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Route 13"] = {(x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Route 14"] = {(x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Route 15"] = {(x,y), (x,y), (x,y), (x,y), (x,y)}
-Kanto = ["Route 22"] = {(x,y), (x,y), (x,y), (x,y), (x,y)}
-
-return Kanto
+			return talkToNpcOnCell(, )	--Tree 3
+  		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 4
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 5
+  		end
+	elseif getMapName() == "Viridian Forest" then
+		if isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 1
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 2
+		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 3
+  		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 4
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 5
+	  	if isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 1
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 2
+		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 3
+  		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 4
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 5
+	  	if isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 1
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 2
+		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 3
+  		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 4
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 5
+	  	if isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 1
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 2
+		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 3
+  		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 4
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 5
+	  	if isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 1
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 2
+		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 3
+  		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 4
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 5
+ 	elseif getMapName() == "Viridian City" then
+	elseif getMapName() == "Pewter City" then
+	elseif getMapName() == "Lavender Town" then
+	elseif getMapName() == "Cerulean City" then
+	elseif getMapName() == "Route 1" then
+	elseif getMapName() == "Route 2" then
+	elseif getMapName() == "Route 3" then
+	elseif getMapName() == "Route 4" then
+	elseif getMapName() == "Route 7" then
+	elseif getMapName() == "Route 8" then
+	elseif getMapName() == "Route 11" then
+	elseif getMapName() == "Route 13" then
+	elseif getMapName() == "Route 14" then
+	elseif getMapName() == "Route 15" then
+	elseif getMapName() == "Route 22" then
