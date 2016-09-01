@@ -250,7 +250,87 @@
 			return talkToNpcOnCell(, )	--Tree 16
 		end
 	elseif getMapName() == "Route 11" then
+		if isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 1
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 2
+		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 3
+  		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 4
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 5
+	  	elseif isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 6
+  		end
 	elseif getMapName() == "Route 13" then
+		if isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 1
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 2
+		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 3
+  		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 4
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 5
+	  	elseif isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 6
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 7
+		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 8
+  		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 9
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 10
+	  	elseif isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 11
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 12
+		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 13
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 14
+	  	elseif isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 15
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 16
+		end
 	elseif getMapName() == "Route 14" then
+		if isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 1
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 2
+		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 3
+  		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 4
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 5
+	  	end
 	elseif getMapName() == "Route 15" then
+		if isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 1
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 2
+		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 3
+  		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 4
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 5
+	  	end
 	elseif getMapName() == "Route 22" then
+		if isNpcOnCell() then
+  			return talkToNpcOnCell(, )	--Tree 1
+  		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 2
+		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )	--Tree 3
+  		elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 4
+	  	elseif isNpcOnCell(, ) then
+	  		return talkToNpcOnCell(, )	--Tree 5
+	  	end
+	 end
