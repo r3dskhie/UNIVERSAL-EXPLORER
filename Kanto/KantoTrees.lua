@@ -1,14 +1,21 @@
-
-  if getMapName() == "
-    if isNpcOnCell(31, 5) then -- Berry 1
-	  	return talkToNpcOnCell(31, 5)
-	  elseif isNpcOnCell(32, 5) then -- Berry 2
-		  return talkToNpcOnCell(32, 5)
-	  elseif isNpcOnCell(37, 5) then -- Berry 3
-		  return talkToNpcOnCell(37, 5)
-  	elseif isNpcOnCell(38, 5) then -- Berry 4
-	  	return talkToNpcOnCell(38, 5)
+	
+	if getMapName() == "Pallet Town" then
+  	if isNpcOnCell() then
+  		return talkToNpcOnCell(, )
+  	elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )
+		elseif isNpcOnCell(, ) then
+			return talkToNpcOnCell(, )
+  	elseif isNpcOnCell(, ) then
+	  	return talkToNpcOnCell(, )
+	  elseif isNpcOnCell(, ) then
+	  	return talkToNpcOnCell(, )
   	end
+elseif getMapName() == "Viridian Forest" then
+  elseif getMapName() == "Viridian Forest" then
+	  elseif getMapName() == "Viridian Forest" then
+	  	  elseif getMapName() == "Viridian Forest" then
+
 
 Kanto = {}
 
