@@ -1,5 +1,10 @@
 # Headbutt
-      Clear all trees on Kanto and Johto Region
+      # COOL SCRIPT of all TIME
 
-+ Kanto Region - 0% done
+      - Clear all headbutt trees
+      - Clear all digging spots
+      - Harvesting Berries
+
+
++ Kanto Region - 5% done
 + Johto Region - 0% done
