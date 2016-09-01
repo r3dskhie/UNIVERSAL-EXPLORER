@@ -170,10 +170,10 @@ function onPathAction()
 		elseif getMapName() == "Route 2 Stop" then
 			moveToMap("Viridian Forest")
 		elseif getMapName() == "Viridian Forest" then
-			if isNpcOnCell(25,58) then
+			if isNpcOnCell(10,63) then
 				pushDialogAnswer(butter)
 			log("---Headbutting 1st tree---")
-				return talkToNpcOnCell(25,58)	--Tree 1
+				return talkToNpcOnCell(10,63)	--Tree 1
 			elseif isNpcOnCell(19,46) then
 			log("---Ooops! We have some berries that are ready to harvest---")
 			log("---Harvesting some berries---")
@@ -190,50 +190,94 @@ function onPathAction()
 			log("---Ooops! We have some berries that are ready to harvest---")
 			log("---Harvesting some berries---")
 				return talkToNpcOnCell(24,8)	--Berry 4
-			elseif isNpcOnCell(27,57) then
+			elseif isNpcOnCell(14,61) then
 				pushDialogAnswer(butter)
 			log("---Headbutting 2nd tree---")
-				return talkToNpcOnCell(27,57)	--Tree 2
-			elseif isNpcOnCell(43,56) then
+				return talkToNpcOnCell(14,61)	--Tree 2
+			elseif isNpcOnCell(15,61) then
 				pushDialogAnswer(butter)
 			log("---Headbutting 3rd tree---")
-				return talkToNpcOnCell(43,56)	--Tree 3
-			elseif isNpcOnCell(24,46) then
+				return talkToNpcOnCell(15,61)	--Tree 3
+			elseif isNpcOnCell(30,62) then
 				pushDialogAnswer(butter)
 			log("---Headbutting 4th tree---")
-				return talkToNpcOnCell(24,46)	--Tree 4
-			elseif isNpcOnCell(65,47) then
+				return talkToNpcOnCell(30,62)	--Tree 4
+			elseif isNpcOnCell(35,62) then
 				pushDialogAnswer(butter)
 			log("---Headbutting 5th tree---")
-				return talkToNpcOnCell(65,47)	--Tree 5
-			elseif isNpcOnCell(45,33) then
+				return talkToNpcOnCell(35,62)	--Tree 5
+			elseif isNpcOnCell(12,43) then
 				pushDialogAnswer(butter)
 			log("---Headbutting 6th tree---")
-				return talkToNpcOnCell(45,33)	--Tree 6
-			elseif isNpcOnCell(43,34) then
+				return talkToNpcOnCell(12,43)	--Tree 6
+			elseif isNpcOnCell(24,42) then
 				pushDialogAnswer(butter)
 			log("---Headbutting 7th tree---")
-				return talkToNpcOnCell(43,34)	--Tree 7
-			elseif isNpcOnCell(34,34) then
+				return talkToNpcOnCell(24,42)	--Tree 7
+			elseif isNpcOnCell(27,42) then
 				pushDialogAnswer(butter)
 			log("----Headbutting 8th tree---")
-				return talkToNpcOnCell(34,34)	--Tree 8
-			elseif isNpcOnCell(33,13) then
+				return talkToNpcOnCell(27,42)	--Tree 8
+			elseif isNpcOnCell(35,41) then
 				pushDialogAnswer(butter)
 			log("---Headbutting 9th tree---")
-				return talkToNpcOnCell(33,13)	--Tree 9
-			elseif isNpcOnCell(45,25) then
+				return talkToNpcOnCell(35,41)	--Tree 9
+			elseif isNpcOnCell(39,40) then
 				pushDialogAnswer(butter)
 			log("---Headbutting 10th tree---")
-				return talkToNpcOnCell(45,25)	--Tree 10
-			elseif isNpcOnCell(56,27) then
+				return talkToNpcOnCell(39,40)	--Tree 10
+			elseif isNpcOnCell(58,59) then
 				pushDialogAnswer(butter)
 			log("---Headbutting 11th tree---")
-				return talkToNpcOnCell(56,27)	--Tree 11
-			elseif isNpcOnCell(43,15) then
+				return talkToNpcOnCell(58,59)	--Tree 11
+			elseif isNpcOnCell(50,35) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 12th tree---")
+				return talkToNpcOnCell(50,35)	--Tree 12
+			elseif isNpcOnCell(51,18) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 13rd tree---")
+				return talkToNpcOnCell(51,18)	--Tree 13
+			elseif isNpcOnCell(46,18) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 14th tree---")
+				return talkToNpcOnCell(46,18)	--Tree 14
+			elseif isNpcOnCell(39,8) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 15th tree---")
+				return talkToNpcOnCell(39,8)	--Tree 15
+			elseif isNpcOnCell(46,7) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 16th tree---")
+				return talkToNpcOnCell(46,7)	--Tree 16
+			elseif isNpcOnCell(49,7) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 17th tree---")
+				return talkToNpcOnCell(49,7)	--Tree 17
+			elseif isNpcOnCell(52,8) then
+				pushDialogAnswer(butter)
+			log("----Headbutting 18th tree---")
+				return talkToNpcOnCell(52,8)	--Tree 18
+			elseif isNpcOnCell(22,8) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 19th tree---")
+				return talkToNpcOnCell(22,8)	--Tree 19
+			elseif isNpcOnCell(20,8) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 20th tree---")
+				return talkToNpcOnCell(20,8)	--Tree 20
+			elseif isNpcOnCell(17,8) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 21th tree---")
+				return talkToNpcOnCell(17,8)	--Tree 21
+			elseif isNpcOnCell(27,28) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 22th tree---")
+				return talkToNpcOnCell(27,28)	--Tree 22
+			elseif isNpcOnCell(32,32) then
 				pushDialogAnswer(butter)
 			log("---Headbutting Last tree---")
-				return talkToNpcOnCell(43,15)	--Tree 12
+				return talkToNpcOnCell(32,32)	--Tree 23
 			else
 			log("---"..getMapName().." Cleared... Moving to next Map---")
 				moveToMap("Route 2 Stop2")
