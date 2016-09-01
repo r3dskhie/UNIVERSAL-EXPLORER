@@ -1,12 +1,12 @@
 
-dofile "Kanto"
+KantoTrees = require "Kanto/KantoTrees"
 
 funtion onPathAction()
 
   if isPokemonUsable(1) then
     
-    if KantoHeadbutt() then
-      reurn
+    if KantoTrees then
+      return KantoTrees
     elseif getMapName() == "Pallet Town" then
       moveToMap("Route 1")
     elseif getMapName() == "Route 1" then
