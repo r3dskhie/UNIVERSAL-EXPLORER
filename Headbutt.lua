@@ -1,14 +1,32 @@
 
-KantoTrees = require "Kanto/KantoTrees"
 
 funtion onPathAction()
 
   if isPokemonUsable(1) then
     
-    if KantoTrees then
-      return KantoTrees
-    elseif getMapName() == "Pallet Town" then
-      moveToMap("Route 1")
+    if getMapName() == "Pallet Town" then
+  		if isNpcOnCell(28, 22) then
+			log("---Headbutting first tree---")
+  		  return talkToNpcOnCell(28, 22)	--Tree 1
+  		elseif isNpcOnCell(27, 16) then
+			log("----Headbutting second tree---")
+			 return talkToNpcOnCell(27, 16)	--Tree 2
+		  elseif isNpcOnCell(20, 7) then
+			log("----Headbutting third tree---")
+			  return talkToNpcOnCell(20, 7)	--Tree 3
+		  elseif isNpcOnCell(8, 5) then
+			log("----Headbutting fourth tree---")
+			  return talkToNpcOnCell(8, 5)	--Tree 4
+		  elseif isNpcOnCell(4, 7) then
+			log("----Headbutting fifth tree---")
+			  return talkToNpcOnCell(4, 7)	--Tree 5
+	  	elseif isNpcOnCell(13, 17) then
+			log("----Headbutting sixth tree---")
+		    return talkToNpcOnCell(13, 17)	--Tree 6
+		  else
+			log("---"..getMapName().." Cleared... Moving to next Map---")
+			  moveToMap("Route 1")
+  		end
     elseif getMapName() == "Route 1" then
       moveToMap("Viridian City")
     elseif getMapName() == "Viridian City" then
