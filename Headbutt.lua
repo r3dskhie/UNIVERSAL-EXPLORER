@@ -26,10 +26,10 @@ function onStop()
 	log("--- "..getMapName().. ", Dig count: "..digcount)
 	log("Headbutt count: "..hbuttcount)
 end
-function onDialogMesssage(all)
-	if stringContains(all, "has Dig") then
+function onDialogMesssage(message)
+	if stringContains(message, "has Dig") then
 		digcount = digcount + 1
-	elseif stringContains(all, "has Headbutt") then
+	elseif stringContains(message, "has Headbutt") then
 		hbuttcount = hbuttcount + 1
 	end
 end
