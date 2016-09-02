@@ -34,11 +34,11 @@ function onDialogMesssage(message)
 	end
 end
 function onPathAction()
-	if not isMounted() and hasItem("mount") and not isSurfing() and isOutside() then
+	if not isMounted() and hasItem(mount) and not isSurfing() and isOutside() then
 		log("---------------------------")
 		log("~~~ Riding on my pet!!! ~~~")
 		log("---------------------------")
-		return useItem("mount")
+		return useItem(mount)
 
 	elseif isPokemonUsable(1) then
 		if getMapName() == "Pallet Town" then
