@@ -1,4 +1,4 @@
-# Headbutt
+# Headbutt/Dig/Harvest/Item
       # COOL SCRIPT of all TIME
 
       - Clear all headbutt trees
