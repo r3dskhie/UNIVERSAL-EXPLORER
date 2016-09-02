@@ -1,3 +1,15 @@
+		--CONFIGURATION...
+		digger = 2	--Index of a pokemon with dig
+		butter = 3	--Index of a pokemon with headbutt
+		mount = "Bicycle"	--Set the name of the mount
+		
+	--WARNING!!! So many bugs at the moment
+	--This is just a test
+	--Please report your encountered bugs at Proshine Forum Thread
+	
+name = "Cool Script"
+author = "redskhie	credits: imMigno, s1lver"
+description = [[This is just a test]]
 
 function onStart()
 	digcount = 1
@@ -17,7 +29,13 @@ function onDialogMesssage()
 	end
 end
 function onPathAction()
-	if isPokemonUsable(1) then
+	if not isMounted() and hasItem("mount") and not isSurfing() and isOutside() then
+		log("---------------------------")
+		log("~~~ Riding on my pet!!! ~~~")
+		log("---------------------------")
+		return useItem("mount")
+
+	elseif isPokemonUsable(1) then
 		if getMapName() == "Pallet Town" then
   			if isNpcOnCell(28, 22) then
   				pushDialogAnswer(butter)
@@ -383,7 +401,7 @@ function onPathAction()
 				return moveToCell(44,30)	--GOING BACK to 1F to Exit
 			end
 		elseif digcount == 19 and getMapName() == "Mt. Moon B1F" then
-				moveToCell(65,20)
+			moveToCell(65,20)
 		elseif digcount == 19 and getMapName() == "Mt. Moon 1F" then
 			moveToCell(21,20)		--CELL EXITS
 		elseif digcount == 19 and getMapName() == "Mt. Moon B1F" then
@@ -396,36 +414,6 @@ function onPathAction()
 			moveToMap("Mt. Moon Exit")
 		elseif getMapName() == "Mt. Moon Exit" then
 			moveToMap("Route 4")
-		
-			
-			
-			
-			
-		
-				
-	elseif getMapName() == "Route 2 Stop2" then
-      moveToMap("Viridian Forest")
-    elseif getMapName() == "Viridian Forest" then
-      moveToMap("Route 2 Stop")
-    elseif getMapName() == "Route 2 Stop" then
-      moveToMap("Route 2")
-    elseif getMapName() == "Route 2" then
-      moveToMap("Pewter City")
-    elseif getMapName() == "Pewter City" then
-      moveToMap("Route 3")
-    elseif getMapName() == "Route 3" then
-      moveToMap("Mt. Moon 1F")
-    elseif getMapName() == "Mt. Moon 1F" then
-      moveToMap("Mt. Moon B1F")
-    elseif getMapName() == "Mt. Moon B1F" then
-      moveToMap("Mt. Moon B2F")
-    elseif getMapName() == "Mt. Moon B2F" then
-      moveToMap("Mt. Moon Exit")
-    elseif getMapName() == "Mt. Moon Exit" then
-      moveToMap("Route 4")
-    elseif getMapName() == "Route 4" then
-      moveToMap("Cerulean City")
-    end
-    
-  end
-end
+		elseif getMapName() == "Route 4" then
+			fatal("Done test! Please report at PROSHINE FORUM THREAD! Thank you!")
+		end
