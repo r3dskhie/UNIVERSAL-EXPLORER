@@ -171,7 +171,7 @@ function onPathAction()
 			elseif isNpcOnCell(12,16) then
 				pushDialogAnswer(butter)
 			log("---Headbutting 2nd tree---")
-				return talkToNpcOnCell(12,16)	--Tree 2
+				return talkToNpcOnCell(12,16) or moveToMap("Route 2 Stop")	--Tree 2
 			elseif isNpcOnCell(10,9) then
 				pushDialogAnswer(butter)
 			log("---Headbutting 3rd tree---")
@@ -196,10 +196,10 @@ function onPathAction()
 				pushDialogAnswer(butter)
 			log("---Headbutting Last tree---")
 				return talkToNpcOnCell(39,54)	--Tree 8
-			elseif isNpcOnCell(39,54) then
+			elseif isNpcOnCell(42,66) then
 			log("---Ooops! We have some berries that are ready to harvest---")
 			log("---Harvesting some berries---")
-				return talkToNpcOnCell(39,54)	--Berry 1
+				return talkToNpcOnCell(42,66)	--Berry 1
 			else
 			log("---"..getMapName().." Cleared... Moving to next Map---")
 				return moveToMap("Route 2 Stop") or moveToMap("Pewter City")
