@@ -419,7 +419,7 @@ function onPathAction()
 				moveToMap("Mt. Moon 1F")
 			end
 		elseif getMapName() == "Mt. Moon 1F" then
-			if digcount < 5 then
+			if digcount < 12 then
 				if isNpcOnCell(25,60) then
 					pushDialogAnswer(digger)
 				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
@@ -440,7 +440,7 @@ function onPathAction()
 					log("--- Avoiding Ladder! ---")
 					return moveToCell(56,29)	--CELL TO AVOID LADDER
 				end
-			elseif digcount < 9 then
+			elseif digcount < 16 then
 				if isNpcOnCell(63,18) then
 					pushDialogAnswer(digger)
 				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
@@ -462,13 +462,13 @@ function onPathAction()
 					return moveToCell(58,33)	--MOVING to 1st area of DIG SPOT in B2F
 				end
 			
-			elseif digcount == 9 then
+			elseif digcount == 16 then
 				log("--- Digging on "..getMapName().." finished! Moving to next Spot ---")
 				return moveToCell(58,33)	--MOVING to 1st area of DIG SPOT in B2F
 			end
-		elseif digcount < 14 and getMapName() == "Mt. Moon B1F" then
+		elseif digcount < 21 and getMapName() == "Mt. Moon B1F" then
 			moveToCell(43,34)
-		elseif digcount <= 14 and getMapName() == "Mt. Moon B2F" then
+		elseif digcount <= 21 and getMapName() == "Mt. Moon B2F" then
 			if isNpcOnCell(33,50) then
 				pushDialogAnswer(digger)
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
@@ -493,13 +493,13 @@ function onPathAction()
 				log("--- "..getMapName().." first area cleared, moving to 1F ---")
 				return moveToCell(30,54)	--GOING BACK to 1F to start for 2nd area of DIG SPOT in B2F
 			end
-		elseif digcount < 19 and getMapName() == "Mt. Moon B1F" then
+		elseif digcount < 26 and getMapName() == "Mt. Moon B1F" then
 			moveToCell(18,15)	
-		elseif digcount < 19 and getMapName() == "Mt. Moon 1F" then
+		elseif digcount < 26 and getMapName() == "Mt. Moon 1F" then
 			moveToCell(37,29)
-		elseif digcount < 19 and getMapName() == "Mt. Moon B1F" then
+		elseif digcount < 26 and getMapName() == "Mt. Moon B1F" then
 			moveToCell(57,21)
-		elseif digcount <= 19 and getMapName() == "Mt. Moon B2F" then
+		elseif digcount <= 26 and getMapName() == "Mt. Moon B2F" then
 			if isNpcOnCell(50,25) then
 				pushDialogAnswer(digger)
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
@@ -524,17 +524,17 @@ function onPathAction()
 				log("--- Mt. Moon cleared! Moving to next map ---")
 				return moveToCell(44,30)	--GOING BACK to 1F to Exit
 			end
-		elseif digcount == 19 and getMapName() == "Mt. Moon B1F" then
+		elseif digcount == 26 and getMapName() == "Mt. Moon B1F" then
 			moveToCell(65,20)
-		elseif digcount == 19 and getMapName() == "Mt. Moon 1F" then
+		elseif digcount == 26 and getMapName() == "Mt. Moon 1F" then
 			moveToCell(21,20)		--CELL EXITS
-		elseif digcount == 19 and getMapName() == "Mt. Moon B1F" then
+		elseif digcount == 26 and getMapName() == "Mt. Moon B1F" then
 			moveToCell(56,34)
-		elseif digcount == 19 and getMapName() == "Mt. Moon B2F" then
+		elseif digcount == 26 and getMapName() == "Mt. Moon B2F" then
 			moveToCell(17,27)
-		elseif digcount == 19 and getMapName() == "Mt. Moon B1F" then
+		elseif digcount == 26 and getMapName() == "Mt. Moon B1F" then
 			moveToCell(41,20)
-		elseif digcount == 19 and getMapName() == "Mt. Moon 1F" then
+		elseif digcount == 26 and getMapName() == "Mt. Moon 1F" then
 			moveToMap("Mt. Moon Exit")
 		elseif getMapName() == "Mt. Moon Exit" then
 			moveToMap("Route 4")
