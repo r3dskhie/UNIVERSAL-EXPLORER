@@ -29,7 +29,8 @@ end
 function onDialogMesssage(select)
 	if stringContains(select, "Select a Pokemon that has Dig.") then
 		digcount = digcount + 1
-	elseif stringContains(select, "Select a Pokemon that has Headbutt.") then
+	end
+	if stringContains(select, "Select a Pokemon that has Headbutt.") then
 		hbuttcount = hbuttcount + 1
 	end
 end
