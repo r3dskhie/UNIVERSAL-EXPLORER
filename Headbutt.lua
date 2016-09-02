@@ -417,7 +417,7 @@ function onPathAction()
 				return talkToNpcOnCell(77,33)	--Berry 3
 			else
 			log("---"..getMapName().." Cleared... Moving to next Map---")
-				moveToMap("Mt. Moon 1F")
+				fatal("Done test! Please report at PROSHINE FORUM THREAD! Thank you!")
 			end
 		elseif getMapName() == "Mt. Moon 1F" then
 			if digcount < 12 then
