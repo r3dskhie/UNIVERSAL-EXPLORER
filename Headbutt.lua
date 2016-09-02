@@ -26,10 +26,10 @@ function onStop()
 	log("--- "..getMapName().. ", Dig count: "..digcount)
 	log("Headbutt count: "..hbuttcount)
 end
-function onDialogMesssage(Select)
-	if stringContains(Select, "has Dig") then
+function onDialogMesssage(select)
+	if stringContains(select, "Select a Pokemon that has Dig.") then
 		digcount = digcount + 1
-	elseif stringContains(Select, "has Headbutt") then
+	elseif stringContains(select, "Select a Pokemon that has Headbutt.") then
 		hbuttcount = hbuttcount + 1
 	end
 end
