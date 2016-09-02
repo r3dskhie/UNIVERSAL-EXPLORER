@@ -6,5 +6,5 @@
       - Harvesting Berries
 
 
-+ Kanto Region - 5% done
++ Kanto Region - 10% done
 + Johto Region - 0% done
