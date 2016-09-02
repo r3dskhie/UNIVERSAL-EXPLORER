@@ -8,7 +8,7 @@
 	--Please report your encountered bugs at Proshine Forum Thread
 	
 name = "Cool Script"
-author = "redskhie	credits: imMigno, s1lver"
+author = "---redskhie---	credits: imMigno, S1lver "
 description = [[This is just a test]]
 
 function onStart()
@@ -17,12 +17,14 @@ function onStart()
 end
 function onPause()
 	log("Debugging... Checking logs")
+	log("Headbutt count: "..hbuttcount)
 	log("Dig count: "..digcount)
 	log("Map name: "..getMapName())
 end
 function onStop()
 	log("ERROR! Checking logs")
 	log("--- "..getMapName().. ", Dig count: "..digcount)
+	log("Headbutt count: "..hbuttcount)
 end
 function onDialogMesssage()
 	if stringContains("Select a Pokemon that has Dig.") then
