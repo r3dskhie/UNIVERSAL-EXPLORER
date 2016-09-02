@@ -27,9 +27,9 @@ function onStop()
 	log("Headbutt count: "..hbuttcount)
 end
 function onDialogMesssage()
-	if stringContains("Select a Pokemon that has Dig.") then
+	if stringContains("has Dig") then
 		digcount = digcount + 1
-	elseif stringContains("Select a Pokemon that has Headbutt.") then
+	elseif stringContains("has Headbutt") then
 		hbuttcount = hbuttcount + 1
 	end
 end
