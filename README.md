@@ -7,4 +7,7 @@
 
 
 + Kanto Region - 10% done
++ Love Island - 0% done
 + Johto Region - 0% done
++ Mt. Silver - 0% done
++ Hoenn Excavation Site - 0% done
