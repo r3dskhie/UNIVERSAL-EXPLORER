@@ -319,7 +319,7 @@ function onPathAction()
 				moveToMap("Route 2 Stop2")
 			end
 		elseif getMapName() == "Route 2 Stop2" then
-			moveToMap("Route 2)
+			moveToMap("Route 2")
 		elseif getMapName() == "Pewter City" then
 			if isNpcOnCell(5,7) then
 				pushDialogAnswer(butter)
