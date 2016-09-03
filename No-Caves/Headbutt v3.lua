@@ -3,6 +3,7 @@
 		butter = 5	--Index of a pokemon with headbutt
 		mount = "Bicycle"	--Set the name of the mount
 		MtMoon = true		--Set this to true if you want to digs in mt. moon --4 days cooldown per dig
+					--WARNING!!! SET to FALSE When dig is in cooldown!
 		
 	--WARNING!!! So many bugs at the moment
 	--This is just a test
