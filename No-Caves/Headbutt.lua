@@ -7,6 +7,15 @@
 	--This is just a test
 	--Please report your encountered bugs at Proshine Forum Thread
 	
+local dialogs = {
+	headbutt = Dialog:new({
+		"Select a Pokemon that has Headbutt."
+	}),
+	dig = Dialog:new({
+		"Select a Pokemon that has Dig."
+	})
+	
+}
 name = "Cool Script"
 author = "--redskhie--"
 description = [[This is just a test]]
@@ -27,7 +36,9 @@ function onStop()
 	log("Headbutt count: "..hbuttcount)
 end
 function onDialogMessage(message)
-	questManager:dialog(message)
+	if self.dialogs.bulbasaur.state then
+		hbuttcount = hbuttcount + 1
+	end
 end
 function onPathAction()
 	if not isMounted() and hasItem(mount) and not isSurfing() and isOutside() then
