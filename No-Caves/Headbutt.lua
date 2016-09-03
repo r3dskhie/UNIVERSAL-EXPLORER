@@ -489,10 +489,10 @@ function onPathAction()
 		elseif getMapName() == "Route 9" then
 			moveToMap("Route 10")
 		elseif getMapName() == "Route 10" then
-			if isNpcOnCell(x,y) then
+			if isNpcOnCell(9,9) then
 				pushDialogAnswer(1)
 				pushDialogAnswer(digger)
-				talkToNpcOnCell(x,y)
+				talkToNpcOnCell(9,9)
 			else
 				moveToMap("Lavender Town")
 			end
