@@ -23,7 +23,7 @@ description = [[---This script will hunt for trees, dig spots and many more!---]
 function onStart()
 	digcount = 0
 	hbuttcount = 0
-	x = 0
+	x= 0
 end
 function onPause()
 	log("Debugging... Checking logs")
@@ -435,10 +435,10 @@ function onPathAction()
 			log("---Ooops! We have some berries that are ready to harvest---")
 			log("---Harvesting some berries---")
 				return talkToNpcOnCell(77,33)	--Berry 3
-			elseif isNpcOnCell(74,16) then
+			else
 				
 			log("---"..getMapName().." Cleared... Moving to next Map---")
-				talkToNpcOnCell(74,16)
+				moveToMap("Mt. Moon 1F")
 			end
 		elseif getMapName() == "Mt. Moon 1F" then
 			if x == 0 then
@@ -482,9 +482,10 @@ function onPathAction()
 					return talkToNpcOnCell(66,21)	--Dig 8
 				else
 					log("--- Digging on "..getMapName().." finished! Moving to next Spot ---")
-					return moveToCell(58,33)	--MOVING to 1st area of DIG SPOT in B2F
+					moveToCell(58,33)	--MOVING to 1st area of DIG SPOT in B2F
+					x = x + 1
 				end
-			elseif x == 3 then
+			elseif x == 3 or x == 4 then
 				moveToCell(37,29)
 				x = x + 1
 			elseif x == 5 then
@@ -535,6 +536,8 @@ function onPathAction()
 					moveToCell(30,54)	--GOING BACK to 1F to start for 2nd area of DIG SPOT in B2F
 					x = x + 1
 				end
+			elseif x == 3 then
+				moveToCell(30,54)	--GOING BACK to 1F to start for 2nd area of DIG SPOT in B2F
 			elseif x == 4 then
 		
 				if isNpcOnCell(50,25) then
