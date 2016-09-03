@@ -30,11 +30,13 @@ function onPause()
 	log("Headbutt count: "..hbuttcount)
 	log("Dig count: "..digcount)
 	log("Map name: "..getMapName())
+	log("Moon Debug count: "..x)
 end
 function onStop()
 	log("ERROR! Checking logs")
 	log("--- "..getMapName().. ", Dig count: "..digcount)
 	log("Headbutt count: "..hbuttcount)
+	log("Moon Debug count: "..x)
 end
 function onDialogMessage(message)
 	if message == "Reselect a different Pokemon?" then
