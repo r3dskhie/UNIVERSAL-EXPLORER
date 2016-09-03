@@ -852,7 +852,137 @@ function onPathAction()
 		elseif getMapName() == "Vermilion City" then
 			moveToMap("Route 11")
 		elseif getMapName() == "Route 11" then
-			
+			if isNpcOnCell(81, 7) then
+  				pushDialogAnswer(butter)
+			log("---Headbutting 1st tree---")
+				return talkToNpcOnCell(81, 7)	--Tree 1
+			elseif isNpcOnCell(78, 6) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 2nd tree---")
+				return talkToNpcOnCell(78, 6)	--Tree 2
+			elseif isNpcOnCell(76, 5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 3rd tree---")
+				return talkToNpcOnCell(76, 5)	--Tree 3
+			elseif isNpcOnCell(19, 13) then
+  				pushDialogAnswer(butter)
+			log("---Headbutting 3rd tree---")
+				return talkToNpcOnCell(19, 13)	--Tree 4
+			elseif isNpcOnCell(19, 7) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 4th tree---")
+				return talkToNpcOnCell(19, 7)	--Tree 5
+			elseif isNpcOnCell(23, 6) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 5th tree---")
+				return talkToNpcOnCell(23, 6)	--Tree 6
+			elseif isNpcOnCell(72,5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 7th tree---")
+				return talkToNpcOnCell(72,5)	--Tree 7
+			elseif isNpcOnCell(70,5) then
+				pushDialogAnswer(butter)
+			log("----Headbutting 8th tree---")
+				return talkToNpcOnCell(70,5)	--Tree 8
+			elseif isNpcOnCell(67,5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 9th tree---")
+				return talkToNpcOnCell(67,5)	--Tree 9
+			elseif isNpcOnCell(64,5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 10th tree---")
+				return talkToNpcOnCell(64,5)	--Tree 10
+			elseif isNpcOnCell(61,5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 11th tree---")
+				return talkToNpcOnCell(61,5)	--Tree 11
+			elseif isNpcOnCell(57,5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 12th tree---")
+				return talkToNpcOnCell(57,5)	--Tree 12
+			elseif isNpcOnCell(54,5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 13rd tree---")
+				return talkToNpcOnCell(54,5)	--Tree 13
+			elseif isNpcOnCell(48,5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 14th tree---")
+				return talkToNpcOnCell(48,5)	--Tree 14
+			elseif isNpcOnCell(45,5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 15th tree---")
+				return talkToNpcOnCell(45,5)	--Tree 15
+			elseif isNpcOnCell(43,5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 16th tree---")
+				return talkToNpcOnCell(43,5)	--Tree 16
+			elseif isNpcOnCell(40,5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 17th tree---")
+				return talkToNpcOnCell(40,5)	--Tree 17
+			elseif isNpcOnCell(37,5) then
+				pushDialogAnswer(butter)
+			log("----Headbutting 18th tree---")
+				return talkToNpcOnCell(37,5)	--Tree 18
+			elseif isNpcOnCell(33,5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 19th tree---")
+				return talkToNpcOnCell(33,5)	--Tree 19
+			elseif isNpcOnCell(31,5) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 20th tree---")
+				return talkToNpcOnCell(31,5)	--Tree 20
+			elseif isNpcOnCell(29,4) then
+				pushDialogAnswer(butter)
+			log("---Headbutting Last tree---")
+				return talkToNpcOnCell(29,4)	--Tree 21
+			else
+			log("---"..getMapName().." Cleared... Moving to next Map---")
+				moveToMap("Digletts Cave Entrance 2")
+			end
+		elseif getMapName() == "Digletts Cave Entrance 2" then
+			moveToMap("Digletts Cave")
+		elseif getMapName() == "Digletts Cave" then
+			if isNpcOnCell(52,42) then
+				pushDialogAnswer(digger)
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(52,42)	--Dig 1
+			elseif isNpcOnCell(51,42) then
+				pushDialogAnswer(digger)
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(51,42)	--Dig 2
+			elseif isNpcOnCell(47,43) then
+				pushDialogAnswer(digger)
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(47,43)	--Dig 3
+			elseif isNpcOnCell(49,44) then
+				pushDialogAnswer(digger)
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(49,44)	--Dig 4
+			elseif isNpcOnCell(35,35) then
+				pushDialogAnswer(digger)
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(35,35)	--Dig 5
+			elseif isNpcOnCell(36,37) then
+				pushDialogAnswer(digger)
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(36,37)	--Dig 6
+			elseif isNpcOnCell(32,35) then
+				pushDialogAnswer(digger)
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(32,35)	--Dig 7
+			elseif isNpcOnCell(33,37) then
+				pushDialogAnswer(digger)
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(33,37)	--Dig 8
+			else
+			log("---"..getMapName().." Cleared... Moving to next Map---")
+				moveToMap("Digletts Cave Entrance 1")
+			end
+		elseif getMapName() == "Digletts Cave Entrance 1" then
+			moveToMap("Route 2")
+		elseif getMapName() == "Route 2" then
+			log("--- ROUTINE DONE ... Wait for the next UPDATE!!! ---")
 		end
 	end
 end
