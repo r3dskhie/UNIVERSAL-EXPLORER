@@ -21,7 +21,7 @@ author = "--redskhie--"
 description = [[---This script will hunt for trees, dig spots and many more!---]]
 
 function onStart()
-	digcount = 26
+	digcount = 0
 	hbuttcount = 0
 end
 function onPause()
@@ -846,13 +846,15 @@ function onPathAction()
 		elseif getMapName() == "Fuchsia City" then
 			moveToMap("Route 18")
 		elseif getMapName() == "Route 18" then
-			return moveToMap("Route 17") or moveToMap("Bike Road Stop")
+			return moveToMap("Route 17") or moveToCell(35,16)
 		elseif getMapName() == "Bike Road Stop" then
-			moveToMap("Route 18")
+			moveToCell(0,6)
 		elseif getMapName() == "Route 17" then
 			moveToMap("Route 16")
 		elseif getMapName() == "Route 16" then
-			return moveToMap("Celadon City") or moveToMap("Route 16 Stop House")
+			return moveToMap("Celadon City") or moveToCell(64,13)
+		elseif getMapName() == "Route 16 Stop House" then
+			moveToCell(20,6)
 		elseif getMapName() == "Celadon City" then
 			moveToMap("Route 7")
 		elseif getMapName() == "Route 7" then
@@ -1125,9 +1127,17 @@ function onPathAction()
 end
 function onBattleAction()
 
-	if getOpponentName() == "Fletchling" or getOpponentName() == "Starly" or getOpponentName() == "Ferroseed" or getOpponentName() == "Murkrow"  or getOpponentName() == "Venipede"  then
+	if getOpponentName() == "Fletchling" or getOpponentName() == "Starly" or getOpponentName() == "Ferroseed" or getOpponentName() == "Scyther" or getOpponentName() == "Murkrow"  or getOpponentName() == "Venipede"  then
+		if getActivePokemonNumber() == 1 then
+			return sendPokemon(2) or useItem("Great Ball") or sendAnyPokemon() or run()
+		
+		elseif ( getActivePokemonNumber() == 2 ) and ( getOpponentHealth() > 1 ) then
+			return weakAttack() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
+		elseif getOpponentHealth() == 1 then
 
-		return useItem("Pokeball") or useItem("Ultra Ball") or useItem("Great Ball") or sendAnyPokemon() or run()
+			return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball")  or sendAnyPokemon() or attack() or run()
+        
+		end
 	else
 		return run() or sendAnyPokemon()
 	end
