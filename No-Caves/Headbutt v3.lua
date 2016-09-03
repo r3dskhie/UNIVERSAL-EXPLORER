@@ -21,7 +21,7 @@ author = "--redskhie--"
 description = [[---This script will hunt for trees, dig spots and many more!---]]
 
 function onStart()
-	digcount = 0
+	digcount = 26
 	hbuttcount = 0
 end
 function onPause()
@@ -44,6 +44,8 @@ function onDialogMessage(message)
 		pushDialogAnswer(butter)
 	elseif message == "Select a Pokemon that has Dig." then
 		digcount = digcount + 1
+		pushDialogAnswer(digger)
+	elseif message == "Please select a Pokemon that knows the Dig technique." then
 		pushDialogAnswer(digger)
 	end
 	
@@ -624,11 +626,10 @@ function onPathAction()
 			moveToMap("Route 10")
 		elseif getMapName() == "Route 10" then
 			if isNpcOnCell(9,9) then
-				pushDialogAnswer(1)
 				
-				talkToNpcOnCell(9,9)
-			else
-				moveToMap("Lavender Town")
+				return talkToNpcOnCell(9,9) or moveToMap("Lavender Town")
+			
+				
 			end
 		elseif getMapName() == "Lavender Town" then
 			if isNpcOnCell(5,9) then
