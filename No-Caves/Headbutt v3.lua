@@ -432,9 +432,10 @@ function onPathAction()
 			log("---Ooops! We have some berries that are ready to harvest---")
 			log("---Harvesting some berries---")
 				return talkToNpcOnCell(77,33)	--Berry 3
-			else
+			elseif isNpcOnCell(74,16) then
+				
 			log("---"..getMapName().." Cleared... Moving to next Map---")
-				moveToMap("Mt. Moon 1F")
+				talkToNpcOnCell(74,16)
 			end
 		elseif getMapName() == "Mt. Moon 1F" then
 			if digcount < 12 then
