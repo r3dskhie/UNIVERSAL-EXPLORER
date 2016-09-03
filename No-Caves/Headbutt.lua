@@ -456,6 +456,7 @@ function onPathAction()
 			else
 				log("---"..getMapName().." Cleared... Moving to next Map---")
 				moveToMap("Cerulean City")
+			end
 		elseif getMapName() == "Cerulean City" then
 			if isNpcOnCell(44,8) then
 				pushDialogAnswer(butter)
@@ -824,7 +825,7 @@ function onPathAction()
 		elseif getMapName() == "Route 8 Stop House" then
 			moveToMap("Saffron City")
 		elseif getMapName() == "Saffron City" then
-			moveToMap("Route 6 Stop House") then
+			moveToMap("Route 6 Stop House")
 		elseif getMapName() == "Route 6 Stop House" then
 			moveToMap("Route 6")
 		elseif getMapName() == "Route 6" then
