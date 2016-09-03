@@ -438,7 +438,7 @@ function onPathAction()
 				talkToNpcOnCell(74,16)
 			end
 		elseif getMapName() == "Mt. Moon 1F" then
-			if digcount < 12 then
+			if x == 0 then
 				if isNpcOnCell(25,60) then
 					
 				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
@@ -458,8 +458,9 @@ function onPathAction()
 				else
 					log("--- Avoiding Ladder! ---")
 					return moveToCell(56,29)	--CELL TO AVOID LADDER
+					x = x + 1
 				end
-			elseif digcount < 16 then
+			elseif x == 1 then
 				if isNpcOnCell(63,18) then
 					
 				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
@@ -480,82 +481,90 @@ function onPathAction()
 					log("--- Digging on "..getMapName().." finished! Moving to next Spot ---")
 					return moveToCell(58,33)	--MOVING to 1st area of DIG SPOT in B2F
 				end
+			elseif x == 3 then
+				moveToCell(37,29)
+				x = x + 1
+			elseif x == 5 then
+				moveToCell(21,20)		--CELL EXITS
+				x = x + 1
+			elseif x == 7 then
+				moveToMap("Mt. Moon B1F")
+			end
+		elseif getMapName() == "Mt. Moon B1F" then
+			if x == 2 then
+				moveToCell(43,34)
+			elseif x == 3 then
+				moveToCell(18,15)
+			elseif x == 4 then
+				moveToCell(57,21)
+			elseif x == 5 then
+				moveToCell(65,20)
+			elseif x == 6 then
+				moveToCell(56,34)
+			elseif x == 7 then
+				moveToCell(41,20)
+			end
+		elseif getMapName() == "Mt. Moon B2F" then
+			if x == 2 then
 			
-			elseif digcount == 16 then
-				log("--- Digging on "..getMapName().." finished! Moving to next Spot ---")
-				return moveToCell(58,33)	--MOVING to 1st area of DIG SPOT in B2F
-			end
-		elseif digcount < 21 and getMapName() == "Mt. Moon B1F" then
-			moveToCell(43,34)
-		elseif digcount <= 21 and getMapName() == "Mt. Moon B2F" then
-			if isNpcOnCell(33,50) then
+				if isNpcOnCell(33,50) then
 				
-			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(33,50)	--Dig 9
-			elseif isNpcOnCell(38,49) then
+				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+					return talkToNpcOnCell(33,50)	--Dig 9
+				elseif isNpcOnCell(38,49) then
 				
-			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(38,49)	--Dig 10
-			elseif isNpcOnCell(39,52) then
+				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+					return talkToNpcOnCell(38,49)	--Dig 10
+				elseif isNpcOnCell(39,52) then
 				
-			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(39,52)	--Dig 11
-			elseif isNpcOnCell(39,55) then
+				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+					return talkToNpcOnCell(39,52)	--Dig 11
+				elseif isNpcOnCell(39,55) then
 				
-			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(39,55)	--Dig 12
-			elseif isNpcOnCell(44,49) then
+				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+					return talkToNpcOnCell(39,55)	--Dig 12
+				elseif isNpcOnCell(44,49) then
 				
-			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(44,49)	--Dig 13
-			else
-				log("--- "..getMapName().." first area cleared, moving to 1F ---")
-				return moveToCell(30,54)	--GOING BACK to 1F to start for 2nd area of DIG SPOT in B2F
-			end
-		elseif digcount < 26 and getMapName() == "Mt. Moon B1F" then
-			moveToCell(18,15)	
-		elseif digcount < 26 and getMapName() == "Mt. Moon 1F" then
-			moveToCell(37,29)
-		elseif digcount < 26 and getMapName() == "Mt. Moon B1F" then
-			moveToCell(57,21)
-		elseif digcount <= 26 and getMapName() == "Mt. Moon B2F" then
-			if isNpcOnCell(50,25) then
+				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+					return talkToNpcOnCell(44,49)	--Dig 13
+				else
+					log("--- "..getMapName().." first area cleared, moving to 1F ---")
+					return moveToCell(30,54)	--GOING BACK to 1F to start for 2nd area of DIG SPOT in B2F
+					x = x + 1
+				end
+			elseif x == 4 then
+		
+				if isNpcOnCell(50,25) then
+					
+				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+					return talkToNpcOnCell(50,25)	--Dig 14
+				elseif isNpcOnCell(57,23) then
 				
-			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(50,25)	--Dig 14
-			elseif isNpcOnCell(57,23) then
+				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+					return talkToNpcOnCell(57,23)	--Dig 15
+				elseif isNpcOnCell(62,21) then
+					
+				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+					return talkToNpcOnCell(62,21)	--Dig 16
+				elseif isNpcOnCell(61,26) then
 				
-			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(57,23)	--Dig 15
-			elseif isNpcOnCell(62,21) then
+				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+					return talkToNpcOnCell(61,26)	--Dig 17
+				elseif isNpcOnCell(56,29) then
 				
-			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(62,21)	--Dig 16
-			elseif isNpcOnCell(61,26) then
-				
-			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(61,26)	--Dig 17
-			elseif isNpcOnCell(56,29) then
-				
-			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(56,29)	--Dig 18
-			else
+				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+					return talkToNpcOnCell(56,29)	--Dig 18
+				else
 				log("--- Mt. Moon cleared! Moving to next map ---")
-				return moveToCell(44,30)	--GOING BACK to 1F to Exit
+					return moveToCell(44,30)	--GOING BACK to 1F to Exit
+					x = x + 1
+				end
+			elseif x == 6 then
+				moveToCell(17,27)
+				x = x + 1
 			end
-		elseif digcount == 26 and getMapName() == "Mt. Moon B1F" then
-			moveToCell(65,20)
-		elseif digcount == 26 and getMapName() == "Mt. Moon 1F" then
-			moveToCell(21,20)		--CELL EXITS
-		elseif digcount == 26 and getMapName() == "Mt. Moon B1F" then
-			moveToCell(56,34)
-		elseif digcount == 26 and getMapName() == "Mt. Moon B2F" then
-			moveToCell(17,27)
-		elseif digcount == 26 and getMapName() == "Mt. Moon B1F" then
-			moveToCell(41,20)
-		elseif digcount == 26 and getMapName() == "Mt. Moon 1F" then
-			moveToMap("Mt. Moon B1F")
 		elseif getMapName() == "Mt. Moon Exit" then
+			x = 0
 			moveToMap("Route 4")
 		elseif getMapName() == "Route 4" then
 			if isNpcOnCell(74,15) then
