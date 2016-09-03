@@ -23,6 +23,7 @@ description = [[---This script will hunt for trees, dig spots and many more!---]
 function onStart()
 	digcount = 0
 	hbuttcount = 0
+	x = 0
 end
 function onPause()
 	log("Debugging... Checking logs")
