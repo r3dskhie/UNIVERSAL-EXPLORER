@@ -458,7 +458,7 @@ function onPathAction()
 					return talkToNpcOnCell(22,58)	--Dig 4
 				else
 					log("--- Avoiding Ladder! ---")
-					return moveToCell(56,29)	--CELL TO AVOID LADDER
+					moveToCell(56,29)	--CELL TO AVOID LADDER
 					x = x + 1
 				end
 			elseif x == 1 then
@@ -530,7 +530,7 @@ function onPathAction()
 					return talkToNpcOnCell(44,49)	--Dig 13
 				else
 					log("--- "..getMapName().." first area cleared, moving to 1F ---")
-					return moveToCell(30,54)	--GOING BACK to 1F to start for 2nd area of DIG SPOT in B2F
+					moveToCell(30,54)	--GOING BACK to 1F to start for 2nd area of DIG SPOT in B2F
 					x = x + 1
 				end
 			elseif x == 4 then
@@ -557,7 +557,7 @@ function onPathAction()
 					return talkToNpcOnCell(56,29)	--Dig 18
 				else
 				log("--- Mt. Moon cleared! Moving to next map ---")
-					return moveToCell(44,30)	--GOING BACK to 1F to Exit
+					moveToCell(44,30)	--GOING BACK to 1F to Exit
 					x = x + 1
 				end
 			elseif x == 6 then
