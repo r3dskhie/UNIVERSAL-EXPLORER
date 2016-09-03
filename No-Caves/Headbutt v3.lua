@@ -1005,15 +1005,15 @@ function onPathAction()
 				return talkToNpcOnCell(76, 5)	--Tree 3
 			elseif isNpcOnCell(19, 13) then
   				
-			log("---Headbutting 3rd tree---")
+			log("---Headbutting 4th tree---")
 				return talkToNpcOnCell(19, 13)	--Tree 4
 			elseif isNpcOnCell(19, 7) then
 				
-			log("---Headbutting 4th tree---")
+			log("---Headbutting 5th tree---")
 				return talkToNpcOnCell(19, 7)	--Tree 5
 			elseif isNpcOnCell(23, 6) then
 				
-			log("---Headbutting 5th tree---")
+			log("---Headbutting 6th tree---")
 				return talkToNpcOnCell(23, 6)	--Tree 6
 			elseif isNpcOnCell(72,5) then
 				
