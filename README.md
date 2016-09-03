@@ -11,3 +11,8 @@
 + Johto Region - 0% done
 + Mt. Silver - 0% done
 + Hoenn Excavation Site - 0% done
+
+
+# INSTRUCTION:
+
+Copy/Load the Headbutt v3.lua on Headbutt/No Caves/Headbutt v3.lua
