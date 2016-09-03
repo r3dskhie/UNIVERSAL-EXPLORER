@@ -415,11 +415,10 @@ function onPathAction()
 			log("---Ooops! We have some berries that are ready to harvest---")
 			log("---Harvesting some berries---")
 				return talkToNpcOnCell(77,33)	--Berry 3
-			elseif isNpcOnCell(x,y) then
-				pushDialogAnswer(1)
+			elseif isNpcOnCell(74,16) then
 				pushDialogAnswer(digger)
 			log("---"..getMapName().." Cleared... Moving to next Map---")
-				talkToNpcOnCell(x,y)
+				talkToNpcOnCell(74,16)
 			end
 		elseif getMapName() == "Route 4" then
 			if isNpcOnCell(74,15) then
