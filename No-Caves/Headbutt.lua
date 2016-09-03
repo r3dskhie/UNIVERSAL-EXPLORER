@@ -988,9 +988,9 @@ function onPathAction()
 end
 function onBattleAction()
 
-	if getOpponentName() == "Fletchling" then
+	if getOpponentName() == "Fletchling" or getOpponentName() == "Starly" or getOpponentName() == "Ferroseed" or getOpponentName() == "Murkrow" then
 
-		return useItem("Pokeball") or sendAnyPokemon() or run()
+		return useItem("Pokeball") or useItem("Ultra Ball") or useItem("Great Ball") or sendAnyPokemon() or run()
 	else
 		return run() or sendAnyPokemon()
 	end
