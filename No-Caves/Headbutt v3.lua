@@ -847,6 +847,8 @@ function onPathAction()
 			moveToMap("Route 18")
 		elseif getMapName() == "Route 18" then
 			return moveToMap("Route 17") or moveToMap("Bike Road Stop")
+		elseif getMapName() == "Bike Road Stop" then
+			moveToMap("Route 18")
 		elseif getMapName() == "Route 17" then
 			moveToMap("Route 16")
 		elseif getMapName() == "Route 16" then
