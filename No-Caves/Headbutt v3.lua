@@ -391,7 +391,7 @@ function onPathAction()
 			elseif isNpcOnCell(67,38) then
 				
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(6,38)	--Dig 5
+				return talkToNpcOnCell(67,38)	--Dig 5
 			elseif isNpcOnCell(71,38) then
 				
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
