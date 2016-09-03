@@ -980,9 +980,8 @@ function onPathAction()
 				moveToMap("Digletts Cave Entrance 1")
 			end
 		elseif getMapName() == "Digletts Cave Entrance 1" then
-			moveToMap("Route 2")
-		elseif getMapName() == "Route 2" then
 			log("--- ROUTINE DONE ... Wait for the next UPDATE!!! ---")
+		
 		end
 	end
 end
