@@ -1176,13 +1176,13 @@ function onBattleAction()
         
 		end
 	elseif getMapName() == "Mt. Moon 1F" then
-		return run() or sendAnyPokemon()
+		run()
 	x = x -1
 	elseif getMapName() == "Mt. Moon B1F" then
-		return run() or sendAnyPokemon()
+		run()
 	y = y - 1
 	elseif getMapName() == "Mt. Moon B2F" then
-		return run() or sendAnyPokemon()
+		run()
 	z = z - 1
 	else
 		return run() or sendAnyPokemon()
