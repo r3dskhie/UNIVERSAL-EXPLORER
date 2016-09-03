@@ -8,7 +8,7 @@
 	--Please report your encountered bugs at Proshine Forum Thread
 	
 name = "Cool Script"
-author = "--redskhie--	credits: imMigno, S1lver "
+author = "--redskhie--"
 description = [[This is just a test]]
 
 function onStart()
