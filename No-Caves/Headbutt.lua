@@ -1,6 +1,6 @@
 		--CONFIGURATION...
-		digger = 2	--Index of a pokemon with dig
-		butter = 3	--Index of a pokemon with headbutt
+		digger = 4	--Index of a pokemon with dig
+		butter = 5	--Index of a pokemon with headbutt
 		mount = "Bicycle"	--Set the name of the mount
 		
 	--WARNING!!! So many bugs at the moment
@@ -29,8 +29,11 @@ end
 function onDialogMesssage(select)
 	if stringContains(select, "Select a Pokemon that has Dig.") then
 		digcount = digcount + 1
-	end
-	if stringContains(select, "Select a Pokemon that has Headbutt.") then
+	elseif stringContains(select, "Select a Pokemon that has Headbutt.") then
+		hbuttcount = hbuttcount + 1
+	elseif select == "Select a Pokemon that has Dig." then
+		digcount = digcount + 1
+	elseif select == "Select a Pokemon that has Headbutt." then
 		hbuttcount = hbuttcount + 1
 	end
 end
