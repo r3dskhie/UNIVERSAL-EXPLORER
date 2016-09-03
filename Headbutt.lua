@@ -1,6 +1,6 @@
 		--CONFIGURATION...
 		digger = 2	--Index of a pokemon with dig
-		butter = 3	--Index of a pokemon with headbutt
+ 		butter = 3	--Index of a pokemon with headbutt
 		mount = "Bicycle"	--Set the name of the mount
 		
 	--WARNING!!! So many bugs at the moment
