@@ -6,7 +6,7 @@
       - Harvesting Berries
 
 
-+ Kanto Region - 20% done
++ Kanto Region - 80% done
 + Love Island - 0% done
 + Johto Region - 0% done
 + Mt. Silver - 0% done
