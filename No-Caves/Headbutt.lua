@@ -770,11 +770,89 @@ function onPathAction()
 			elseif isNpcOnCell(32,14) then
 			log("---Ooops! We have some berries that are ready to harvest---")
 			log("---Harvesting some berries---")
-				return talkToNpcOnCell(32,14)	--Berry 2
+				return talkToNpcOnCell(32,14)	--Berry 1
 			else
 				log("---"..getMapName().." Cleared... Moving to next Map---")
 				moveToMap("Underground House 3")
 			end
+		elseif getMapName() == "Underground House 3" then
+			moveToMap("Underground1")
+		elseif getMapName() == "Underground1" then
+			moveToMap("Underground House 4")
+		elseif getMapName() == "Underground House 4" then
+			moveToMap("Route 8")
+		elseif getMapName() == "Route 8" then
+			if isNpcOnCell(17,3) then
+			log("---Ooops! We have some berries that are ready to harvest---")
+			log("---Harvesting some berries---")
+				return talkToNpcOnCell(17,3)	--Berry 1
+			elseif isNpcOnCell(18,3) then
+			log("---Ooops! We have some berries that are ready to harvest---")
+			log("---Harvesting some berries---")
+				return talkToNpcOnCell(18,3)	--Berry 2
+			elseif isNpcOnCell(19,3) then
+			log("---Ooops! We have some berries that are ready to harvest---")
+			log("---Harvesting some berries---")
+				return talkToNpcOnCell(19,3)	--Berry 3
+			elseif isNpcOnCell(37,4) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 1st tree---")
+				return talkToNpcOnCell(37,4)	--Tree 1
+			elseif isNpcOnCell(52,15) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 2nd tree---")
+				return talkToNpcOnCell(52,15)	--Tree 2
+			elseif isNpcOnCell(54,14) then
+				pushDialogAnswer(butter)
+			log("---Headbutting 3rd tree---")
+				return talkToNpcOnCell(54,14)	--Tree 3
+			elseif isNpcOnCell(62,6) then
+				pushDialogAnswer(butter)
+			log("---Headbutting Last tree---")
+				return talkToNpcOnCell(62,6)	--Tree 4
+			elseif isNpcOnCell(57,3) then
+			log("---Ooops! We have some berries that are ready to harvest---")
+			log("---Harvesting some berries---")
+				return talkToNpcOnCell(57,3)	--Berry 4
+			elseif isNpcOnCell(56,3) then
+			log("---Ooops! We have some berries that are ready to harvest---")
+			log("---Harvesting some berries---")
+				return talkToNpcOnCell(56,3)	--Berry 5
+			else
+				log("---"..getMapName().." Cleared... Moving to next Map---")
+				moveToMap("Route 8 Stop House")
+			end
+		elseif getMapName() == "Route 8 Stop House" then
+			moveToMap("Saffron City")
+		elseif getMapName() == "Saffron City" then
+			moveToMap("Route 6 Stop House") then
+		elseif getMapName() == "Route 6 Stop House" then
+			moveToMap("Route 6")
+		elseif getMapName() == "Route 6" then
+			if isNpcOnCell(31,5) then
+			log("---Ooops! We have some berries that are ready to harvest---")
+			log("---Harvesting some berries---")
+				return talkToNpcOnCell(31,5)	--Berry 1
+			elseif isNpcOnCell(32,5) then
+			log("---Ooops! We have some berries that are ready to harvest---")
+			log("---Harvesting some berries---")
+				return talkToNpcOnCell(32,5)	--Berry 2
+			elseif isNpcOnCell(37,5) then
+			log("---Ooops! We have some berries that are ready to harvest---")
+			log("---Harvesting some berries---")
+				return talkToNpcOnCell(37,5)	--Berry 3
+			elseif isNpcOnCell(38,5) then
+			log("---Ooops! We have some berries that are ready to harvest---")
+			log("---Harvesting some berries---")
+				return talkToNpcOnCell(38,5)	--Berry 4
+			else
+				log("---"..getMapName().." Cleared... Moving to next Map---")
+				moveToMap("Vermilion City")
+			end
+		elseif getMapName() == "Vermilion City" then
+			moveToMap("Route 11")
+		elseif getMapName() == "Route 11" then
+			
 		end
 	end
 end
