@@ -7,6 +7,7 @@
 
 
 + Kanto Region - 90% done
+      -End point: Digletts Cave Entrance 1
 + Love Island - 0% done
 + Johto Region - 0% done
 + Mt. Silver - 0% done
