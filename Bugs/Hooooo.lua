@@ -1,5 +1,6 @@
 
         backupCount = 0
+	mount = "Bicycle"
 
 
 
@@ -7,11 +8,20 @@
 function onStart()
     x = backupCount
 end
+function onPause()
+	log(" Debug count: "..x)
+end
 function onBattleAction()
     run()
 end
 function onPathAction()
-  if isPokemonUsable(1)
+  if not isMounted() and hasItem(mount) and not isSurfing() and isOutside() then
+		log("---------------------------")
+		log("~~~ Riding on my pet!!! ~~~")
+		log("---------------------------")
+		return useItem(mount)
+  elseif isPokemonUsable(1) then
+    
     if getMapName() == "Lilycove City" then
         moveToMap("Route 121")
     elseif getMapName() == "Route 121" then
@@ -20,7 +30,7 @@ function onPathAction()
         elseif x == 6 then
             moveToMap("Lilycove City")  --End
         end
-    elseif getMapName() == "120" then
+    elseif getMapName() == "Route 120" then
         if x == 0 then
             moveToMap("Fortree City")   --Move to next Site
         elseif x == 6 then
@@ -100,13 +110,13 @@ function onPathAction()
         if x == 2 then
             moveToMap("Route 112")                      --Move to 3rd Site
         elseif x == 3 then
-            moveToMap("Route 111 Desert")               --Move to 4th Site
+            moveToCell(20,7)               --Move to 4th Site
         end
     elseif getMapName() == "Route 112" then
         if x == 2 then
             moveToMap("Fiery Path")                     --Move to 3rd Site
         elseif x == 3 then
-            moveToMap("Route 111 South")                --Move to 4th Site
+            return moveToMap("Route 111 North") or moveToMap("Route 111 South")                --Move to 4th Site
         end
     elseif getMapName() == "Fiery Path" then
         if x == 2 then
@@ -114,7 +124,7 @@ function onPathAction()
             talkToNpcOnCell(14,32)                      --Feral Site 3rd
         elseif x == 3 then
             log("-- Update| Backup count = "..x)
-            moveToMap("Route 112")                      --Move to 4th Site
+            moveToCell(36,48)                      --Move to 4th Site
         end
     elseif getMapName() == "Feral Site" then
         moveToCell(5,7)                             --Done Site
@@ -122,7 +132,7 @@ function onPathAction()
     elseif getMapName() == "Route 111 Desert" then
         if x == 3 then
             log("-- Info| We are now entering Historical Site! --")
-            talkToNpcOnCell(34,31)                      --Historical Site 4th
+            return talkToNpc("Gingery Jones")                     --Historical Site 4th
         elseif x == 4 then
             log("-- Update| Backup count = "..x)
             moveToMap("Route 111 North")                --Move to 5th Site
@@ -131,14 +141,18 @@ function onPathAction()
         moveToCell(2,8)                             --Done Site
         x = x + 1
     elseif getMapName() == "Route 111 North" then
-        moveToMap("Route 113")                      --Move to 5th Site
+	if x == 3 then
+		moveToMap("Route 111 Desert")
+	elseif x == 4 then
+        	moveToMap("Route 113")                      --Move to 5th Site
+	end
     elseif getMapName() == "Route 113" then
         moveToMap("Fallarbor Town")                 --Move to 5th Site
     elseif getMapName() == "Fallarbor Town" then
         moveToMap("Route 114")                      --Move to 5th Site
     elseif getMapName() == "Route 114" then
         moveToMap("Meteor Falls 1F 1R")             --Move to 5th Site
-    elseif getMapName() == "Meteor Falls 1F 1R" then
+    elseif getMapName() == "Meteor falls 1F 1R" then
         moveToMap("Route 115")                      --Move to 5th Site
     elseif getMapName() == "Route 115" then
         if x == 4 then
@@ -158,7 +172,7 @@ function onPathAction()
     elseif getMapName() == "Rusturf Tunnel" then
         if x == 5 then
             log("-- Info| We are now entering Haunted Site! --")
-            talkToNpcOncell(26,15)                      --Haunted Site Last
+            talkToNpc("Gingery Jones")                      --Haunted Site Last
         elseif x == 6 then
             log("-- Update| Backup count = "..x)
             log("-- Warning!!! No Site to Smash!!! Going back to starting map... --")
