@@ -3,7 +3,6 @@
 		butter = 5	--Index of a pokemon with headbutt
 		mount = "Bicycle"	--Set the name of the mount
 		MtMoon = true		--Set this to true if you want to digs in mt. moon --4 days cooldown per dig
-					--WARNING!!! SET to FALSE When dig is in cooldown!
 		
 	--WARNING!!! So many bugs at the moment
 	--This is just a test
@@ -25,26 +24,20 @@ description = [[---This script will hunt for trees, dig spots and many more!---]
 function onStart()
 	digcount = 0
 	hbuttcount = 0
-	x = 0
 	y = 0
-	z = 0
 end
 function onPause()
 	log("Debugging... Checking logs")
 	log("Headbutt count: "..hbuttcount)
 	log("Dig count: "..digcount)
 	log("Map name: "..getMapName())
-	log("X 1F count: "..x)
 	log("Y B1F count: "..y)
-	log("Z B2F count: "..z)
 end
 function onStop()
 	log("ERROR! Checking logs")
 	log("--- "..getMapName().. ", Dig count: "..digcount)
 	log("Headbutt count: "..hbuttcount)
-	log("X 1F count: "..x)
 	log("Y B1F count: "..y)
-	log("Z B2F count: "..z)
 end
 function onDialogMessage(message)
 	if message == "Reselect a different Pokemon?" then
@@ -452,61 +445,54 @@ function onPathAction()
 				talkToNpcOnCell(74,16)
 			end
 		elseif getMapName() == "Mt. Moon 1F" then
-			if x == 0 then
+			if (getPlayerX() >= 19 and getPlayerX() <= 40 and getPlayerY() >= 43 and getPlayerY() <= 62) or (getPlayerX() >= 41 and getPlayerX() <= 57 and getPlayerY() >= 28 and getPlayerY() <= 52) then
+
 				if isNpcOnCell(25,60) then
-					
+					pushDialogAnswer(digger)
 				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
 					return talkToNpcOnCell(25,60)	--Dig 1
 				elseif isNpcOnCell(20,60) then
-					
+					pushDialogAnswer(digger)
 				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
 					return talkToNpcOnCell(20,60)	--Dig 2
 				elseif isNpcOnCell(22,61) then
-					
+					pushDialogAnswer(digger)
 				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
 					return talkToNpcOnCell(22,61)	--Dig 3
 				elseif isNpcOnCell(22,58) then
-					
+					pushDialogAnswer(digger)
 				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
 					return talkToNpcOnCell(22,58)	--Dig 4
 				else
-					log("--- Avoiding Ladder! ---")
-					moveToCell(56,29)	--CELL TO AVOID LADDER
-					x = x + 1
+					log("--- Done on 1st area of 1F dig spots...Going to 1st B2F dig area! ---")
+					return moveToCell(58,33)	--CELL TO AVOID LADDER
 				end
-			elseif x == 1 then
+			elseif (getPlayerX() >= 58 and getPlayerX() <= 71 and getPlayerY() >= 16 and getPlayerY() <= 33) or (getPlayerX() >= 33 and getPlayerX() <= 38 and getPlayerY() >= 24 and getPlayerY() <= 28) or (getPlayerX() >= 33 and getPlayerX() <= 57 and getPlayerY() >= 16 and getPlayerY() <= 24) then
 				if isNpcOnCell(63,18) then
-					
+					pushDialogAnswer(digger)
 				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
 					return talkToNpcOnCell(63,18)	--Dig 5
 				elseif isNpcOnCell(65,20) then
-					
+					pushDialogAnswer(digger)
 				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
 					return talkToNpcOnCell(65,20)	--Dig 6
 				elseif isNpcOnCell(67,19) then
-					
+					pushDialogAnswer(digger)
 				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
 					return talkToNpcOnCell(67,19)	--Dig 7
 				elseif isNpcOnCell(66,21) then
-					
+					pushDialogAnswer(digger)
 				log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
 					return talkToNpcOnCell(66,21)	--Dig 8
 				else
-					log("--- Digging on "..getMapName().." finished! Moving to next Spot ---")
-					moveToCell(58,33)	--MOVING to 1st area of DIG SPOT in B2F
-					x = x + 1
+					log("--- Digging on "..getMapName().." finished! Moving to 2nd area of B2F Spot ---")
+					return moveToCell(37,29)	--MOVING to 1st area of DIG SPOT in B2F
 				end
-			elseif x == 2 then
-				moveToCell(37,29)
-				x = x + 1
-			elseif x == 3 then
-				moveToCell(21,20)		--CELL EXITS
-				x = x + 1
-			elseif x == 4 then
-				moveToMap("Mt. Moon Exit")
-
-
+			elseif (getPlayerX() >= 19 and getPlayerX() <= 38 and getPlayerY() >= 29 and getPlayerY() <= 38) or (getPlayerX() >= 19 and getPlayerX() <= 28 and getPlayerY() >= 16 and getPlayerY() <= 28) then
+				moveToCell(21,20)
 			end
+
+
 		elseif getMapName() == "Mt. Moon B1F" then
 			if y == 0 then
 				moveToCell(43,34)
@@ -528,71 +514,54 @@ function onPathAction()
 				y = y + 1
 
 			end
+			
 		elseif getMapName() == "Mt. Moon B2F" then
-
-			if z == 0 then
-
 			if isNpcOnCell(33,50) then
-				
+				pushDialogAnswer(digger)
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(33,50)	--Dig 9
+				return talkToNpcOnCell(33,50) or moveToCell(44,30)	--Dig 9
 			elseif isNpcOnCell(38,49) then
-				
+				pushDialogAnswer(digger)
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(38,49)	--Dig 10
+				return talkToNpcOnCell(38,49) or moveToCell(44,30)	--Dig 10
 			elseif isNpcOnCell(39,52) then
-				
+				pushDialogAnswer(digger)
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(39,52)	--Dig 11
+				return talkToNpcOnCell(39,52) or moveToCell(44,30)	--Dig 11
 			elseif isNpcOnCell(39,55) then
-				
+				pushDialogAnswer(digger)
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(39,55)	--Dig 12
+				return talkToNpcOnCell(39,55) or moveToCell(44,30)	--Dig 12
 			elseif isNpcOnCell(44,49) then
-				
+				pushDialogAnswer(digger)
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(44,49)	--Dig 13
-			else
-				log("--- "..getMapName().." first area cleared, moving to 1F ---")
-				moveToCell(30,54)	--GOING BACK to 1F to start for 2nd area of DIG SPOT in B2F
-				z = z + 1
-			end
-
-			elseif z == 1 then
-
-			if isNpcOnCell(50,25) then
-				
+				return talkToNpcOnCell(44,49) or moveToCell(44,30)	--Dig 13
+			elseif isNpcOnCell(50,25) then
+				pushDialogAnswer(digger)
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(50,25)	--Dig 14
+				return talkToNpcOnCell(50,25) or moveToCell(30,54)	--Dig 14
 			elseif isNpcOnCell(57,23) then
-				
+				pushDialogAnswer(digger)
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(57,23)	--Dig 15
+				return talkToNpcOnCell(57,23) or moveToCell(30,54)	--Dig 15
 			elseif isNpcOnCell(62,21) then
-				
+				pushDialogAnswer(digger)
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(62,21)	--Dig 16
-			elseif isNpcOnCell(61,26) then
-				
+				return talkToNpcOnCell(62,21) or moveToCell(30,54)	--Dig 16
+			elseif isNpcOnCell(61,26) then 
+				pushDialogAnswer(digger)
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(61,26)	--Dig 17
+				return talkToNpcOnCell(61,26) or moveToCell(30,54)	--Dig 17
 			elseif isNpcOnCell(56,29) then
-				
+				pushDialogAnswer(digger)
 			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-				return talkToNpcOnCell(56,29)	--Dig 18
+				return talkToNpcOnCell(56,29) or moveToCell(30,54)	--Dig 18
 			else
 				log("--- Mt. Moon cleared! Moving to next map ---")
-				moveToCell(44,30)	--GOING BACK to 1F to Exit
-				z = z + 1
+				return moveToCell(44,30) or moveToCell(30,54) or moveToCell(17,27)	--GOING BACK to 1F to Exit
 			end
 
-			elseif z == 2 then
-				moveToCell(17,27)
-				z = z + 1
-
-			end
 		elseif getMapName() == "Mt. Moon Exit" then
-			x = 0
 			moveToMap("Route 4")
 		elseif getMapName() == "Route 4" then
 			if isNpcOnCell(74,15) then
@@ -629,7 +598,7 @@ function onPathAction()
 				return talkToNpcOnCell(83,25)	--Tree 5
 			else
 				log("---"..getMapName().." Cleared... Moving to next Map---")
-				moveToMap("Cerulean City")
+				moveToCell(96,21)
 			end
 		elseif getMapName() == "Cerulean City" then
 			if isNpcOnCell(44,8) then
@@ -1176,15 +1145,11 @@ function onBattleAction()
 			return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball")  or sendAnyPokemon() or attack() or run()
         
 		end
-	elseif getMapName() == "Mt. Moon 1F" then
-		run()
-	x = x -1
+	
 	elseif getMapName() == "Mt. Moon B1F" then
 		run()
 	y = y - 1
-	elseif getMapName() == "Mt. Moon B2F" then
-		run()
-	z = z - 1
+	
 	else
 		return run() or sendAnyPokemon()
 	end
