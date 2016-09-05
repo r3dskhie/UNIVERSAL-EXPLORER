@@ -27,6 +27,7 @@ function onStart()
 	a = 1
 	b = 0
 	c = 0
+	x = 3
     smash = 1
     	log("-----------------------------------------------------------")
 	log("--------- We are now Commencing the Routine ---------")
@@ -801,12 +802,45 @@ function onPathAction()
 			end
 		elseif getMapName() == "Route 9" then
 			pc = 0
+			x = 1
 			moveToMap("Route 10")
 		elseif getMapName() == "Route 10" then
-			if isNpcOnCell(9,9) then
-				
-				return talkToNpcOnCell(9,9) or moveToMap("Lavender Town")
-			
+			if x == 1 then
+				moveToMap("Rock Tunnel 1")
+			elseif x == 0 then
+				if isNpcOnCell(9,9) then
+					return talkToNpcOnCell(9,9) or moveToMap("Lavender Town")
+				end
+			end
+		elseif getMapName() == "Rock Tunnel 1" then
+			x = 0
+			if isNpcOnCell(41,6) then
+					 
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(41,6)	--Dig 1
+			elseif isNpcOnCell(44,7) then
+				 
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(44,7)	--Dig 2
+			elseif isNpcOnCell(34,5) then
+					 
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(34,5)	--Dig 3
+			elseif isNpcOnCell(37,14) then
+					 
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(37,14)	--Dig 4
+			elseif isNpcOnCell(28,18) then
+				 
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(28,18)	--Dig 5
+			elseif isNpcOnCell(37,18) then
+					 
+			log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+				return talkToNpcOnCell(37,18)	--Dig 6
+			else
+				log("---"..getMapName().." Cleared... Moving to next Map---")
+				moveToMap("Route 10")
 			end
 		elseif getMapName() == "Lavender Town" then
 			
