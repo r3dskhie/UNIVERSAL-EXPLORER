@@ -2,9 +2,18 @@
         backupCount = 0
 	mount = "Bicycle"
 	
-digger = 4
-butter = 5
+digger = 4		--Set the index number of Pokemon with digs
+butter = 5		--Set the index number of Pokemon with headbutt
 
+
+	MtMoon == false		--Set this to false if the dig spots are on cooldown to not encounter an error
+
+
+
+	--CATCHING CONFIGURATION
+	
+		--PLEASE SET TO normal catch if you're not using Synchronize pokemon
+		
 catchUncaught = true		--set to true if you want to catch uncaught pokes else false
 catchShiny = true		--set to true if you want to catch encountered shiny's else false
 catchList = {"Golett", "Gligar", "Noibat", "Aron", "Beldum", "Mawile", "Absol", "Pawniard", "Litleo", "Vanillite", "Skorupi", "Trapinch", "Ferroseed", "Sawk", "Throh", "Timburr"}
