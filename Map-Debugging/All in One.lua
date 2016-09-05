@@ -16,7 +16,7 @@ butter = 5		--Set the index number of Pokemon with headbutt
 		
 catchUncaught = true		--set to true if you want to catch uncaught pokes else false
 catchShiny = true		--set to true if you want to catch encountered shiny's else false
-catchList = {"Golett", "Gligar", "Noibat", "Aron", "Beldum", "Mawile", "Absol", "Pawniard", "Litleo", "Vanillite", "Skorupi", "Trapinch", "Ferroseed", "Sawk", "Throh", "Timburr"}
+catchList = {"Starly", "Fletchling", "Chimchar", "Scyther", "Murkrow", "Staravia", "Turtwig", "Venipede", "Fletchinder", "Rufflet", "Golett", "Gligar", "Noibat", "Aron", "Beldum", "Mawile", "Absol", "Pawniard", "Litleo", "Vanillite", "Skorupi", "Trapinch", "Ferroseed", "Sawk", "Throh", "Timburr"}
 
 normalCatchOn = false        --Directly throw pokeballs on hunted pokemons
 fswipeOn = true       --Switch to pokemon with false swipe, use false swipe until the hunted pokes hp is reach to 1 then throw pokeballs
@@ -36,10 +36,14 @@ sleepmove = "Spore"        --Set/Change the name of the sleep move
 
 function onStart()
     ex = backupCount
-    digcount = 0
+    	digcount = 0
 	hbuttcount = 0
 	pc = 0
 	jto = 0
+	y = 0
+	a = 1
+	b = 0
+	c = 0
     smash = 1
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- Note: Always Remember your BACK-UP COUNT in Excavation Site in case the bot DISCONNECTED---")
