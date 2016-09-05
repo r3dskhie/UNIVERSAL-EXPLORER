@@ -6,10 +6,12 @@
 
 
 function onStart()
-    x = backupCount
+    ex = backupCount
+    smash = 0
 end
 function onPause()
-	log(" Debug count: "..x)
+	log(" Debug count: "..ex)
+	log("--- You smashed "..smash.. " fools in all sites!!! ---")
 end
 function onBattleAction()
     run()
@@ -25,125 +27,121 @@ function onPathAction()
     if getMapName() == "Lilycove City" then
         moveToMap("Route 121")
     elseif getMapName() == "Route 121" then
-        if x == 0 then
+        if ex == 0 then
             moveToMap("Route 120")      --Move to next Site
-        elseif x == 6 then
+        elseif ex == 6 then
             moveToMap("Lilycove City")  --End
         end
     elseif getMapName() == "Route 120" then
-        if x == 0 then
+        if ex == 0 then
             moveToMap("Fortree City")   --Move to next Site
-        elseif x == 6 then
+        elseif ex == 6 then
             moveToMap("Route 121")      --End
         end
     elseif getMapName() == "Fortree City" then
-        if x == 0 then
+        if ex == 0 then
             moveToMap("Route 119A")     --Move to next Site
-        elseif x == 6 then
+        elseif ex == 6 then
             moveToMap("Route 120")      --End
         end
     elseif getMapName() == "Route 119A" then
-        if x == 0 then
+        if ex == 0 then
             log("Info| We are now entering Natural Site!")
             talkToNpcOnCell(16,68)      --Move to Natural Site
-        elseif x == 1 then
-            log("-- Update | Backup count = "..x)
+        elseif ex == 1 then
+            log("-- Update | Backup count = "..ex)
             moveToMap("Route 119B")     --Move to 2nd Site
-        elseif x == 6 then
+        elseif ex == 6 then
             moveToMap("Fortree City")   --End
         end
     elseif getMapName() == "Natural Site" then
-        moveToCell(6,7)             --Done Site
-        x = x + 1
+        Natural()
     elseif getMapName() == "Route 119B" then
-        if x == 1 then
+        if ex == 1 then
             moveToMap("Route 118")      --Move to 2nd Site
-        elseif x == 6 then
+        elseif ex == 6 then
             moveToMap("Route 119A")     --End
         end
     elseif getMapName() == "Route 118" then
-        if x == 1 then
+        if ex == 1 then
             moveToMap("Mauville City Stop House 4")     --Move to 2nd Site
-        elseif x == 6 then
+        elseif ex == 6 then
             moveToMap("Route 119B")                     --End
         end
     elseif getMapName() == "Mauville City Stop House 4" then
-        if x == 1 then
+        if ex == 1 then
             moveToMap("Mauville City")                  --Move to 2nd Site
-        elseif x == 6 then
+        elseif ex == 6 then
             moveToMap("Route 118")                     --End
         end
     elseif getMapName() == "Mauville City" then
-        if x == 1 then
+        if ex == 1 then
             moveToMap("Mauville City Stop House 1")     --Move to 2nd Site
-        elseif x == 2 then
+        elseif ex == 2 then
             moveToMap("Mauville City Stop House 3")     --Move to 3rd Site
-        elseif x == 6 then
+        elseif ex == 6 then
             moveToMap("Mauville City Stop House 4")     --End
         end
     elseif getMapName() == "Mauville City Stop House 1" then
-        if x == 1 then
+        if ex == 1 then
             moveToMap("Route 110")                      --Move to 2nd Site
-        elseif x == 2 then
+        elseif ex == 2 then
             moveToMap("Mauville City")                  --Move to 3rd Site
         end
     elseif getMapName() == "Route 110" then
-        if x == 1 then
+        if ex == 1 then
             moveToMap("Route 103")                      --Move to 2nd Site
-        elseif x == 2 then
+        elseif ex == 2 then
             moveToMap("Mauville City Stop House 1")     --Move to 3rd Site
         end
     elseif getMapName() == "Route 103" then
-        if x == 1 then
+        if ex == 1 then
             log("-- Info| We are now entering Glacial Site! --")
             talkToNpcOnCell(55,4)                       --Glacial Site 2nd
-        elseif x == 2 then
-            log("-- Update| Backup count = "..x)
+        elseif ex == 2 then
+            log("-- Update| Backup count = "..ex)
             moveToMap("Route 110")                      --Move to 3rd Site
         end
     elseif getMapName() == "Glacial Site" then
-        moveToCell(5,5)                             --Done Site
-        x = x + 1
+        Glacial()
     elseif getMapName() == "Mauville City Stop House 3" then
         moveToMap("Route 111 South")                --Move to 3rd Site
     elseif getMapName() == "Route 111 South" then
-        if x == 2 then
+        if ex == 2 then
             moveToMap("Route 112")                      --Move to 3rd Site
-        elseif x == 3 then
+        elseif ex == 3 then
             moveToCell(20,7)               --Move to 4th Site
         end
     elseif getMapName() == "Route 112" then
-        if x == 2 then
+        if ex == 2 then
             moveToMap("Fiery Path")                     --Move to 3rd Site
-        elseif x == 3 then
+        elseif ex == 3 then
             return moveToMap("Route 111 North") or moveToMap("Route 111 South")                --Move to 4th Site
         end
     elseif getMapName() == "Fiery Path" then
-        if x == 2 then
+        if ex == 2 then
             log("-- Info| We are now entering Feral Site! --")
             talkToNpcOnCell(14,32)                      --Feral Site 3rd
-        elseif x == 3 then
-            log("-- Update| Backup count = "..x)
+        elseif ex == 3 then
+            log("-- Update| Backup count = "..ex)
             moveToCell(36,48)                      --Move to 4th Site
         end
     elseif getMapName() == "Feral Site" then
-        moveToCell(5,7)                             --Done Site
-        x = x + 1
+        Feral()
     elseif getMapName() == "Route 111 Desert" then
-        if x == 3 then
+        if ex == 3 then
             log("-- Info| We are now entering Historical Site! --")
             return talkToNpc("Gingery Jones")                     --Historical Site 4th
-        elseif x == 4 then
-            log("-- Update| Backup count = "..x)
+        elseif ex == 4 then
+            log("-- Update| Backup count = "..ex)
             moveToMap("Route 111 North")                --Move to 5th Site
         end
     elseif getMapName() == "Historical Site" then
-        moveToCell(2,8)                             --Done Site
-        x = x + 1
+        Historical()
     elseif getMapName() == "Route 111 North" then
-	if x == 3 then
+	if ex == 3 then
 		moveToMap("Route 111 Desert")
-	elseif x == 4 then
+	elseif ex == 4 then
         	moveToMap("Route 113")                      --Move to 5th Site
 	end
     elseif getMapName() == "Route 113" then
@@ -155,32 +153,30 @@ function onPathAction()
     elseif getMapName() == "Meteor falls 1F 1R" then
         moveToMap("Route 115")                      --Move to 5th Site
     elseif getMapName() == "Route 115" then
-        if x == 4 then
+        if ex == 4 then
             log("-- Info| We are now entering Mineral Site! --")
             talkToNpcOnCell(81,78)                      --Mineral Site 5th
-        elseif x == 5 then
-            log("-- Update| Backup count = "..x)
+        elseif ex == 5 then
+            log("-- Update| Backup count = "..ex)
             moveToMap("Rustboro City")                  --Move to last Site
         end
     elseif getMapName() == "Mineral Site" then
-        moveToCell(9,6)                             --Done Site
-        x = x + 1
+        Mineral()
     elseif getMapName() == "Rustboro City" then
         moveToMap("Route 116")                      --Move to last Site
     elseif getMapName() == "Route 116" then
         moveToMap("Rusturf Tunnel")                 --Move to last Site
     elseif getMapName() == "Rusturf Tunnel" then
-        if x == 5 then
+        if ex == 5 then
             log("-- Info| We are now entering Haunted Site! --")
             talkToNpc("Gingery Jones")                      --Haunted Site Last
-        elseif x == 6 then
-            log("-- Update| Backup count = "..x)
+        elseif ex == 6 then
+            log("-- Update| Backup count = "..ex)
             log("-- Warning!!! No Site to Smash!!! Going back to starting map... --")
             moveToMap("Verdanturf Town")                --End
         end
     elseif getMapName() == "Haunted Site" then
-        moveToCell(3,8)                             --Done Site
-        x = x + 1
+        Haunted()
     elseif getMapName() == "Verdanturf Town" then
         moveToMap("Route 117")                      --End
     elseif getMapName() == "Route 117" then
@@ -189,4 +185,436 @@ function onPathAction()
         moveToMap("Mauville City")                  --End     
     end
   end
+end
+function Natural()
+	if isNpcOnCell(4,8) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(4,8)
+	elseif isNpcOnCell(7,6) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(7,6)
+	elseif isNpcOnCell(11,4) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(11,4)
+	elseif isNpcOnCell(12,3) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(12,3)
+	elseif isNpcOnCell(14,5) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(14,5)
+	elseif isNpcOnCell(17,1) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(17,1)
+	elseif isNpcOnCell(16,2) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(16,2)
+	elseif isNpcOnCell(18,3) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(18,3)
+	elseif isNpcOnCell(16,8) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(16,8)
+	elseif isNpcOnCell(20,5) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(20,5)
+	elseif isNpcOnCell(22,7) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(22,7)
+	elseif isNpcOnCell(22,4) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(22,4)
+	elseif isNpcOnCell(20,10) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(20,10)
+	elseif isNpcOnCell(20,15) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(20,15)
+	elseif isNpcOnCell(15,13) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(15,13)
+	elseif isNpcOnCell(12,17) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(12,17)
+	elseif isNpcOnCell(7,17) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(7,17)
+	elseif isNpcOnCell(6,11) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(6,11)
+	elseif isNpcOnCell(4,11) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(4,11)
+	elseif isNpcOnCell(16,17) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(16,17)
+	elseif isNpcOnCell(17,14) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(17,14)
+	elseif isNpcOnCell(18,16) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(18,16)
+	elseif isNpcOnCell(24,18) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(24,18)
+	elseif isNpcOnCell(24,16) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(24,16)
+	else
+		log("--- "..getMapName().." cleared... Moving to next site")
+		moveToCell(6,7)             --Done Site
+        	ex = ex + 1
+        end
+end
+function Glacial()
+	if isNpcOnCell(2,11) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(2,11)
+	elseif isNpcOnCell(3,13) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(3,13)
+	elseif isNpcOnCell(8,3) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(8,3)
+	elseif isNpcOnCell(12,4) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(12,4)
+	elseif isNpcOnCell(14,1) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(14,1)
+	elseif isNpcOnCell(19,1) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(19,1)
+	elseif isNpcOnCell(18,3) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(18,3)
+	elseif isNpcOnCell(21,4) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(21,4)
+	elseif isNpcOnCell(21,8) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(21,8)
+	elseif isNpcOnCell(17,9) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(17,9)
+	elseif isNpcOnCell(23,5) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(23,5)
+	elseif isNpcOnCell(25,4) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(25,4)
+	elseif isNpcOnCell(25,1) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(25,1)
+	elseif isNpcOnCell(19,14) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(19,14)
+	elseif isNpcOnCell(20,16) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(20,16)
+	elseif isNpcOnCell(25,11) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(25,11)
+	elseif isNpcOnCell(19,17) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(19,17)
+	elseif isNpcOnCell(10,18) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(10,18)
+	elseif isNpcOnCell(9,16) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(9,16)
+	elseif isNpcOnCell(4,18) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(4,18)
+	elseif isNpcOnCell(15,14) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(15,14)
+	elseif isNpcOnCell(13,16) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(13,16)
+	elseif isNpcOnCell(13,11) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(13,11)
+	elseif isNpcOnCell(8,14) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(8,14)
+	else
+		log("--- "..getMapName().." cleared... Moving to next site")
+		moveToCell(5,5)                             --Done Site
+        	ex = ex + 1
+        end
+end
+function Feral()
+	if isNpcOnCell(3,7) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(3,7)
+	elseif isNpcOnCell(4,5) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(4,5)
+	elseif isNpcOnCell(6,12) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(6,12)
+	elseif isNpcOnCell(3,16) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(3,16)
+	elseif isNpcOnCell(11,11) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(11,11)
+	elseif isNpcOnCell(1,16) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(1,16)
+	elseif isNpcOnCell(2,18) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(2,18)
+	elseif isNpcOnCell(12,17) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(12,17)
+	elseif isNpcOnCell(15,17) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(15,17)
+	elseif isNpcOnCell(18,15) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(18,15)
+	elseif isNpcOnCell(25,18) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(25,18)
+	elseif isNpcOnCell(15,15) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(15,15)
+	elseif isNpcOnCell(21,15) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(21,15)
+	elseif isNpcOnCell(22,16) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(22,16)
+	elseif isNpcOnCell(24,14) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(24,14)
+	elseif isNpcOnCell(22,11) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(22,11)
+	elseif isNpcOnCell(21,8) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(21,8)
+	elseif isNpcOnCell(21,6) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(21,6)
+	elseif isNpcOnCell(19,4) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(19,4)
+	elseif isNpcOnCell(18,4) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(18,4)
+	elseif isNpcOnCell(7,1) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(7,1)
+	elseif isNpcOnCell(12,3) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(12,3)
+	elseif isNpcOnCell(12,2) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(12,2)
+	elseif isNpcOnCell(6,4) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(6,4)
+	elseif isNpcOnCell(9,5) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(9,5)
+	else
+		log("--- "..getMapName().." cleared... Moving to next site")
+		moveToCell(5,7)                             --Done Site
+        	ex = ex + 1
+        end
+end
+function Mineral()
+	if isNpcOnCell(5,36) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(5,36)
+	elseif isNpcOnCell(23,23) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(23,23)
+	elseif isNpcOnCell(25,19) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(25,19)
+	elseif isNpcOnCell(30,18) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(30,18)
+	elseif isNpcOnCell(34,19) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(34,19)
+	elseif isNpcOnCell(37,20) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(37,20)
+	elseif isNpcOnCell(40,21) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(40,21)
+	elseif isNpcOnCell(42,28) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(42,28)
+	elseif isNpcOnCell(37,30) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(37,30)
+	elseif isNpcOnCell(34,32) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(34,32)
+	elseif isNpcOnCell(33,27) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(33,27)
+	elseif isNpcOnCell(29,31) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(29,31)
+	elseif isNpcOnCell(32,8) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(32,8)
+	elseif isNpcOnCell(29,7) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(29,7)
+	elseif isNpcOnCell(26,8) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(26,8)
+	elseif isNpcOnCell(22,10) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(22,10)
+	elseif isNpcOnCell(17,14) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(17,14)
+	elseif isNpcOnCell(14,15) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(14,15)
+	elseif isNpcOnCell(14,15) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(14,15)
+	else
+		log("--- "..getMapName().." cleared... Moving to next site")
+		moveToCell(9,6)                             --Done Site
+        	ex = ex + 1
+        end
+end
+function Historical()
+	if isNpcOnCell(5,36) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(5,36)
+	elseif isNpcOnCell(23,23) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(23,23)
+	elseif isNpcOnCell(25,19) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(25,19)
+	elseif isNpcOnCell(30,18) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(30,18)
+	elseif isNpcOnCell(34,19) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(34,19)
+	elseif isNpcOnCell(37,20) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(37,20)
+	elseif isNpcOnCell(40,21) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(40,21)
+	elseif isNpcOnCell(42,28) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(42,28)
+	elseif isNpcOnCell(37,30) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(37,30)
+	elseif isNpcOnCell(34,32) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(34,32)
+	elseif isNpcOnCell(33,27) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(33,27)
+	elseif isNpcOnCell(29,31) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(29,31)
+	elseif isNpcOnCell(32,8) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(32,8)
+	elseif isNpcOnCell(29,7) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(29,7)
+	elseif isNpcOnCell(26,8) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(26,8)
+	elseif isNpcOnCell(22,10) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(22,10)
+	elseif isNpcOnCell(17,14) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(17,14)
+	elseif isNpcOnCell(14,15) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(14,15)
+	elseif isNpcOnCell(14,15) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(14,15)
+	else
+		log("--- "..getMapName().." cleared... Moving to next site")
+		moveToCell(2,8)                             --Done Site
+        	ex = ex + 1
+        end
+end
+function Haunted()
+	if isNpcOnCell(5,36) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(5,36)
+	elseif isNpcOnCell(23,23) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(23,23)
+	elseif isNpcOnCell(25,19) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(25,19)
+	elseif isNpcOnCell(30,18) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(30,18)
+	elseif isNpcOnCell(34,19) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(34,19)
+	elseif isNpcOnCell(37,20) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(37,20)
+	elseif isNpcOnCell(40,21) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(40,21)
+	elseif isNpcOnCell(42,28) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(42,28)
+	elseif isNpcOnCell(37,30) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(37,30)
+	elseif isNpcOnCell(34,32) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(34,32)
+	elseif isNpcOnCell(33,27) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(33,27)
+	elseif isNpcOnCell(29,31) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(29,31)
+	elseif isNpcOnCell(32,8) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(32,8)
+	elseif isNpcOnCell(29,7) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(29,7)
+	elseif isNpcOnCell(26,8) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(26,8)
+	elseif isNpcOnCell(22,10) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(22,10)
+	elseif isNpcOnCell(17,14) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(17,14)
+	elseif isNpcOnCell(14,15) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(14,15)
+	elseif isNpcOnCell(14,15) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(14,15)
+	else
+		log("--- "..getMapName().." cleared... Moving to next site")
+		moveToCell(3,8)                             --Done Site
+        	ex = ex + 1
+        end
 end
