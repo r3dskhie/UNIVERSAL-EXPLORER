@@ -351,7 +351,7 @@ function Route29()
 		return talkToNpcOnCell(39,17)
 	elseif isNpcOnCell(38,22) then
 	log("---Headbutting tree no."..hbuttcount.." ---")
-		return talkToNpcOnCell(38,22
+		return talkToNpcOnCell(38,22)
 	elseif isNpcOnCell(27,9) then	
 	log("---Headbutting tree no."..hbuttcount.." ---")
 		return talkToNpcOnCell(27,9)
@@ -367,6 +367,7 @@ function Route29()
 	else
 	log("---"..getMapName().." Cleared... Moving to next Map---")
 		moveToMap("Cherrygrove City")
+	end
 end
 function Cherry()
 	if isNpcOnCell(46,7) then			
@@ -643,7 +644,7 @@ function SpokeWell()
 		return talkToNpcOnCell(10,27)	--Dig 11
 	elseif isNpcOnCell(15,25) then	
 		log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
-		return talkToNpcOnCell(15,25))	--Dig 12
+		return talkToNpcOnCell(15,25)	--Dig 12
 	else
 		log("--- No dig spots available! "..getMapName().." Cleared... Moving to next Map---")
 		moveToMap("Slowpoke Well L1")
