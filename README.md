@@ -4,16 +4,16 @@
       - Clear all headbutt trees
       - Clear all digging spots
       - Harvesting Berries
+      - Smashing Excavation Sites
 
 
-+ Kanto Region - 90% done
-      + End point: Digletts Cave Entrance 1
++ Kanto Region - 95% done
 + Love Island - 0% done
-+ Johto Region - 0% done
-+ Mt. Silver - 0% done
-+ Hoenn Excavation Site - 0% done
++ Johto Region - 80% done
++ Mt. Silver - 5% done
++ Hoenn Excavation Site - 100% done
 
 
 # INSTRUCTION:
 
-Copy/Load the Headbutt v3.lua on Headbutt/No Caves/Headbutt v3.lua
+Wait for the official release
