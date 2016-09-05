@@ -647,7 +647,7 @@ function onPathAction()
 			else
 				moveToCell(21,20)		--CELL EXITS
 			end
-		elseif digcount < 21 and getMapName() == "Mt. Moon B1F" then
+		elseif getMapName() == "Mt. Moon B1F" then
 			if x == 3 then
 				moveToCell(43,34)
 			elseif x == 2 then
