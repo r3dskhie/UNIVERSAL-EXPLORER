@@ -28,10 +28,19 @@ sleepmove = "Spore"        --Set/Change the name of the sleep move
 function onStart()
     ex = backupCount
     smash = 1
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--- Note: Always Remember your BACK-UP COUNT in Excavation Site in case the bot DISCONNECTED---")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 end
 function onPause()
-	log(" Debug count: "..ex)
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--- Debug count: "..ex)
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- You smashed "..smash.." fools in all sites!!! ---")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+end
+function onStop()
+
 end
 function IsPokemonOnCaptureList()
     result = false
@@ -79,8 +88,16 @@ function onPathAction()
   elseif isPokemonUsable(1) then
     
     if getMapName() == "Lilycove City" then
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--- We are now in Hoenn Region! ---")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--- Note: Always Remember your BACK-UP COUNT ---")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         moveToMap("Route 121")
     elseif getMapName() == "Route 121" then
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--- Note: Always Remember your BACK-UP COUNT ---")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         if ex == 0 then
             moveToMap("Route 120")      --Move to next Site
         elseif ex == 6 then
@@ -111,6 +128,9 @@ function onPathAction()
     elseif getMapName() == "Natural Site" then
         Natural()
     elseif getMapName() == "Route 119B" then
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--- Note: Always Remember your BACK-UP COUNT ---")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         if ex == 1 then
             moveToMap("Route 118")      --Move to 2nd Site
         elseif ex == 6 then
@@ -129,6 +149,9 @@ function onPathAction()
             moveToMap("Route 118")                     --End
         end
     elseif getMapName() == "Mauville City" then
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--- Note: Always Remember your BACK-UP COUNT ---")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         if ex == 1 then
             moveToMap("Mauville City Stop House 1")     --Move to 2nd Site
         elseif ex == 2 then
@@ -159,6 +182,9 @@ function onPathAction()
     elseif getMapName() == "Glacial Site" then
         Glacial()
     elseif getMapName() == "Mauville City Stop House 3" then
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--- Note: Always Remember your BACK-UP COUNT ---")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         moveToMap("Route 111 South")                --Move to 3rd Site
     elseif getMapName() == "Route 111 South" then
         if ex == 2 then
@@ -199,12 +225,18 @@ function onPathAction()
         	moveToMap("Route 113")                      --Move to 5th Site
 	end
     elseif getMapName() == "Route 113" then
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--- Note: Always Remember your BACK-UP COUNT ---")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         moveToMap("Fallarbor Town")                 --Move to 5th Site
     elseif getMapName() == "Fallarbor Town" then
         moveToMap("Route 114")                      --Move to 5th Site
     elseif getMapName() == "Route 114" then
         moveToMap("Meteor Falls 1F 1R")             --Move to 5th Site
     elseif getMapName() == "Meteor falls 1F 1R" then
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--- Note: Always Remember your BACK-UP COUNT ---")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         moveToMap("Route 115")                      --Move to 5th Site
     elseif getMapName() == "Route 115" then
         if ex == 4 then
