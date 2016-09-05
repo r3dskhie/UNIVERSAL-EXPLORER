@@ -1,13 +1,13 @@
 
         backupCount = 0
-	mount = "Arcanine Mount"
+	mount = "Bicycle"
 	
 digger = 4
 butter = 5
 
 catchUncaught = true		--set to true if you want to catch uncaught pokes else false
 catchShiny = true		--set to true if you want to catch encountered shiny's else false
-catchList = {"Golett", "Gligar", "Aron", "Beldum", "Mawile", "Absol", "Pawniard", "Litleo", "Vanillite", "Skorupi", "Trapinch", "Ferroseed", "Sawk", "Throh", "Timburr"}
+catchList = {"Golett", "Gligar", "Noibat", "Aron", "Beldum", "Mawile", "Absol", "Pawniard", "Litleo", "Vanillite", "Skorupi", "Trapinch", "Ferroseed", "Sawk", "Throh", "Timburr"}
 
 normalCatchOn = false        --Directly throw pokeballs on hunted pokemons
 fswipeOn = true       --Switch to pokemon with false swipe, use false swipe until the hunted pokes hp is reach to 1 then throw pokeballs
@@ -27,11 +27,11 @@ sleepmove = "Spore"        --Set/Change the name of the sleep move
 
 function onStart()
     ex = backupCount
-    smash = 0
+    smash = 1
 end
 function onPause()
 	log(" Debug count: "..ex)
-	log("--- You smashed "..smash.. " fools in all sites!!! ---")
+	log("--- You smashed "..smash.." fools in all sites!!! ---")
 end
 function IsPokemonOnCaptureList()
     result = false
@@ -242,480 +242,638 @@ function onPathAction()
 end
 function Natural()
 	if isNpcOnCell(4,8) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(4,8)
+
+		 talkToNpcOnCell(4,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(7,6) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(7,6)
+	
+		 talkToNpcOnCell(7,6)
+		smash = smash + 1/2
 	elseif isNpcOnCell(11,4) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(11,4)
+	
+		 talkToNpcOnCell(11,4)
+		smash = smash + 1/2
 	elseif isNpcOnCell(12,3) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(12,3)
+	
+		 talkToNpcOnCell(12,3)
+		smash = smash + 1/2
 	elseif isNpcOnCell(14,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(14,5)
+	
+		 talkToNpcOnCell(14,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(17,1) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(17,1)
+	
+		 talkToNpcOnCell(17,1)
+		smash = smash + 1/2
 	elseif isNpcOnCell(16,2) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(16,2)
+	
+		 talkToNpcOnCell(16,2)
+		smash = smash + 1/2
 	elseif isNpcOnCell(18,3) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(18,3)
+	
+		 talkToNpcOnCell(18,3)
+		smash = smash + 1/2
 	elseif isNpcOnCell(16,8) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(16,8)
+	
+		 talkToNpcOnCell(16,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(20,5) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(20,5)
+	
+		 talkToNpcOnCell(20,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(22,7) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(22,7)
+	
+		 talkToNpcOnCell(22,7)
+		smash = smash + 1/2
 	elseif isNpcOnCell(22,4) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(22,4)
+	
+		 talkToNpcOnCell(22,4)
+		smash = smash + 1/2
 	elseif isNpcOnCell(20,10) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(20,10)
+	
+		 talkToNpcOnCell(20,10)
+		smash = smash + 1/2
 	elseif isNpcOnCell(20,15) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(20,15)
+	
+		 talkToNpcOnCell(20,15)
+		smash = smash + 1/2
 	elseif isNpcOnCell(15,13) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(15,13)
+	
+		 talkToNpcOnCell(15,13)
+		smash = smash + 1/2
 	elseif isNpcOnCell(12,17) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(12,17)
+	
+		 talkToNpcOnCell(12,17)
+		smash = smash + 1/2
 	elseif isNpcOnCell(7,17) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(7,17)
+	
+		 talkToNpcOnCell(7,17)
+		smash = smash + 1/2
 	elseif isNpcOnCell(6,11) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(6,11)
+	
+		 talkToNpcOnCell(6,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(4,11) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(4,11)
+	
+		 talkToNpcOnCell(4,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(16,17) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(16,17)
+	
+		 talkToNpcOnCell(16,17)
+		smash = smash + 1/2
 	elseif isNpcOnCell(17,14) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(17,14)
+	
+		 talkToNpcOnCell(17,14)
+		smash = smash + 1/2
 	elseif isNpcOnCell(18,16) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(18,16)
+	
+		 talkToNpcOnCell(18,16)
+		smash = smash + 1/2
 	elseif isNpcOnCell(24,18) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(24,18)
+	
+		 talkToNpcOnCell(24,18)
+		smash = smash + 1/2
+	
 	elseif isNpcOnCell(24,16) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(24,16)
+	
+		 talkToNpcOnCell(24,16)
+		smash = smash + 1/2
+		
+	
 	else
 		log("--- "..getMapName().." cleared... Moving to next site")
+		log("--- Current number of smashed "..smash)
 		moveToCell(6,7)             --Done Site
         	ex = ex + 1
         end
 end
 function Glacial()
 	if isNpcOnCell(2,11) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(2,11)
+	
+		 talkToNpcOnCell(2,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(3,13) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(3,13)
+	
+		 talkToNpcOnCell(3,13)
+		smash = smash + 1/2
 	elseif isNpcOnCell(8,3) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(8,3)
+	
+		 talkToNpcOnCell(8,3)
+		smash = smash + 1/2
 	elseif isNpcOnCell(12,4) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(12,4)
+	
+		 talkToNpcOnCell(12,4)
+		smash = smash + 1/2
 	elseif isNpcOnCell(14,1) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(14,1)
+	
+		 talkToNpcOnCell(14,1)
+		smash = smash + 1/2
 	elseif isNpcOnCell(19,1) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(19,1)
+	
+		 talkToNpcOnCell(19,1)
+		smash = smash + 1/2
 	elseif isNpcOnCell(18,3) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(18,3)
+	
+		 talkToNpcOnCell(18,3)
+		smash = smash + 1/2
 	elseif isNpcOnCell(21,4) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(21,4)
+	
+		 talkToNpcOnCell(21,4)
+		smash = smash + 1/2
 	elseif isNpcOnCell(21,8) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(21,8)
+	
+		 talkToNpcOnCell(21,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(17,9) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(17,9)
+	
+		 talkToNpcOnCell(17,9)
+		smash = smash + 1/2
 	elseif isNpcOnCell(23,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(23,5)
+	
+		 talkToNpcOnCell(23,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(25,4) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(25,4)
+	
+		 talkToNpcOnCell(25,4)
+		smash = smash + 1/2
 	elseif isNpcOnCell(25,1) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(25,1)
+	
+		 talkToNpcOnCell(25,1)
+		smash = smash + 1/2
 	elseif isNpcOnCell(19,14) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(19,14)
+	
+		 talkToNpcOnCell(19,14)
+		smash = smash + 1/2
 	elseif isNpcOnCell(20,16) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(20,16)
+	
+		 talkToNpcOnCell(20,16)
+		smash = smash + 1/2
 	elseif isNpcOnCell(25,11) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(25,11)
+	
+		 talkToNpcOnCell(25,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(19,17) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(19,17)
+	
+		 talkToNpcOnCell(19,17)
+		smash = smash + 1/2
 	elseif isNpcOnCell(10,18) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(10,18)
+	
+		 talkToNpcOnCell(10,18)
+		smash = smash + 1/2
 	elseif isNpcOnCell(9,16) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(9,16)
+	
+		 talkToNpcOnCell(9,16)
+		smash = smash + 1/2
 	elseif isNpcOnCell(4,18) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(4,18)
+	
+		 talkToNpcOnCell(4,18)
+		smash = smash + 1/2
 	elseif isNpcOnCell(15,14) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(15,14)
+	
+		 talkToNpcOnCell(15,14)
+		smash = smash + 1/2
 	elseif isNpcOnCell(13,16) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(13,16)
+	
+		 talkToNpcOnCell(13,16)
+		smash = smash + 1/2
 	elseif isNpcOnCell(13,11) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(13,11)
+	
+		 talkToNpcOnCell(13,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(8,14) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(8,14)
+	
+		 talkToNpcOnCell(8,14)
+		smash = smash + 1/2
 	else
 		log("--- "..getMapName().." cleared... Moving to next site")
+		log("--- Current number of smashed "..smash)
 		moveToCell(5,5)                             --Done Site
         	ex = ex + 1
         end
 end
 function Feral()
 	if isNpcOnCell(3,7) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(3,7)
+	
+		 talkToNpcOnCell(3,7)
+		smash = smash + 1/2
 	elseif isNpcOnCell(4,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(4,5)
+	
+		 talkToNpcOnCell(4,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(6,12) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(6,12)
+	
+		 talkToNpcOnCell(6,12)
+		smash = smash + 1/2
 	elseif isNpcOnCell(3,16) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(3,16)
+	
+		 talkToNpcOnCell(3,16)
+		smash = smash + 1/2
 	elseif isNpcOnCell(11,11) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(11,11)
+	
+		 talkToNpcOnCell(11,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(1,16) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(1,16)
+		
+		 return talkToNpcOnCell(1,16) or moveToCell(8,15)
+		
 	elseif isNpcOnCell(2,18) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(2,18)
+	
+		 talkToNpcOnCell(2,18)
+		smash = smash + 1/2
 	elseif isNpcOnCell(12,17) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(12,17)
+	
+		 talkToNpcOnCell(12,17)
+		smash = smash + 1/2
 	elseif isNpcOnCell(15,17) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(15,17)
+	
+		 talkToNpcOnCell(15,17)
+		smash = smash + 1/2
 	elseif isNpcOnCell(18,15) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(18,15)
+	
+		 talkToNpcOnCell(18,15)
+		smash = smash + 1/2
 	elseif isNpcOnCell(25,18) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(25,18)
+	
+		 talkToNpcOnCell(25,18)
+		smash = smash + 1/2
 	elseif isNpcOnCell(15,15) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(15,15)
+	
+		 return talkToNpcOnCell(15,15) or moveToCell(8,17)
+		
 	elseif isNpcOnCell(21,15) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(21,15)
+	
+		 talkToNpcOnCell(21,15)
+		smash = smash + 1/2
 	elseif isNpcOnCell(22,16) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(22,16)
+	
+		 talkToNpcOnCell(22,16)
+		smash = smash + 1/2
 	elseif isNpcOnCell(24,14) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(24,14)
+	
+		 talkToNpcOnCell(24,14)
+		smash = smash + 1/2
 	elseif isNpcOnCell(22,11) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(22,11)
+	
+		 talkToNpcOnCell(22,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(21,8) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(21,8)
+	
+		 talkToNpcOnCell(21,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(21,6) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(21,6)
+	
+		 talkToNpcOnCell(21,6)
+		smash = smash + 1/2
 	elseif isNpcOnCell(19,4) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(19,4)
+	
+		 talkToNpcOnCell(19,4)
+		smash = smash + 1/2
 	elseif isNpcOnCell(18,4) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(18,4)
+	
+		 talkToNpcOnCell(18,4)
+		smash = smash + 1/2
 	elseif isNpcOnCell(7,1) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(7,1)
+	
+		 talkToNpcOnCell(7,1)
+		smash = smash + 1/2
 	elseif isNpcOnCell(12,3) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(12,3)
+	
+		 talkToNpcOnCell(12,3)
+		smash = smash + 1/2
 	elseif isNpcOnCell(12,2) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(12,2)
+	
+		 talkToNpcOnCell(12,2)
+		smash = smash + 1/2
 	elseif isNpcOnCell(6,4) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(6,4)
+	
+		 talkToNpcOnCell(6,4)
+		smash = smash + 1/2
 	elseif isNpcOnCell(9,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(9,5)
+	
+		 talkToNpcOnCell(9,5)
+		smash = smash + 1/2
 	else
 		log("--- "..getMapName().." cleared... Moving to next site")
+		log("--- Current number of smashed "..smash)
 		moveToCell(5,7)                             --Done Site
         	ex = ex + 1
         end
 end
 function Mineral()
 	if isNpcOnCell(7,7) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(7,7)
+	
+		 talkToNpcOnCell(7,7)
+		smash = smash + 1/2
 	elseif isNpcOnCell(9,8) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(9,8)
+	
+		 talkToNpcOnCell(9,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(5,9) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(5,9)
+	
+		 talkToNpcOnCell(5,9)
+		smash = smash + 1/2
 	elseif isNpcOnCell(7,10) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(7,10)
+	
+		 talkToNpcOnCell(7,10)
+		smash = smash + 1/2
 	elseif isNpcOnCell(3,11) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(3,11)
+	
+		 talkToNpcOnCell(3,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(5,13) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(5,13)
+	
+		 talkToNpcOnCell(5,13)
+		smash = smash + 1/2
 	elseif isNpcOnCell(3,16) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(3,16)
+	
+		 talkToNpcOnCell(3,16)
+		smash = smash + 1/2
 	elseif isNpcOnCell(11,11) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(11,11)
+	
+		 talkToNpcOnCell(11,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(10,13) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(10,13)
+	
+		 talkToNpcOnCell(10,13)
+		smash = smash + 1/2
 	elseif isNpcOnCell(15,12) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(15,12)
+	
+		 talkToNpcOnCell(15,12)
+		smash = smash + 1/2
 	elseif isNpcOnCell(14,15) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(14,15)
+	
+		 talkToNpcOnCell(14,15)
+		smash = smash + 1/2
 	elseif isNpcOnCell(5,17) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(5,17)
+	
+		 return talkToNpcOnCell(5,17) or moveToCell(11,15)
+		
 	elseif isNpcOnCell(6,18) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(6,18)
+	
+		 talkToNpcOnCell(6,18)
+		smash = smash + 1/2
 	elseif isNpcOnCell(8,18) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(8,18)
+	
+		 talkToNpcOnCell(8,18)
+		smash = smash + 1/2
 	elseif isNpcOnCell(25,16) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(25,16)
+	
+		 talkToNpcOnCell(25,16)
+		smash = smash + 1/2
 	elseif isNpcOnCell(23,18) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(23,18)
+	
+		 talkToNpcOnCell(23,18)
+		smash = smash + 1/2
 	elseif isNpcOnCell(20,18) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(20,18)
+	
+		 talkToNpcOnCell(20,18)
+		smash = smash + 1/2
 	elseif isNpcOnCell(23,11) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(23,11)
+	
+		 return talkToNpcOnCell(23,11) or moveToCell(11,17)
+		
 	elseif isNpcOnCell(23,7) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(23,7)
+	
+		 talkToNpcOnCell(23,7)
+		smash = smash + 1/2
 	elseif isNpcOnCell(22,6) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(22,6)
+	
+		 talkToNpcOnCell(22,6)
+		smash = smash + 1/2
 	elseif isNpcOnCell(7,3) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(7,3)
+	
+		 talkToNpcOnCell(7,3)
+		smash = smash + 1/2
 	elseif isNpcOnCell(21,2) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(21,2)
+	
+		 talkToNpcOnCell(21,2)
+		smash = smash + 1/2
 	elseif isNpcOnCell(20,2) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(20,2)
+	
+		 talkToNpcOnCell(20,2)
+		smash = smash + 1/2
 	elseif isNpcOnCell(11,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(11,5)
+	
+		 talkToNpcOnCell(11,5)
+		smash = smash + 1/2
 	else
 		log("--- "..getMapName().." cleared... Moving to next site")
+		log("--- Current number of smashed "..smash)
 		moveToCell(9,6)                             --Done Site
         	ex = ex + 1
         end
 end
 function Historical()
 	if isNpcOnCell(8,8) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(8,8)
+	
+		 talkToNpcOnCell(8,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(9,7) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(9,7)
+	
+		 talkToNpcOnCell(9,7)
+		smash = smash + 1/2
 	elseif isNpcOnCell(10,6) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(10,6)
+	
+		 talkToNpcOnCell(10,6)
+		smash = smash + 1/2
 	elseif isNpcOnCell(12,6) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(12,6)
+	
+		 talkToNpcOnCell(12,6)
+		smash = smash + 1/2
 	elseif isNpcOnCell(14,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(14,5)
+	
+		 talkToNpcOnCell(14,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(16,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(16,5)
+	
+		 talkToNpcOnCell(16,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(17,5) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(17,5)
+	
+		 talkToNpcOnCell(17,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(19,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(19,5)
+	
+		 talkToNpcOnCell(19,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(21,6) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(21,6)
+	
+		 talkToNpcOnCell(21,6)
+		smash = smash + 1/2
 	elseif isNpcOnCell(23,1) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(23,1)
+	
+		 talkToNpcOnCell(23,1)
+		smash = smash + 1/2
 	elseif isNpcOnCell(23,2) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(23,2)
+	
+		 talkToNpcOnCell(23,2)
+		smash = smash + 1/2
 	elseif isNpcOnCell(21,2) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(21,2)
+	
+		 talkToNpcOnCell(21,2) 
+		smash = smash + 1/2
 	elseif isNpcOnCell(22,17) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(22,17)
+	
+		 return talkToNpcOnCell(22,17) or moveToCell(21,14)
+		
 	elseif isNpcOnCell(19,17) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(19,17)
+	
+		 talkToNpcOnCell(19,17)
+		smash = smash + 1/2
 	elseif isNpcOnCell(17,13) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(17,13)
+	
+		 return talkToNpcOnCell(17,13) or moveToCell(20,15)
 	elseif isNpcOnCell(15,13) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(15,13)
+	
+		 talkToNpcOnCell(15,13)
+		smash = smash + 1/2
 	elseif isNpcOnCell(13,14) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(13,14)
+	
+		 talkToNpcOnCell(13,14)
+		smash = smash + 1/2
 	elseif isNpcOnCell(11,14) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(11,14)
+	
+		 talkToNpcOnCell(11,14)
+		smash = smash + 1/2
 	elseif isNpcOnCell(10,15) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(10,15)
+	
+		 talkToNpcOnCell(10,15)
+		smash = smash + 1/2
 	elseif isNpcOnCell(8,15) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(8,15)
+	
+		 talkToNpcOnCell(8,15)
+		smash = smash + 1/2
 	elseif isNpcOnCell(5,15) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(5,15)
-	elseif isNpcOnCell(6,12) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(6,12)
+	
+		 talkToNpcOnCell(5,15)
+		smash = smash + 1/2
+	
 	elseif isNpcOnCell(3,15) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(3,15)
+	
+		 return talkToNpcOnCell(3,15) or moveToCell(2,12)
+		
 	elseif isNpcOnCell(1,16) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(1,16)
+	
+		  talkToNpcOnCell(1,16)
+		smash = smash + 1/2
+	elseif isNpcOnCell(6,12) then		
+	
+		 return talkToNpcOnCell(6,12) or moveToCell(2,14)
+		
+
 	else
+		
 		log("--- "..getMapName().." cleared... Moving to next site")
-		moveToCell(2,8)                             --Done Site
-        	ex = ex + 1
+		log("--- Current number of smashed "..smash)
+		moveToCell(2,8)                              --Done Site
+		ex = ex + 1
+        	
         end
 end
 function Haunted()
 	if isNpcOnCell(1,8) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(1,8)
+	
+		 talkToNpcOnCell(1,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(2,11) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(2,11)
+	
+		 talkToNpcOnCell(2,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(4,16) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(4,16)
+	
+		 talkToNpcOnCell(4,16)
+		smash = smash + 1/2
 	elseif isNpcOnCell(9,14) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(9,14)
+	
+		 talkToNpcOnCell(9,14)
+		smash = smash + 1/2
 	elseif isNpcOnCell(11,14) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(11,14)
+	
+		 talkToNpcOnCell(11,14)
+		smash = smash + 1/2
 	elseif isNpcOnCell(15,14) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(15,14)
+	
+		 talkToNpcOnCell(15,14)
+		smash = smash + 1/2
 	elseif isNpcOnCell(17,14) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(17,14)
+	
+		 talkToNpcOnCell(17,14)
+		smash = smash + 1/2
 	elseif isNpcOnCell(21,14) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(21,14)
+	
+		 talkToNpcOnCell(21,14)
+		smash = smash + 1/2
 	elseif isNpcOnCell(20,11) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(20,11)
+	
+		 talkToNpcOnCell(20,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(16,11) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(16,11)
+	
+		 talkToNpcOnCell(16,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(14,11) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(14,11)
+	
+		 talkToNpcOnCell(14,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(12,11) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(12,11)
+	
+		 talkToNpcOnCell(12,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(8,11) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(8,11)
+	
+		 talkToNpcOnCell(8,11)
+		smash = smash + 1/2
 	elseif isNpcOnCell(7,8) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(7,8)
+	
+		 talkToNpcOnCell(7,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(9,8) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(9,8)
+	
+		 talkToNpcOnCell(9,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(11,8) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(11,8)
+	
+		 talkToNpcOnCell(11,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(13,8) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(13,8)
+	
+		 talkToNpcOnCell(13,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(15,8) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(15,8)
+	
+		 talkToNpcOnCell(15,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(17,8) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(17,8)
+	
+		 talkToNpcOnCell(17,8)
+		smash = smash + 1/2
 	elseif isNpcOnCell(16,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(16,5)
+	
+		 talkToNpcOnCell(16,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(14,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(14,5)
+	
+		 talkToNpcOnCell(14,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(12,5) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(12,5)
+	
+		 talkToNpcOnCell(12,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(8,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(8,5)
+	
+		 talkToNpcOnCell(8,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(6,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(6,5)
+	
+		 talkToNpcOnCell(6,5)
+		smash = smash + 1/2
 	elseif isNpcOnCell(4,5) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(4,5)
+	
+		 talkToNpcOnCell(4,5)
+		smash = smash + 1/2
 	else
 		log("--- "..getMapName().." cleared... Moving to next site")
+		log("--- Current number of smashed "..smash)
 		moveToCell(3,8)                             --Done Site
         	ex = ex + 1
         end
