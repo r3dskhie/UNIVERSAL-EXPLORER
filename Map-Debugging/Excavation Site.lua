@@ -30,6 +30,7 @@ function onStart()
     smash = 1
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- Note: Always Remember your BACK-UP COUNT in Excavation Site in case the bot DISCONNECTED---")
+	log("--- Enter your BACK-UP COUNT if your disconnected in the middle of Hunting Sites ---")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 end
 function onPause()
