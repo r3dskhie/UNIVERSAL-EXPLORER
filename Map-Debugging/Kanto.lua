@@ -1,37 +1,38 @@
-		--CONFIGURATION...
-		digger = 4	--Index of a pokemon with dig
-		butter = 5	--Index of a pokemon with headbutt
-		mount = "Bicycle"	--Set the name of the mount
-		MtMoon = true		--Set this to true if you want to digs in mt. moon --4 days cooldown per dig
-		
-	--WARNING!!! So many bugs at the moment
-	--This is just a test
-	--Please report your encountered bugs at Proshine Forum Thread
 
-name = "Cool Script"
+
+name = "Super Saiyan 2"
 author = "--redskhie--"
 description = [[---This script will hunt for trees, dig spots and many more!---]]
+
+dofile "Config.lua"
 
 function onStart()
 	digcount = 0
 	hbuttcount = 0
 	pc = 0
 	x = 3
+	log("-----------------------------------------------------------")
+	log("--------- We are now Commencing the Routine ---------")
+	log("-----------------------------------------------------------")
 
 end
 function onPause()
-	log("Debugging... Checking logs")
+	log("-----------------------------------------------------------")
+	log("---------------------- Routine Paused ---------------------")
+	log("-----------------------------------------------------------")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("Headbutt count: "..hbuttcount)
 	log("Dig count: "..digcount)
-	log("Map name: "..getMapName())
-	log("Y B1F count: "..y)
-	log("PC : " ..pc)
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 end
 function onStop()
-	log("ERROR! Checking logs")
-	log("--- "..getMapName().. ", Dig count: "..digcount)
+	log("-----------------------------------------------------------")
+	log("---------------------- Routine Stopped ---------------------")
+	log("-----------------------------------------------------------")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("Headbutt count: "..hbuttcount)
-	log("Y B1F count: "..y)
+	log("Dig count: "..digcount)
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 end
 function onDialogMessage(message)
