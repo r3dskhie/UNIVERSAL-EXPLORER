@@ -1,27 +1,11 @@
 
 
-mount = "Arcanine Mount"
-digger = 4
-butter = 5
 
-catchUncaught = true		--set to true if you want to catch uncaught pokes else false
-catchShiny = true		--set to true if you want to catch encountered shiny's else false
-catchList = {"Golett", "Gligar", "Aron", "Beldum", "Mawile", "Absol", "Pawniard", "Litleo", "Vanillite", "Skorupi", "Trapinch", "Ferroseed", "Sawk", "Throh", "Timburr"}
+name = "Super Saiyan Blue"
+author = "--redskhie--"
+description = [[---This script will hunt for trees, dig spots and many more!---]]
 
-normalCatchOn = false        --Directly throw pokeballs on hunted pokemons
-fswipeOn = true       --Switch to pokemon with false swipe, use false swipe until the hunted pokes hp is reach to 1 then throw pokeballs
-sleepOn = false            --Switch to pokemon with sleep move, use sleep move until the hunted pokes status is SLEEPING then throw pokeballs
-advanceCatchOn = false        --Use fswipeOn and sleepOn to catch hunted pokes
-
-falseswiper = 2            --Index of pokemon with false swipe
-fswipeHP = 10            --Returns the health percent of the false swiper, then heal to PC
-weakmove = "False Swipe"    --False Swipe move
-
-sleeper = 6            --Index of pokemon with sleep move
-sleeperHP = 10            --Returns the health percent of the false swiper, then heal to PC
-sleepmove = "Spore"        --Set/Change the name of the sleep move
-
-
+dofile "Config.lua"
 
 function onStart() 
 	digcount = 0
@@ -34,7 +18,13 @@ function onStart()
 end
 
 function onPause()
-	log("b"..b)
+	log("-----------------------------------------------------------")
+	log("---------------------- Routine Paused ---------------------")
+	log("-----------------------------------------------------------")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("Headbutt count: "..hbuttcount)
+	log("Dig count: "..digcount)
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 end
 function IsPokemonOnCaptureList()
