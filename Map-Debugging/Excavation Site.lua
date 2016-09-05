@@ -587,61 +587,79 @@ end
 function Haunted()
 	if isNpcOnCell(1,8) then	
 	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(5,36)
-	elseif isNpcOnCell(23,23) then		
+		return talkToNpcOnCell(1,8)
+	elseif isNpcOnCell(2,11) then		
 	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(23,23)
-	elseif isNpcOnCell(25,19) then		
+		return talkToNpcOnCell(2,11)
+	elseif isNpcOnCell(4,16) then		
 	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(25,19)
-	elseif isNpcOnCell(30,18) then			
+		return talkToNpcOnCell(4,16)
+	elseif isNpcOnCell(9,14) then			
 	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(30,18)
-	elseif isNpcOnCell(34,19) then		
+		return talkToNpcOnCell(9,14)
+	elseif isNpcOnCell(11,14) then		
 	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(34,19)
-	elseif isNpcOnCell(37,20) then		
+		return talkToNpcOnCell(11,14)
+	elseif isNpcOnCell(15,14) then		
 	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(37,20)
-	elseif isNpcOnCell(40,21) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(40,21)
-	elseif isNpcOnCell(42,28) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(42,28)
-	elseif isNpcOnCell(37,30) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(37,30)
-	elseif isNpcOnCell(34,32) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(34,32)
-	elseif isNpcOnCell(33,27) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(33,27)
-	elseif isNpcOnCell(29,31) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(29,31)
-	elseif isNpcOnCell(32,8) then	
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(32,8)
-	elseif isNpcOnCell(29,7) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(29,7)
-	elseif isNpcOnCell(26,8) then		
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(26,8)
-	elseif isNpcOnCell(22,10) then			
-	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(22,10)
-	elseif isNpcOnCell(17,14) then		
+		return talkToNpcOnCell(15,14)
+	elseif isNpcOnCell(17,14) then	
 	log("---Smashing no."..smash.." ---")
 		return talkToNpcOnCell(17,14)
-	elseif isNpcOnCell(14,15) then		
+	elseif isNpcOnCell(21,14) then		
 	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(14,15)
-	elseif isNpcOnCell(14,15) then		
+		return talkToNpcOnCell(21,14)
+	elseif isNpcOnCell(20,11) then		
 	log("---Smashing no."..smash.." ---")
-		return talkToNpcOnCell(14,15)
+		return talkToNpcOnCell(20,11)
+	elseif isNpcOnCell(16,11) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(16,11)
+	elseif isNpcOnCell(14,11) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(14,11)
+	elseif isNpcOnCell(12,11) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(12,11)
+	elseif isNpcOnCell(8,11) then	
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(8,11)
+	elseif isNpcOnCell(7,8) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(7,8)
+	elseif isNpcOnCell(9,8) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(9,8)
+	elseif isNpcOnCell(11,8) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(11,8)
+	elseif isNpcOnCell(13,8) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(13,8)
+	elseif isNpcOnCell(15,8) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(15,8)
+	elseif isNpcOnCell(17,8) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(17,8)
+	elseif isNpcOnCell(16,5) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(16,5)
+	elseif isNpcOnCell(14,5) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(14,5)
+	elseif isNpcOnCell(12,5) then			
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(12,5)
+	elseif isNpcOnCell(8,5) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(8,5)
+	elseif isNpcOnCell(6,5) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(6,5)
+	elseif isNpcOnCell(4,5) then		
+	log("---Smashing no."..smash.." ---")
+		return talkToNpcOnCell(4,5)
 	else
 		log("--- "..getMapName().." cleared... Moving to next site")
 		moveToCell(3,8)                             --Done Site
