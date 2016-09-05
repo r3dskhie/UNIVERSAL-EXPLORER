@@ -661,7 +661,7 @@ function onPathAction()
 				else
 					x = x -1
 					log("--- Mt. Moon cleared! Moving to next map ---")
-					return moveToCell(44,30)  or moveToCell(17,27)	--GOING BACK to 1F to Exit
+					return moveToCell(44,30)  or moveToCell(17,27) or moveToCell(30,54)	--GOING BACK to 1F to Exit
 					
 				end
 		elseif getMapName() == "Mt. Moon Exit" then
