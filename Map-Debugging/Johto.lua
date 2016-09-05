@@ -646,39 +646,39 @@ function Ilex()
 	elseif isNpcOnCell(40,21) then	
 	log("---Headbutting tree no."..hbuttcount.." ---")
 		return talkToNpcOnCell(40,21)
-	elseif isNpcOnCell(31,13) then		
+	elseif isNpcOnCell(42,28) then		
 	log("---Headbutting tree no."..hbuttcount.." ---")
-		return talkToNpcOnCell(31,13)
-	elseif isNpcOnCell(31,25) then		
+		return talkToNpcOnCell(42,28)
+	elseif isNpcOnCell(37,30) then		
 	log("---Headbutting tree no."..hbuttcount.." ---")
-		return talkToNpcOnCell(31,25)
-	elseif isNpcOnCell(31,31) then			
+		return talkToNpcOnCell(37,30)
+	elseif isNpcOnCell(34,32) then			
 	log("---Headbutting tree no."..hbuttcount.." ---")
-		return talkToNpcOnCell(31,31)
-	elseif isNpcOnCell(12,20) then		
+		return talkToNpcOnCell(34,32)
+	elseif isNpcOnCell(33,27) then		
 	log("---Headbutting tree no."..hbuttcount.." ---")
-		return talkToNpcOnCell(12,20)
-	elseif isNpcOnCell(8,10) then		
+		return talkToNpcOnCell(33,27)
+	elseif isNpcOnCell(29,31) then		
 	log("---Headbutting tree no."..hbuttcount.." ---")
-		return talkToNpcOnCell(8,10)
-	elseif isNpcOnCell(51,25) then	
+		return talkToNpcOnCell(29,31)
+	elseif isNpcOnCell(32,8) then	
 	log("---Headbutting tree no."..hbuttcount.." ---")
-		return talkToNpcOnCell(51,25)
-	elseif isNpcOnCell(31,13) then		
+		return talkToNpcOnCell(32,8)
+	elseif isNpcOnCell(29,7) then		
 	log("---Headbutting tree no."..hbuttcount.." ---")
-		return talkToNpcOnCell(31,13)
-	elseif isNpcOnCell(31,25) then		
+		return talkToNpcOnCell(29,7)
+	elseif isNpcOnCell(26,8) then		
 	log("---Headbutting tree no."..hbuttcount.." ---")
-		return talkToNpcOnCell(31,25)
-	elseif isNpcOnCell(31,31) then			
+		return talkToNpcOnCell(26,8)
+	elseif isNpcOnCell(22,10) then			
 	log("---Headbutting tree no."..hbuttcount.." ---")
-		return talkToNpcOnCell(31,31)
-	elseif isNpcOnCell(12,20) then		
+		return talkToNpcOnCell(22,10)
+	elseif isNpcOnCell(17,14) then		
 	log("---Headbutting tree no."..hbuttcount.." ---")
-		return talkToNpcOnCell(12,20)
-	elseif isNpcOnCell(8,10) then		
+		return talkToNpcOnCell(17,14)
+	elseif isNpcOnCell(14,15) then		
 	log("---Headbutting tree no."..hbuttcount.." ---")
-		return talkToNpcOnCell(8,10)
+		return talkToNpcOnCell(14,15)
 	else
 		log("---"..getMapName().." Cleared... Moving to next Map---")
 		moveToMap("Route 34 Stop House")
