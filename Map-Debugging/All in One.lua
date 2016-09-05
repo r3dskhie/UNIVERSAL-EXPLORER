@@ -1,12 +1,25 @@
-
-        backupCount = 0
-	mount = "Bicycle"
+				
+				-- Copyright © 2016 redskhie 
+				-- Official github link:
+				-- Official PROShine thread: https://proshine-bot.com/thread-1246.html
+				-- Contact me at discord nickname: Redd
+			
+			
+				
+        backupCount = 0		--Do not touch this if you're not in Hoenn Region
+        			--Always Remember Back Up Count when Doing Excavation Sites
+        			--Enter your Back Up Count if you are DISCONNECTED in the middle of the Excavation Sites
+        			
+        			
+	mount = "Bicycle"	--Choose what kind of Mount you want to use, I suggest you to use any kind of mount for faster routine
+	
+	
 	
 digger = 4		--Set the index number of Pokemon with digs
 butter = 5		--Set the index number of Pokemon with headbutt
 
 
-	MtMoon == false		--Set this to false if the dig spots are on cooldown to not encounter an error
+	MtMoon == false		--Set this to false if the dig spots are on cooldown to not encounter an error on MT. MOON
 
 
 
@@ -16,10 +29,15 @@ butter = 5		--Set the index number of Pokemon with headbutt
 		
 catchUncaught = true		--set to true if you want to catch uncaught pokes else false
 catchShiny = true		--set to true if you want to catch encountered shiny's else false
+
+		--Add names of the pokemon you want to catch if not on this list
+		--REMEMBER that pokemon names are sensitive
 catchList = {"Starly", "Fletchling", "Chimchar", "Scyther", "Murkrow", "Staravia", "Turtwig", "Venipede", "Fletchinder", "Rufflet", "Golett", "Gligar", "Noibat", "Aron", "Beldum", "Mawile", "Absol", "Pawniard", "Litleo", "Vanillite", "Skorupi", "Trapinch", "Ferroseed", "Sawk", "Throh", "Timburr"}
 
-normalCatchOn = false        --Directly throw pokeballs on hunted pokemons
-fswipeOn = true       --Switch to pokemon with false swipe, use false swipe until the hunted pokes hp is reach to 1 then throw pokeballs
+		--PLEASE SET TO normal catch if you're not using Synchronize pokemon
+		
+normalCatchOn =true        --Directly throw pokeballs on hunted pokemons
+fswipeOn = false       --Switch to pokemon with false swipe, use false swipe until the hunted pokes hp is reach to 1 then throw pokeballs
 sleepOn = false            --Switch to pokemon with sleep move, use sleep move until the hunted pokes status is SLEEPING then throw pokeballs
 advanceCatchOn = false        --Use fswipeOn and sleepOn to catch hunted pokes
 
@@ -34,7 +52,25 @@ sleepmove = "Spore"        --Set/Change the name of the sleep move
 
 
 
+			-- Copyright © 2016 redskhie 
+				-- Official github link:
+				-- Official PROShine thread: https://proshine-bot.com/thread-1246.html
+				-- Contact me at discord nickname: Redd
+				
+				
+				
+
+name = "Universal Effort Value Trainer"
+author = "redskhie"
+description = [[EV Training]]
+
+dofile "Config.lua"
+
 function onStart()
+	startime = os.time()
+	shinycount = 0
+	pcCount = 0
+	wildcount = 0
     ex = backupCount
     	digcount = 0
 	hbuttcount = 0
@@ -48,20 +84,44 @@ function onStart()
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- Note: Always Remember your BACK-UP COUNT in Excavation Site in case the bot DISCONNECTED---")
 	log("--- Enter your BACK-UP COUNT if your disconnected in the middle of Hunting Sites ---")
+	log("-Remember that smash count are not very accurate-")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 end
+
 function onPause()
-	
+	log("-----------------------------------------------------------")
+	log("---------------------- Routine Paused ---------------------")
+	log("-----------------------------------------------------------")
 	log("Headbutt count: "..hbuttcount)
 	log("Dig count: "..digcount)
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-	log("--- Debug count: "..ex)
+	log("--- Back-up count: "..ex)
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- You smashed "..smash.." fools in all sites!!! ---")
+	log("-Remember that smash count are not very accurate-")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 end
 function onStop()
-
+	log("-----------------------------------------------------------")
+	log("---------------------- Routine Stopped ---------------------")
+	log("-----------------------------------------------------------")
+	log("--- Back-up count: "..ex)
+	log(" ")
+	endtime = os.time()
+	log(string.format("Bot running time: %.2f", os.difftime(endtime,startime)/3600 ).. " hours")
+	log("or")
+	log(string.format("Bot running time: %.2f", os.difftime(endtime,startime)/60 ).. " minutes")
+	log(" ")
+end
+function onBattleMessage(wild)
+    if stringContains(wild, "A Wild SHINY ") then
+        shinycount = shinycount + 1
+		wildcount = wildcount + 1
+		log("Info | Shinies encountered: " .. shinycount)
+	elseif stringContains(wild, "A Wild ") then
+        wildcount = wildcount + 1
+		log("Info | Shinies encountered: " .. shinycount)
+	end
 end
 function onDialogMessage(message)
 	if message == "Reselect a different Pokemon?" then
@@ -76,6 +136,10 @@ function onDialogMessage(message)
 	elseif message == "Please select a Pokemon that knows the Dig technique." then
 		pushDialogAnswer(digger)
 	end
+	if stringContains(message, "Would you like me to heal your Pokemon?") then
+        pcCount = pcCount + 1
+		log("Info | Times in Pokecenter: " .. pcCount)
+    	end
 	
 
 end
@@ -1312,20 +1376,26 @@ function onPathAction()
 			log("---"..getMapName().." Cleared... Moving to next Map---")
 				moveToMap("Digletts Cave Entrance 1")
 			end
-		elseif getMapName() == "Digletts Cave Entrance 1" then
+	elseif getMapName() == "Digletts Cave Entrance 1" then
+			log(" ")
+    	log("--- KANTO REGION is fucked up!!! ---")
+    	log("-Fasten your seatbelt! We are now soon entering JOHTO REGION-")
+    	log(" ")     
 			jto = 1
-			log("Route 2")
+			moveToMap("Route 2")
     elseif getMapName() == "Lilycove City" then
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- We are now in Hoenn Region! ---")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- Note: Always Remember your BACK-UP COUNT ---")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("-Remember that smash count are not very accurate-")
         moveToMap("Route 121")
     elseif getMapName() == "Route 121" then
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- Note: Always Remember your BACK-UP COUNT ---")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("-Remember that smash count are not very accurate-")
         if ex == 0 then
             moveToMap("Route 120")      --Move to next Site
         elseif ex == 6 then
@@ -1359,6 +1429,7 @@ function onPathAction()
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- Note: Always Remember your BACK-UP COUNT ---")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("-Remember that smash count are not very accurate-")
         if ex == 1 then
             moveToMap("Route 118")      --Move to 2nd Site
         elseif ex == 6 then
@@ -1380,6 +1451,7 @@ function onPathAction()
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- Note: Always Remember your BACK-UP COUNT ---")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("-Remember that smash count are not very accurate-")
         if ex == 1 then
             moveToMap("Mauville City Stop House 1")     --Move to 2nd Site
         elseif ex == 2 then
@@ -1413,6 +1485,7 @@ function onPathAction()
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- Note: Always Remember your BACK-UP COUNT ---")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("-Remember that smash count are not very accurate-")
         moveToMap("Route 111 South")                --Move to 3rd Site
     elseif getMapName() == "Route 111 South" then
         if ex == 2 then
@@ -1456,6 +1529,7 @@ function onPathAction()
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- Note: Always Remember your BACK-UP COUNT ---")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("-Remember that smash count are not very accurate-")
         moveToMap("Fallarbor Town")                 --Move to 5th Site
     elseif getMapName() == "Fallarbor Town" then
         moveToMap("Route 114")                      --Move to 5th Site
@@ -1465,6 +1539,7 @@ function onPathAction()
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- Note: Always Remember your BACK-UP COUNT ---")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("-Remember that smash count are not very accurate-")
         moveToMap("Route 115")                      --Move to 5th Site
     elseif getMapName() == "Route 115" then
         if ex == 4 then
@@ -1492,10 +1567,19 @@ function onPathAction()
     elseif getMapName() == "Haunted Site" then
         Haunted()
     elseif getMapName() == "Verdanturf Town" then
+    	log(" ")
+    	log("--- EXCAVATION SITES are all smashed!!! ---")
+    	log("-Fasten your seatbelt! We are now entering hell-")
         moveToMap("Route 117")                      --End
     elseif getMapName() == "Route 117" then
+    	log(" ")
+    	log("--- EXCAVATION SITES are all smashed!!! ---")
+    	log("-Fasten your seatbelt! We are now entering hell-")    
         moveToMap("Mauville City Stop House 2")     --End
     elseif getMapName() == "Mauville City Stop House 2" then
+    	log(" ")
+    	log("--- EXCAVATION SITES are all smashed!!! ---")
+    	log("-Fasten your seatbelt! We are now entering hell-") 
         moveToMap("Mauville City")                  --End     
     end
   end
