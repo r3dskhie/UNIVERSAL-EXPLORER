@@ -2,6 +2,7 @@
 # UNIVERSAL EXPLORER
 
 
+
       # COOL SCRIPT of all TIME
 
       - Clear all headbutt trees
@@ -19,4 +20,9 @@
 
 # INSTRUCTION:
 
-Wait for the official release
++ Read first "Note.txt"
++ Go to Universal Explorer folder and CAREFULLY READ the "Config.lua"
++ Once the Configuration is PROPERLY SET
++ Go to Universal Explorer folder and load "Universal Explorer.lua"
++ Happy botting!
+
