@@ -1,0 +1,9 @@
+
+
+0 = Route to Natural Site
+1 = Route to Glacial Site
+2 = Route to Feral Site
+3 = Route to Historical Site
+4 = Route to Mineral Site
+5 = Route to Haunted Site
+6 = Route to Lilycove City
