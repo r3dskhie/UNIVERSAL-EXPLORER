@@ -2288,7 +2288,7 @@ ex = 4
         end
 end
 function Haunted()
-x = 6
+ex = 6
 	if isNpcOnCell(1,8) then	
 	
 		 talkToNpcOnCell(1,8)
