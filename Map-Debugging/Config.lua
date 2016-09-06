@@ -11,7 +11,7 @@
         			--Enter your Back Up Count if you are DISCONNECTED in the middle of the Excavation Sites
         			
         			
-	mount = "Bicycle"	--Choose what kind of Mount you want to use, I suggest you to use any kind of mount for faster routine
+	mount = "Arcanine Mount"	--Choose what kind of Mount you want to use, I suggest you to use any kind of mount for faster routine
 	
 	
 	
@@ -19,7 +19,7 @@ digger = 4		--Set the index number of Pokemon with digs
 butter = 5		--Set the index number of Pokemon with headbutt
 
 
-	MtMoon = true		--Set this to false if the dig spots are on cooldown to not encounter an error on MT. MOON
+	MtMoon = false		--Set this to false if the dig spots are on cooldown to not encounter an error on MT. MOON
 
 
 		--MAP CONFIGURATION
@@ -38,14 +38,23 @@ EnterSilver = true	--SET THIS TO TRUE IF YOU WANT TO ENTER MT. SILVER
 catchUncaught = true		--set to true if you want to catch uncaught pokes else false
 catchShiny = true		--set to true if you want to catch encountered shiny's else false
 
+
+
+
+
 		--Add names of the pokemon you want to catch if not on this list
 		--REMEMBER that pokemon names are sensitive
+
 catchList = {"Starly", "Fletchling", "Chimchar", "Scyther", "Murkrow", "Staravia", "Turtwig", "Venipede", "Fletchinder", "Rufflet", "Golett", "Gligar", "Noibat", "Aron", "Beldum", "Mawile", "Absol", "Pawniard", "Litleo", "Vanillite", "Skorupi", "Trapinch", "Ferroseed", "Sawk", "Throh", "Timburr"}
+
+
+
+
 
 		--PLEASE SET TO normal catch if you're not using Synchronize pokemon
 		
-normalCatchOn =true        --Directly throw pokeballs on hunted pokemons
-fswipeOn = false       --Switch to pokemon with false swipe, use false swipe until the hunted pokes hp is reach to 1 then throw pokeballs
+normalCatchOn = false        --Directly throw pokeballs on hunted pokemons
+fswipeOn = true       --Switch to pokemon with false swipe, use false swipe until the hunted pokes hp is reach to 1 then throw pokeballs
 sleepOn = false            --Switch to pokemon with sleep move, use sleep move until the hunted pokes status is SLEEPING then throw pokeballs
 advanceCatchOn = false        --Use fswipeOn and sleepOn to catch hunted pokes
 
