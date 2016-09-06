@@ -19,16 +19,17 @@ function onStart()
 	pcCount = 0
 	wildcount = 0
     ex = backupCount
-    	digcount = 0
+    	digcount = 1
 	hbuttcount = 0
 	pc = 0
 	jto = 0
+	caughtPoke = 0
 	y = 0
 	a = 1
 	b = 0
 	c = 0
 	x = 3
-    smash = 1
+    smash = 0
     	log("-----------------------------------------------------------")
 	log("--------- We are now Commencing the Routine ---------")
 	log("-----------------------------------------------------------")
@@ -37,6 +38,8 @@ function onStart()
 	log("--- Note: Always Remember your BACK-UP COUNT in Excavation Site in case the bot DISCONNECTED---")
 	log("--- Enter your BACK-UP COUNT if your disconnected in the middle of Hunting Sites ---")
 	log("-Remember that smash count are not very accurate-")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--PLEASE MAKE SURE THAT MT. Moon is set to FALSE if dig spots there are on cooldown--")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 end
 
@@ -48,6 +51,7 @@ function onPause()
 	log("Info | Pokemon encountered: " .. wildcount)
 	log("Info | Times in Pokecenter: " .. pcCount)
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("---You caught "..caughtPoke.." unknown Pokemon---")
 	log("Headbutt count: "..hbuttcount)
 	log("Dig count: "..digcount)
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -55,6 +59,8 @@ function onPause()
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- You smashed "..smash.." fools in all sites!!! ---")
 	log("-Remember that smash count are not very accurate-")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--PLEASE MAKE SURE THAT MT. Moon is set to FALSE if dig spots there are on cooldown--")
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 end
 function onStop()
@@ -68,15 +74,22 @@ function onStop()
 	log("or")
 	log(string.format("Bot running time: %.2f", os.difftime(endtime,startime)/60 ).. " minutes")
 	log(" ")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	log("--PLEASE MAKE SURE THAT MT. Moon is set to FALSE if dig spots there are on cooldown--")
+	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 end
 function onBattleMessage(wild)
     if stringContains(wild, "A Wild SHINY ") then
         shinycount = shinycount + 1
 		wildcount = wildcount + 1
 		log("Info | Shinies encountered: " .. shinycount)
+	elseif stringContains(wild, "Success! ") then
+		caughtPoke = caughtPoke + 1
+		
 	elseif stringContains(wild, "A Wild ") then
         wildcount = wildcount + 1
-		log("Info | Shinies encountered: " .. shinycount)
+		log("Info | Pokemon encountered: " .. wildcount)
+		
 	end
 end
 function onDialogMessage(message)
@@ -142,7 +155,7 @@ function onPathAction()
 		log("~~~ Riding on my pet!!! ~~~")
 		log("---------------------------")
 		return useItem(mount)
-  elseif isPokemonUsable(1) then
+  elseif isPokemonUsable(1) and isPokemonUsable(2) then
     	if getMapName() == "Pallet Town" then
   			if isNpcOnCell(28, 22) then
   				
@@ -351,10 +364,10 @@ function onPathAction()
 				return moveToMap("Route 2 Stop") or moveToMap("Pewter City")
 			end
 			elseif jto == 1 then
-				return moveToMap("Viridian City") or moveToMap("Route 2 Stop1")
+				return moveToMap("Viridian City") or moveToCell(39,90)
 			end
-		elseif getMapName() == "Route 2 Stop1" then
-			moveToMap("Route 2")
+		elseif getMapName() == "Route 2 Stop3" then
+			moveToCell(3,12)
 		elseif getMapName() == "Route 2 Stop" then
 			moveToMap("Viridian Forest")
 		elseif getMapName() == "Viridian Forest" then
@@ -721,7 +734,7 @@ function onPathAction()
 				else
 					x = x -1
 					log("--- Mt. Moon cleared! Moving to next map ---")
-					return moveToCell(44,30)  or moveToCell(17,27)	--GOING BACK to 1F to Exit
+					return moveToCell(44,30)  or moveToCell(17,27) or moveToCell(30,54)	--GOING BACK to 1F to Exit
 					
 				end
 		elseif getMapName() == "Mt. Moon Exit" then
@@ -1369,7 +1382,7 @@ function onPathAction()
 		if EnterJohto then
 			log(" ")
     			log("--- KANTO REGION is fucked up!!! ---")
-    			log("-Fasten your seatbelt! We are now going JOHTO REGION-")
+    			log("-Fasten your seatbelt! We are now going to JOHTO REGION-")
     			log(" ")     
 			jto = 1
 			moveToMap("Route 2")
@@ -1392,7 +1405,7 @@ function onPathAction()
 		moveToMap("Route 29")
 	elseif getMapName() == "Route 29" then
 		Route29()
-	elseif getMapName() == "Pokecenter Cherrygrove" then
+	elseif getMapName() == "Pokecenter Cherrygrove City" then
 		pc = 1
 		log("--- Successfully Registered on "..getMapName()..",,,Going back for the ROUTINE ---")
 		moveToMap("Cherrygrove City")
@@ -1498,13 +1511,13 @@ function onPathAction()
 		moveToCell(47,57)
 	elseif getMapName() == "Route 42" then
 		if b == 0 then
-			return moveToMap("Mahogany Town") or moveToCell(17,13)
+			return moveToCell(95,16) or moveToCell(17,13)
 		elseif b == 1 then
 			moveToMap("Ecruteak Stop House 2")
 		end
 	elseif getMapName() == "Mahogany Town" then
 		if b == 0 then
-			moveToMap("Route 44")
+			moveToCell(40,15)
 		elseif b == 1 then
 			moveToMap("Route 42")
 		end
@@ -1526,9 +1539,8 @@ function onPathAction()
 		end
 	elseif getMapName() == "Olivine City" then
 		log("--- PLEASE FASTEN YOUR SEATBELT! ---")
-		pushDialogAnswer(3)
+		pushDialogAnswer(2)
 		talkToNpc("Sailor Jon")
-	end
 	elseif getMapName() == "Lilycove City Harbor" then
 		log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 		log("--- We are now in Hoenn Region! ---")
@@ -1733,6 +1745,12 @@ function onPathAction()
     	log("-Fasten your seatbelt! We are now entering hell-") 
         moveToMap("Mauville City")                  --End     
     end
+  else
+	if not isNpcVisible("Nurse Joy") then
+		return useItem("Escape Rope")
+	else
+		usePokecenter()
+	end
   end
 end
 function Natural()
@@ -2544,7 +2562,7 @@ function Cherry()
 		return talkToNpcOnCell(32,8)
 	else
 		log("--- Pokecenter found! Registering on PC ---")
-		moveToMap("Pokecenter Cherrygrove")
+		moveToMap("Pokecenter Cherrygrove City")
 	end
 end
 function Route30()
@@ -3115,43 +3133,45 @@ function Route38()
 	end
 end
 function normal()
-    return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball")  or sendAnyPokemon() or attack() or run()
+    return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or attack() or run()
 end
 
 function advanceCatch()
         if getActivePokemonNumber() == 1 then
             return sendPokemon(falseswiper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
         elseif ( getActivePokemonNumber() == falseswiper ) and ( getOpponentHealth() > 1 ) then
-            return weakAttack() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
+            return weakAttack() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
         elseif ( getActivePokemonNumber() == sleeper ) and ( getOpponentStatus() ~= "SLEEP" and getOpponentStatus() ~= "PARALIZE" and getOpponentStatus() ~= "POISON" and getOpponentStatus() ~= "BURN" ) and ( getOpponentHealth() == 1 ) then
             return useMove(sleepmove) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
         elseif ( getActivePokemonNumber() == falseswiper ) and ( getOpponentHealth() == 1 ) then
             return sendPokemon(sleeper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
         elseif getOpponentStatus() == "SLEEP" or getOpponentStatus() == "PARALIZE" or getOpponentStatus() == "POISON" or getOpponentStatus() == "BURN" then
-            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or attack() or run()
+            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or attack() or run()
         else
-                return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or attack() or run()
+                return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or attack() or run()
         end
 end
 
 function fswipe()
         if getActivePokemonNumber() == 1 then
-            return sendPokemon(falseswiper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
+            return sendPokemon(falseswiper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
         elseif ( getActivePokemonNumber() == falseswiper ) and ( getOpponentHealth() > 1 ) then
-            return weakAttack() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
+            return weakAttack() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
         elseif getOpponentHealth() == 1 then
-            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball")  or sendAnyPokemon() or attack() or run()
+            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3)  or sendAnyPokemon() or attack() or run()
+	else
+            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or attack() or run()
         end
 end
 function sleep()
         if getActivePokemonNumber() == 1 then
-            return sendPokemon(sleeper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or run()
+            return sendPokemon(sleeper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
         elseif ( getActivePokemonNumber() == sleeper ) and ( getOpponentStatus() ~= "SLEEP" and getOpponentStatus() ~= "PARALIZE" and getOpponentStatus() ~= "POISON" and getOpponentStatus() ~= "BURN" ) then
-            return useMove(sleepmove) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
+            return useMove(sleepmove) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
         elseif getOpponentStatus() == "SLEEP" or getOpponentStatus() == "PARALIZE" or getOpponentStatus() == "POISON" or getOpponentStatus() == "BURN" then
-            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
+            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
         else
-            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or attack() or run()
+            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or attack() or run()
         end    
 end
 
