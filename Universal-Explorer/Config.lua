@@ -20,6 +20,7 @@ butter = 5		--Set the index number of Pokemon with headbutt
 
 
 	MtMoon = false		--Set this to false if the dig spots are on cooldown to not encounter an error on MT. MOON
+				--REQUIRED
 
 
 		--MAP CONFIGURATION
