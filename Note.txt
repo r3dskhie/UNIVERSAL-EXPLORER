@@ -1,5 +1,32 @@
 
+# WHEN POKEMON 1 and POKEMON 2 is not usable, The bot will use ESCAPE ROPE and heal on the last registered PC
+# If this happens, the bot will start over in last PC registered and across its route
 
+  REQUIREMENTS:
+  
+- HM SLAVES
+  -Pokemon with Surf
+  -Pokemon with Cut
+  -Pokemon with Headbutt
+  -Pokemon with Dig
+  -Pokemon with Rock Smash  (required if your doing HOENN EXCAVATION SITES)
+  
+- HEALING POKES
+  -Buy as many Escape Rope in case your team are WEAK!
+  
+- MOUNT
+  -Any mounts will do
+
+- POKEBALLS
+  -Bring as many as you can
+
+
+
+
+      BACK-UP COUNT in EXCAVATION SITE
+      
+        --Use this in case you have been disconnecte in the middle of Excavation Sites
+        
 0 = Route to Natural Site
 1 = Route to Glacial Site
 2 = Route to Feral Site
@@ -7,3 +34,7 @@
 4 = Route to Mineral Site
 5 = Route to Haunted Site
 6 = Route to Lilycove City
+
+
+
+
