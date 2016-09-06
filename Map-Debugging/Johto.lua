@@ -1,4 +1,7 @@
-
+-				-- Copyright © 2016 redskhie 
+				-- Official github link:
+				-- Official PROShine thread: https://proshine-bot.com/thread-1246.html
+				-- Contact me at discord nickname: Redd
 
 
 name = "Super Saiyan Blue"
