@@ -1754,6 +1754,7 @@ function onPathAction()
   end
 end
 function Natural()
+ex = 1
 	if isNpcOnCell(4,8) then	
 
 		 talkToNpcOnCell(4,8)
@@ -1857,10 +1858,11 @@ function Natural()
 		log("--- "..getMapName().." cleared... Moving to next site")
 		log("--- Current number of smashed "..smash)
 		moveToCell(6,7)             --Done Site
-        	ex = ex + 1
+        	
         end
 end
 function Glacial()
+ex = 2
 	if isNpcOnCell(2,11) then	
 	
 		 talkToNpcOnCell(2,11)
@@ -1961,10 +1963,11 @@ function Glacial()
 		log("--- "..getMapName().." cleared... Moving to next site")
 		log("--- Current number of smashed "..smash)
 		moveToCell(5,5)                             --Done Site
-        	ex = ex + 1
+        	
         end
 end
 function Feral()
+ex = 3
 	if isNpcOnCell(3,7) then	
 	
 		 talkToNpcOnCell(3,7)
@@ -2069,10 +2072,11 @@ function Feral()
 		log("--- "..getMapName().." cleared... Moving to next site")
 		log("--- Current number of smashed "..smash)
 		moveToCell(5,7)                             --Done Site
-        	ex = ex + 1
+        	
         end
 end
 function Mineral()
+ex = 5
 	if isNpcOnCell(7,7) then	
 	
 		 talkToNpcOnCell(7,7)
@@ -2173,10 +2177,11 @@ function Mineral()
 		log("--- "..getMapName().." cleared... Moving to next site")
 		log("--- Current number of smashed "..smash)
 		moveToCell(9,6)                             --Done Site
-        	ex = ex + 1
+        	
         end
 end
 function Historical()
+ex = 4
 	if isNpcOnCell(8,8) then	
 	
 		 talkToNpcOnCell(8,8)
@@ -2279,11 +2284,11 @@ function Historical()
 		log("--- "..getMapName().." cleared... Moving to next site")
 		log("--- Current number of smashed "..smash)
 		moveToCell(2,8)                              --Done Site
-		ex = ex + 1
         	
         end
 end
 function Haunted()
+x = 6
 	if isNpcOnCell(1,8) then	
 	
 		 talkToNpcOnCell(1,8)
@@ -2388,7 +2393,7 @@ function Haunted()
 		log("--- "..getMapName().." cleared... Moving to next site")
 		log("--- Current number of smashed "..smash)
 		moveToCell(3,8)                             --Done Site
-        	ex = ex + 1
+        	
         end
 end
 function Route22()
