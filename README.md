@@ -1,3 +1,4 @@
+
 # Headbutt/Dig/Harvest/Item
       # COOL SCRIPT of all TIME
 
@@ -7,9 +8,9 @@
       - Smashing Excavation Sites
 
 
-+ Kanto Region - 99% done
++ Kanto Region - 100% done
 + Love Island - 0% done
-+ Johto Region - 99% done
++ Johto Region - 100% done
 + Mt. Silver - 5% done
 + Hoenn Excavation Site - 100% done
 
