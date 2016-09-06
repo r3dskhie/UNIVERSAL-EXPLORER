@@ -1,6 +1,7 @@
 
 # WHEN POKEMON 1 and POKEMON 2 is not usable, The bot will use ESCAPE ROPE and heal on the last registered PC
 # If this happens, the bot will start over in last PC registered and across its route
+# Do not load other scripts except "Universal Explorer.lua"
 
   REQUIREMENTS:
   
