@@ -1,38 +1,13 @@
+				-- Copyright © 2016 redskhie 
+				-- Official github link:
+				-- Official PROShine thread: https://proshine-bot.com/thread-1246.html
+				-- Contact me at discord nickname: Redd
 
-        backupCount = 0
-	mount = "Bicycle"
-	
-digger = 4		--Set the index number of Pokemon with digs
-butter = 5		--Set the index number of Pokemon with headbutt
+name = "Super Saiyan God"
+author = "--redskhie--"
+description = [[---This script will smash on all Excavation Sites---]]
 
-
-	MtMoon == false		--Set this to false if the dig spots are on cooldown to not encounter an error
-
-
-
-	--CATCHING CONFIGURATION
-	
-		--PLEASE SET TO normal catch if you're not using Synchronize pokemon
-		
-catchUncaught = true		--set to true if you want to catch uncaught pokes else false
-catchShiny = true		--set to true if you want to catch encountered shiny's else false
-catchList = {"Golett", "Gligar", "Noibat", "Aron", "Beldum", "Mawile", "Absol", "Pawniard", "Litleo", "Vanillite", "Skorupi", "Trapinch", "Ferroseed", "Sawk", "Throh", "Timburr"}
-
-normalCatchOn = false        --Directly throw pokeballs on hunted pokemons
-fswipeOn = true       --Switch to pokemon with false swipe, use false swipe until the hunted pokes hp is reach to 1 then throw pokeballs
-sleepOn = false            --Switch to pokemon with sleep move, use sleep move until the hunted pokes status is SLEEPING then throw pokeballs
-advanceCatchOn = false        --Use fswipeOn and sleepOn to catch hunted pokes
-
-falseswiper = 2            --Index of pokemon with false swipe
-fswipeHP = 10            --Returns the health percent of the false swiper, then heal to PC
-weakmove = "False Swipe"    --False Swipe move
-
-sleeper = 6            --Index of pokemon with sleep move
-sleeperHP = 10            --Returns the health percent of the false swiper, then heal to PC
-sleepmove = "Spore"        --Set/Change the name of the sleep move
-
-
-
+dofile "Config.lua"
 
 function onStart()
     ex = backupCount
