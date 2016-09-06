@@ -7,9 +7,9 @@
       - Smashing Excavation Sites
 
 
-+ Kanto Region - 95% done
++ Kanto Region - 99% done
 + Love Island - 0% done
-+ Johto Region - 80% done
++ Johto Region - 99% done
 + Mt. Silver - 5% done
 + Hoenn Excavation Site - 100% done
 
