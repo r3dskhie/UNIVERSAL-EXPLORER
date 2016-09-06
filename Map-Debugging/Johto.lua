@@ -102,6 +102,7 @@ function onPathAction()
 	elseif getMapName() == "Route 29" then
 		Route29()
 	elseif getMapName() == "Pokecenter Cherrygrove" then
+		pc = 1
 		log("--- Successfully Registered on "..getMapName()..",,,Going back for the ROUTINE ---")
 		moveToMap("Cherrygrove City")
 	elseif getMapName() == "Cherrygrove City" then
@@ -153,17 +154,41 @@ function onPathAction()
 	elseif getMapName() == "Route 34 Stop House" then
 		moveToMap("Route 34")
 	elseif getMapName() == "Route 34" then
-		moveToMap("Goldenrod City")
+		Route34()
 	elseif getMapName() == "Goldenrod City" then
-		moveToMap("Route 35 Stop House")
+		if pc == 0 then
+			log("--- Pokecenter found! Registering on PC ---")
+			moveToMap("Pokecenter Goldenrod")
+		elseif pc == 1 then
+			moveToMap("Route 35 Stop House")
+		end
+	elseif getMapName() == "Pokecenter Goldenrod" then
+		pc = 1
+		log("--- Successfully Registered on "..getMapName()..",,,Going back for the ROUTINE ---")
+		moveToMap("Goldenrod City")
 	elseif getMapName() == "Route 35 Stop House" then
+		pc = 0
 		moveToMap("Route 35")
 	elseif getMapName() == "Route 35" then
-		moveToMap("Route 36")
+		Route35()
 	elseif getMapName() == "Route 36" then
-		moveToMap("Route 37")
+		Route36()
 	elseif getMapName() == "Route 37" then
-		moveToMap("Ecruteak City")
+		if isNpcOnCell(30,29) then
+		log("---Ooops! We have some berries that are ready to harvest---")
+		log("---Harvesting some berries---")
+			return talkToNpcOnCell(30,29)	--Berry 1
+		elseif isNpcOnCell(30,23) then
+		log("---Ooops! We have some berries that are ready to harvest---")
+		log("---Harvesting some berries---")
+			return talkToNpcOnCell(30,23)	--Berry 2
+		elseif isNpcOnCell(33,26) then
+		log("---Ooops! We have some berries that are ready to harvest---")
+		log("---Harvesting some berries---")
+			return talkToNpcOnCell(33,26)	--Berry 3
+		else
+			moveToMap("Ecruteak City")
+		end
 	elseif getMapName() == "Ecruteak City" then
 		if b == 0 then
 			moveToMap("Ecruteak Stop House 2")
@@ -177,7 +202,7 @@ function onPathAction()
 			moveToMap("Ecruteak City")
 		end
 	elseif getMapName() == "Mt. Mortar 1F" then
-		return moveToCell(34,35) or moveToCell(65,46)
+		Mortar()
 	elseif getMapName() == "Mt. Mortar Lower Cave" then
 		moveToCell(47,57)
 	elseif getMapName() == "Route 42" then
@@ -194,14 +219,24 @@ function onPathAction()
 		end
 	elseif getMapName() == "Route 44" then
 		b = 1
-		moveToMap("Mahogany Town")
+		Route44()
 	elseif getMapName() == "Ecruteak Stop House 1" then
 		moveToMap("Route 38")
 	elseif getMapName() == "Route 38" then
-		moveToMap("Route 39")
+		Route38()
 	elseif getMapName() == "Route 39" then
-		moveToMap("Olivine City")
-	
+		if Hoenn then
+			log("--- No trees left here in JOHTO Region ---")
+			log("-- Useless... --")
+			log("- We are now going to HOENN Region! -")
+			moveToMap("Olivine City")
+		else
+			fatal("--- No trees left, Psh.. KJ!!! Stopping the bot... ---")
+		end
+	elseif getMapName() == "Olivine City" then
+		log("--- PLEASE FASTEN YOUR SEATBELT! ---")
+		pushDialogAnswer(3)
+		talkToNpc("Sailor Jon")
 	end
 
 end
@@ -378,7 +413,6 @@ function Cherry()
 	else
 		log("--- Pokecenter found! Registering on PC ---")
 		moveToMap("Pokecenter Cherrygrove")
-		pc = pc + 1
 	end
 end
 function Route30()
@@ -727,7 +761,227 @@ function Ilex()
 		moveToMap("Route 34 Stop House")
 	end
 end
-
+function Route34()
+	if isNpcOnCell(15,62) then	
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(15,62)
+	elseif isNpcOnCell(17,62) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(17,62)
+	elseif isNpcOnCell(32,48) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(32,48)
+	elseif isNpcOnCell(32,43) then			
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(32,43)
+	elseif isNpcOnCell(32,38) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(32,38)
+	elseif isNpcOnCell(29,29) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(29,29)
+	elseif isNpcOnCell(26,29) then	
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(26,29)
+	elseif isNpcOnCell(24,23) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(24,23)
+	else
+		log("---"..getMapName().." Cleared... Moving to next Map---")
+		moveToMap("Goldenrod City")
+	end
+end
+function Route35()
+	if isNpcOnCell(6,13) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(6,13)
+	elseif isNpcOnCell(5,10) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(5,10)
+	elseif isNpcOnCell(15,7) then			
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(15,7)
+	elseif isNpcOnCell(20,7) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(20,7)
+	elseif isNpcOnCell(22,7) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(22,7)
+	elseif isNpcOnCell(11,56) then	
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(11,56)
+	elseif isNpcOnCell(29,57) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(29,57)
+	else
+		log("---"..getMapName().." Cleared... Moving to next Map---")
+		moveToMap("Route 36")
+	end
+end
+function Route36()
+	if isNpcOnCell(3,16) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(3,16)
+	elseif isNpcOnCell(7,13) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(7,13)
+	elseif isNpcOnCell(10,11) then			
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(10,11)
+	elseif isNpcOnCell(12,11) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(12,11)
+	elseif isNpcOnCell(12,23) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(12,23)
+	elseif isNpcOnCell(35,25) then	
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(35,25)
+	elseif isNpcOnCell(38,24) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(38,24)
+	elseif isNpcOnCell(40,24) then
+		log("---Ooops! We have some berries that are ready to harvest---")
+		log("---Harvesting some berries---")
+		return talkToNpcOnCell(40,24)	--Berry 1
+	elseif isNpcOnCell(43,24) then
+		log("---Ooops! We have some berries that are ready to harvest---")
+		log("---Harvesting some berries---")
+		return talkToNpcOnCell(43,24)	--Berry 2
+	elseif isNpcOnCell(45,24) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(45,24)
+	elseif isNpcOnCell(52,24) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(52,24)
+	elseif isNpcOnCell(74,20) then			
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(74,20)
+	elseif isNpcOnCell(45,18) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(45,18)
+	elseif isNpcOnCell(43,18) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(43,18)
+	elseif isNpcOnCell(32,13) then	
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(32,13)
+	elseif isNpcOnCell(30,11) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(30,11)
+	elseif isNpcOnCell(28,10) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(28,10)
+	elseif isNpcOnCell(26,10) then	
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(26,10)
+	elseif isNpcOnCell(20,8) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(20,8)
+	else
+		log("---"..getMapName().." Cleared... Moving to next Map---")
+		moveToMap("Route 37")
+	end
+end
+function Mortar()
+	if isNpcOnCell(23,42) then
+		log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+		return talkToNpcOnCell(23,42)	--Dig 1
+	elseif isNpcOnCell(25,45) then	
+		log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+		return talkToNpcOnCell(25,45)	--Dig 2
+	elseif isNpcOnCell(27,40) then
+		log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+		return talkToNpcOnCell(27,40)	--Dig 3
+	elseif isNpcOnCell(57,36) then
+		log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+		return talkToNpcOnCell(57,36) or moveToCell(34,35)	--Dig 4
+	elseif isNpcOnCell(56,43) then	
+		log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+		return talkToNpcOnCell(56,43)	--Dig 5
+	elseif isNpcOnCell(58,39) then
+		log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+		return talkToNpcOnCell(58,39)	--Dig 6
+	elseif isNpcOnCell(63,40) then
+		log("--- "..getPokemonName(digger).." is digging spot "..digcount.." in "..getMapName().." ---")
+		return talkToNpcOnCell(63,40)	--Dig 7
+	else
+		log("---"..getMapName().." Cleared... Moving to next Map---")
+		return moveToCell(34,35) or moveToCell(65,46)
+	end
+end
+function Route44()
+	if isNpcOnCell(3,13) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(3,13)
+	elseif isNpcOnCell(12,7) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(12,7)
+	elseif isNpcOnCell(14,8) then			
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(14,8)
+	elseif isNpcOnCell(20,6) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(20,6)
+	elseif isNpcOnCell(55,5) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(55,5)
+	elseif isNpcOnCell(61,16) then	
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(61,16)
+	elseif isNpcOnCell(54,20) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(54,20)
+	elseif isNpcOnCell(48,20) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(48,20)
+	elseif isNpcOnCell(46,22) then	
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(46,22)
+	elseif isNpcOnCell(42,22) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(42,22)
+	elseif isNpcOnCell(20,17) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(20,17)
+	else
+		log("---"..getMapName().." Cleared... Moving to next Map---")
+		moveToMap("Mahogany Town")
+	end
+end
+function Route38()
+	if isNpcOnCell(59,5) then	
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(59,5)
+	elseif isNpcOnCell(57,5) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(57,5)
+	elseif isNpcOnCell(55,5) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(55,5)
+	elseif isNpcOnCell(53,5) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(53,5)
+	elseif isNpcOnCell(51,5) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(51,5)
+	elseif isNpcOnCell(49,5) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(49,5)
+	elseif isNpcOnCell(52,5) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(52,5)
+	elseif isNpcOnCell(50,5) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(50,5)
+	elseif isNpcOnCell(31,9) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(31,9)
+	else
+		log("---"..getMapName().." Cleared... Moving to next Map---")
+		moveToMap("Route 39")
+	end
+end
 function normal()
     return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball")  or sendAnyPokemon() or attack() or run()
 end
