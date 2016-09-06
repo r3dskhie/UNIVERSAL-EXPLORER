@@ -19,7 +19,15 @@ digger = 4		--Set the index number of Pokemon with digs
 butter = 5		--Set the index number of Pokemon with headbutt
 
 
-	MtMoon = false		--Set this to false if the dig spots are on cooldown to not encounter an error on MT. MOON
+	MtMoon = true		--Set this to false if the dig spots are on cooldown to not encounter an error on MT. MOON
+
+
+		--MAP CONFIGURATION
+		
+EnterJohto = true	--SET THIS TO TRUE IF YOU WANT TO ENTER JOHTO REGION
+EnterHoenn = true	--SET THIS TO TRUE IF YOU WANT TO DO HOENN EXCAVATION SITES
+EnterLove = true	--SET THIS TO TRUE IF YOU WANT TO ENTER LOVE ISLAND
+EnterSilver = true	--SET THIS TO TRUE IF YOU WANT TO ENTER MT. SILVER
 
 
 
