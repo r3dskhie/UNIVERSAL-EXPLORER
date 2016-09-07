@@ -112,6 +112,12 @@ function onDialogMessage(message)
 	
 
 end
+function onSystemMessage(message)
+	if message == "Your Pokemon still has health and can not be revived." then
+		log("--- False swiper still has health... Using Elixir instead ---")
+		useItemOnPokemon("Elixir", falseswiper)
+	end
+end
 function IsPokemonOnCaptureList()
     result = false
     if catchList[1] ~= "" then
@@ -158,6 +164,9 @@ function onPathAction()
   elseif isNpcVisible("PokeStop") then
 	log("--- Robbing Mr. Clown! ---")
 	talkToNpc("PokeStop")
+  elseif getPokemonHealthPercent(falseswiper) <= 50 then
+	log("--- Your false swiper is in danger... Giving him potions ---")
+	return useItemOnPokemon("Hyper Potion", falseswiper) or useItemOnPokemon("Super Potion", falseswiper) or useItemOnPokemon("Potion", falseswiper)
   elseif isPokemonUsable(1) and isPokemonUsable(2) then
     	if getMapName() == "Pallet Town" then
   			if isNpcOnCell(28, 22) then
@@ -1748,7 +1757,10 @@ function onPathAction()
     	log("-Fasten your seatbelt! We are now entering hell-") 
         moveToMap("Mauville City")                  --End     
     end
+  elseif not isPokemonUsable(falseswiper) then
+	return useItemOnPokemon("Revive", falseswiper)
   else
+	
 	if not isNpcVisible("Nurse Joy") then
 		return useItem("Escape Rope")
 	else
@@ -1756,6 +1768,7 @@ function onPathAction()
 	end
   end
 end
+
 function Natural()
 ex = 1
 	if isNpcOnCell(4,8) then	
