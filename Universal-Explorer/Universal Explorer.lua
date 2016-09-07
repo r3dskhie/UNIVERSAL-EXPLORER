@@ -155,6 +155,9 @@ function onPathAction()
 		log("~~~ Riding on my pet!!! ~~~")
 		log("---------------------------")
 		return useItem(mount)
+  elseif isNpcVisible("PokeStop") then
+	log("--- Robbing Mr. Clown! ---")
+	talkToNpc("PokeStop")
   elseif isPokemonUsable(1) and isPokemonUsable(2) then
     	if getMapName() == "Pallet Town" then
   			if isNpcOnCell(28, 22) then
