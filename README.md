@@ -7,6 +7,7 @@
 
       - Clear all headbutt trees
       - Clear all digging spots
+      - Robbing Poke Stops
       - Harvesting Berries
       - Smashing Excavation Sites
 
