@@ -29,6 +29,7 @@ function onStart()
 	b = 0
 	c = 0
 	x = 3
+	z = 0
     smash = 0
     	log("-----------------------------------------------------------")
 	log("--------- We are now Commencing the Routine ---------")
@@ -164,6 +165,8 @@ function onPathAction()
   elseif isNpcVisible("PokeStop") then
 	log("--- Robbing Mr. Clown! ---")
 	talkToNpc("PokeStop")
+  elseif not isPokemonUsable(falseswiper) then
+	return useItemOnPokemon("Revive", falseswiper)
   elseif getPokemonHealthPercent(falseswiper) <= 50 then
 	log("--- Your false swiper is in danger... Giving him potions ---")
 	return useItemOnPokemon("Hyper Potion", falseswiper) or useItemOnPokemon("Super Potion", falseswiper) or useItemOnPokemon("Potion", falseswiper)
@@ -753,6 +756,8 @@ function onPathAction()
 			moveToMap("Route 4")
 		elseif getMapName() == "Route 4" then
 			pc = 0
+			if z == 1 then
+
 			if isNpcOnCell(74,15) then
 				
 			log("---Headbutting 1st tree---")
@@ -789,12 +794,17 @@ function onPathAction()
 				log("---"..getMapName().." Cleared... Moving to next Map---")
 				moveToCell(96,21)
 			end
+
+			elseif z == 0 then
+				moveToCell(96, 14)
+			end
 		elseif getMapName() == "Cerulean City" then
+			z = 1
 			if pc == 0 then
 				if isNpcOnCell(44,8) then
 				
 				log("---Headbutting 1st tree---")
-					return talkToNpcOnCell(44,8)	--Tree 1
+					return talkToNpcOnCell(44,8) or moveToMap("Route 4")	--Tree 1
 				elseif isNpcOnCell(43,14) then
 				
 				log("---Headbutting 2nd tree---")
@@ -823,7 +833,7 @@ function onPathAction()
 					end
 			elseif pc == 1 then
 				log("---"..getMapName().." Cleared... Moving to next Map---")
-					moveToMap("Route 9")
+					return moveToMap("Route 9") 
 			end
 		elseif getMapName() == "Route 9" then
 			pc = 0
@@ -1757,8 +1767,7 @@ function onPathAction()
     	log("-Fasten your seatbelt! We are now entering hell-") 
         moveToMap("Mauville City")                  --End     
     end
-  elseif not isPokemonUsable(falseswiper) then
-	return useItemOnPokemon("Revive", falseswiper)
+  
   else
 	
 	if not isNpcVisible("Nurse Joy") then
