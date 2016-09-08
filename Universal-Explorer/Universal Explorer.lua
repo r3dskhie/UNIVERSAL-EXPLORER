@@ -833,7 +833,7 @@ function onPathAction()
 					end
 			elseif pc == 1 then
 				log("---"..getMapName().." Cleared... Moving to next Map---")
-					return moveToMap("Route 9") 
+					return moveToMap("Route 9")  or moveToMap("Route 4")
 			end
 		elseif getMapName() == "Route 9" then
 			pc = 0
