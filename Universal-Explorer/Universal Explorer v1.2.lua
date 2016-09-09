@@ -19,7 +19,7 @@ function onStart()
 	pcCount = 0
 	wildcount = 0
     ex = backupCount
-    	digcount = 0
+    	digcount = 1
 	hbuttcount = 0
 	pc = 0
 	jto = 0
@@ -833,7 +833,7 @@ function onPathAction()
 					end
 			elseif pc == 1 then
 				log("---"..getMapName().." Cleared... Moving to next Map---")
-					return moveToMap("Route 9")  or moveToMap("Route 4")
+					return moveToMap("Route 9") or moveToMap("Route 4")
 			end
 		elseif getMapName() == "Route 9" then
 			pc = 0
@@ -1569,13 +1569,17 @@ function onPathAction()
 		log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 		moveToMap("Lilycove City")
     elseif getMapName() == "Lilycove City" then
-	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-	log("--- We are now in Hoenn Region! ---")
-	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-	log("--- Note: Always Remember your BACK-UP COUNT ---")
-	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-	log("-Remember that smash count are not very accurate-")
-        moveToMap("Route 121")
+        if ex == 0 then
+			log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+			log("--- We are now in Hoenn Region! ---")
+			log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+			log("--- Note: Always Remember your BACK-UP COUNT ---")
+			log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+			log("-Remember that smash count are not very accurate-")
+            moveToMap("Route 121")      --Move to first Site
+        elseif ex == 6 then
+            fatal("--- UNIVERSAL EXPLORER IS DONE,,, Give feedback to the author ---")  --End
+        end
     elseif getMapName() == "Route 121" then
 	log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	log("--- Note: Always Remember your BACK-UP COUNT ---")
