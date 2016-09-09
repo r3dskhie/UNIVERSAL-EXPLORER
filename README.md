@@ -35,5 +35,5 @@
 | :---         |     :---:      | :---         |
 | 09-09-2016 9:00 am | Universal Explorer v1.2 | Fixed a bug of Poke Stops Rob in Cerulean City |
 | 09-09-2016 9:30 am| Universal Explorer v1.2.0.1 | Fixed a bug of Poke Stops Rob in Route 10 |
-| 09-09-2016 9:30 am| Universal Explorer v1.2.0.2 | Route 10 bug fixes - *not tested yet* |
+| 09-09-2016 8:15 pm| Universal Explorer v1.2.0.2 | Route 10 bug fixes - *not tested yet* |
 
