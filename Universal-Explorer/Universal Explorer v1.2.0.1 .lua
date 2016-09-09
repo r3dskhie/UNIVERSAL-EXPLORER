@@ -30,6 +30,7 @@ function onStart()
 	c = 0
 	x = 3
 	z = 0
+	r = 0
     smash = 0
     	log("-----------------------------------------------------------")
 	log("--------- We are now Commencing the Routine ---------")
@@ -838,13 +839,18 @@ function onPathAction()
 		elseif getMapName() == "Route 9" then
 			pc = 0
 			x = 1
-			moveToCell(86,33)
+			if r == 0 then
+				moveToCell(93,33)
+			elseif r == 1 then
+				moveToCell(86,33)
+			end
 		elseif getMapName() == "Route 10" then
+			r = 1
 			if x == 1 then
-				moveToMap("Rock Tunnel 1")
+				return moveToMap("Rock Tunnel 1") or moveToMap("Route 9")
 			elseif x == 0 then
 				if isNpcOnCell(9,9) then
-					return talkToNpcOnCell(9,9) or moveToMap("Lavender Town")
+					return talkToNpcOnCell(9,9) or moveToMap("Lavender Town") or movetoMap("Route 9")
 				end
 			end
 		elseif getMapName() == "Rock Tunnel 1" then
@@ -1119,7 +1125,7 @@ function onPathAction()
 		elseif getMapName() == "Celadon City" then
 			if pc == 0 then
 				log("--- Pokecenter found! Registering on PC ---")
-				moveToMap("Pokecenter Route 10")
+				moveToMap("Pokecenter Celadon")
 				pc = pc + 1
 			elseif pc == 1 then
 				moveToMap("Route 7")
