@@ -11,16 +11,16 @@
       - Harvesting Berries
       - Smashing Excavation Sites
 
-**FEATURES**
+**FEATURES:**
 
 - [x] Kanto Region - 100% done
 - [ ] Love Island - 0% done
-- [ ] Johto Region - 100% done
+- [x] Johto Region - 100% done
 - [ ] Mt. Silver - 5% done
 - [x] Hoenn Excavation Site - 100% done
 
 
-# INSTRUCTION:
+**INSTRUCTION:**
 
 + Read first "Note.txt"
 + Go to Universal Explorer folder and CAREFULLY READ the "Config.lua"
