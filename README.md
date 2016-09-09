@@ -33,6 +33,6 @@
 
 | Date/Time | Version | Changes |
 | :---         |     :---:      | :---         |
-| 09-09-2016 9:00 am | Fixed a bug of Poke Stops Rob in Cerulean City |
-| 09-09-2016 9:30 am| Fixed a bug of Poke Stops Rob in Route 10 |
+| 09-09-2016 9:00 am | Universal Explorer v1.2 | Fixed a bug of Poke Stops Rob in Cerulean City |
+| 09-09-2016 9:30 am| Universal Explorer v1.2.0.1 | Fixed a bug of Poke Stops Rob in Route 10 |
 
