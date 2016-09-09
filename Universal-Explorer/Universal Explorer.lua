@@ -19,7 +19,7 @@ function onStart()
 	pcCount = 0
 	wildcount = 0
     ex = backupCount
-    	digcount = 1
+    	digcount = 0
 	hbuttcount = 0
 	pc = 0
 	jto = 0
