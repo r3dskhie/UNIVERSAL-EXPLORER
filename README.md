@@ -3,7 +3,7 @@
 
 
 
-      # COOL SCRIPT of all TIME
+      **COOL SCRIPT of all TIME**
 
       - Clear all headbutt trees
       - Clear all digging spots
