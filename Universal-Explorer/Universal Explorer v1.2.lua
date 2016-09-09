@@ -838,7 +838,7 @@ function onPathAction()
 		elseif getMapName() == "Route 9" then
 			pc = 0
 			x = 1
-			moveToMap("Route 10")
+			moveToCell(86,33)
 		elseif getMapName() == "Route 10" then
 			if x == 1 then
 				moveToMap("Rock Tunnel 1")
