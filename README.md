@@ -28,3 +28,11 @@
 + Go to Universal Explorer folder and load "Universal Explorer v#.lua"
 + Happy botting!
 
+
+**CHANGELOG:**
+
+| Date/Time | Version | Changes |
+| :---         |     :---:      | :---         |
+| 09-09-2016 9:00 am | Fixed a bug of Poke Stops Rob in Cerulean City |
+| 09-09-2016 9:30 am| Fixed a bug of Poke Stops Rob in Route 10 |
+
