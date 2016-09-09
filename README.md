@@ -24,6 +24,6 @@
 + Read first "Note.txt"
 + Go to Universal Explorer folder and CAREFULLY READ the "Config.lua"
 + Once the Configuration is PROPERLY SET
-+ Go to Universal Explorer folder and load "Universal Explorer v().lua"
++ Go to Universal Explorer folder and load "Universal Explorer v#.lua"
 + Happy botting!
 
