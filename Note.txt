@@ -1,5 +1,6 @@
 
 # FALSE SWIPER is the PRIORITY to HEAL
+# When False Swiper is fainted, bot will use revive, OR
 # WHEN False swiper is not usable, The bot will use Potions/Elixir to heal pokes or ESCAPE ROPE and heal on the last registered PC
 # If this happens, the bot will start over in last PC registered and across its route
 # Do not load other scripts except "Universal Explorer.lua"
@@ -14,6 +15,7 @@
   -Pokemon with Rock Smash  (required if your doing HOENN EXCAVATION SITES)
   
 - HEALING POKES
+  -Buy Revive as many as you can
   -Buy any Potions in case your team are WEAK!
   -Buy as many Escape Rope in case your team are WEAK!
   
