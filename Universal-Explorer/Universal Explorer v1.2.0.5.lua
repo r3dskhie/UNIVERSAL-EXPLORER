@@ -1439,19 +1439,31 @@ function onPathAction()
 		log("--- Successfully Registered on "..getMapName()..",,,Going back for the ROUTINE ---")
 		moveToMap("Cherrygrove City")
 	elseif getMapName() == "Cherrygrove City" then
-		if pc == 0 then
-			Cherry()
-		elseif pc == 1 then
-		log("---"..getMapName().." Cleared... Moving to next Map---")
+		if s == 0 then
+			if pc == 0 then
+				Cherry()
+			elseif pc == 1 then
+			log("---"..getMapName().." Cleared... Moving to next Map---")
+				moveToMap("Route 30")
+			end
+		else
 			moveToMap("Route 30")
 		end
 	elseif getMapName() == "Route 30" then
-		pc = 0
-		Route30()
+		if s == 0 then
+			pc = 0
+			Route30()
+		else
+			moveToMap("Route 31")
+		end
 	elseif getMapName() == "Route 31" then
-		if c == 0 then
-			Route31()
-		elseif c == 1 then
+		if s == 0 then
+			if c == 0 then
+				Route31()
+			elseif c == 1 then
+				moveToMap("Violet City Stop House")
+			end
+		else
 			moveToMap("Violet City Stop House")
 		end
 	elseif getMapName() == "Dark Cave South" then
@@ -1459,7 +1471,7 @@ function onPathAction()
 		if s == 0 then
 			DarkSouth()
 		elseif s == 1 then
-			moveToCell(15,35)
+			moveToMap("Route 31")
 		end
 	elseif getMapName() == "Route 46" then
 		s = 1
