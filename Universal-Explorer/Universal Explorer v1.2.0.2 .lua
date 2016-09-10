@@ -165,7 +165,7 @@ function onPathAction()
 		return useItem(mount)
   elseif isNpcVisible("PokeStop") then
 	log("--- Robbing Mr. Clown! ---")
-	talkToNpc("PokeStop")
+	return talkToNpc("PokeStop") or moveToCell(27,0)
   elseif not isPokemonUsable(falseswiper) then
 	return useItemOnPokemon("Revive", falseswiper)
   elseif getPokemonHealthPercent(falseswiper) <= 50 then
