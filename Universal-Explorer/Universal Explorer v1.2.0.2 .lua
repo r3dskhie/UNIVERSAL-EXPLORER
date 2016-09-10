@@ -847,10 +847,10 @@ function onPathAction()
 		elseif getMapName() == "Route 10" then
 			r = 1
 			if x == 1 then
-				return moveToMap("Rock Tunnel 1") or moveToMap("Route 9")
+				return moveToMap("Rock Tunnel 1") or moveToCell(27,0)
 			elseif x == 0 then
 				if isNpcOnCell(9,9) then
-					return talkToNpcOnCell(9,9) or moveToMap("Lavender Town") or movetoMap("Route 9")
+					return talkToNpcOnCell(9,9) or moveToMap("Lavender Town") or moveToCell(27,0)
 				end
 			end
 		elseif getMapName() == "Rock Tunnel 1" then
