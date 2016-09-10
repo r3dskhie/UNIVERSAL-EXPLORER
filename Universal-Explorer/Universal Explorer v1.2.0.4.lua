@@ -1464,6 +1464,8 @@ function onPathAction()
 	elseif getMapName() == "Route 46" then
 		s = 1
 		Route46()
+	elseif getMapName() == "Route 29 Stop House" then
+		moveToMap("Route 29")
 	elseif getMapName() == "Violet City Stop House" then
 		moveToMap("Violet City")
 	elseif getMapName() == "Violet City" then
@@ -2983,7 +2985,7 @@ function Route46()
 		return talkToNpcOnCell(12,22)
 	else
 		log("---"..getMapName().." Cleared... Moving to next Map---")
-		moveToMap("Dark Cave South")
+		moveToMap("Route 29 Stop House")
 	end
 end
 function Route34()
