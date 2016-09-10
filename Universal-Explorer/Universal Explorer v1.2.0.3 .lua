@@ -31,6 +31,7 @@ function onStart()
 	x = 3
 	z = 0
 	r = 0
+	s = 0
     smash = 0
     	log("-----------------------------------------------------------")
 	log("--------- We are now Commencing the Routine ---------")
@@ -164,6 +165,7 @@ function onPathAction()
 		log("---------------------------")
 		return useItem(mount)
   elseif isNpcVisible("PokeStop") then
+	r = 1
 	log("--- Robbing Mr. Clown! ---")
 	return talkToNpc("PokeStop") or moveToCell(27,0)
   elseif not isPokemonUsable(falseswiper) then
@@ -841,16 +843,15 @@ function onPathAction()
 			x = 1
 			if r == 0 then
 				moveToCell(93,33)
-			elseif r == 1 then
+			elseif r >= 1 then
 				moveToCell(86,33)
 			end
 		elseif getMapName() == "Route 10" then
-			r = 1
 			if x == 1 then
-				return moveToMap("Rock Tunnel 1") or moveToCell(27,0)
+				return moveToMap("Rock Tunnel 1")
 			elseif x == 0 then
 				if isNpcOnCell(9,9) then
-					return talkToNpcOnCell(9,9) or moveToMap("Lavender Town") or moveToCell(27,0)
+					return talkToNpcOnCell(9,9) or moveToMap("Lavender Town")
 				end
 			end
 		elseif getMapName() == "Rock Tunnel 1" then
@@ -1455,7 +1456,14 @@ function onPathAction()
 		end
 	elseif getMapName() == "Dark Cave South" then
 		c = 1
-		DarkSouth()
+		if s == 0 then
+			DarkSouth()
+		elseif s == 1 then
+			moveToCell(15,35)
+		end
+	elseif getMapName() == "Route 46" then
+		s = 1
+		Route46()
 	elseif getMapName() == "Violet City Stop House" then
 		moveToMap("Violet City")
 	elseif getMapName() == "Violet City" then
@@ -2700,7 +2708,7 @@ function DarkSouth()
 		return talkToNpcOnCell(55,38)	--Dig 4
 	else
 		log("--- No dig spots available! "..getMapName().." Cleared... Moving to next Map---")
-		moveToCell(15,35)
+		moveToMap("Route 46")
 	end
 end
 function Violet()
@@ -2949,6 +2957,33 @@ function Ilex()
 	else
 		log("---"..getMapName().." Cleared... Moving to next Map---")
 		moveToMap("Route 34 Stop House")
+	end
+end
+function Route46()
+	if isNpcOnCell(23,6) then	
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(23,6)
+	elseif isNpcOnCell(20,9) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(20,9)
+	elseif isNpcOnCell(15,8) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(15,8)
+	elseif isNpcOnCell(12,8) then			
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(12,8)
+	elseif isNpcOnCell(23,12) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(23,12)
+	elseif isNpcOnCell(31,13) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(31,13)
+	elseif isNpcOnCell(12,22) then	
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(12,22)
+	else
+		log("---"..getMapName().." Cleared... Moving to next Map---")
+		moveToMap("Dark Cave South")
 	end
 end
 function Route34()
