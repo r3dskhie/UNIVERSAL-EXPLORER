@@ -847,6 +847,7 @@ function onPathAction()
 				moveToCell(86,33)
 			end
 		elseif getMapName() == "Route 10" then
+			r = 1
 			if x == 1 then
 				return moveToMap("Rock Tunnel 1")
 			elseif x == 0 then
