@@ -40,3 +40,6 @@
 | 09-10-2016 4:35 pm| Universal Explorer v1.2.0.4 | Route 46 added - *not tested yet* |
 | 09-10-2016 5:50 pm| Universal Explorer v1.2.0.5 | Route 46 added - *tested* |
 
+**UPDATE PLAN**
+*SIMPLIFY THIS THOUSAND ELSEIF's
+
