@@ -849,10 +849,10 @@ function onPathAction()
 		elseif getMapName() == "Route 10" then
 			r = 1
 			if x == 1 then
-				return moveToMap("Rock Tunnel 1")  or moveToCell(27,0)
+				return moveToMap("Rock Tunnel 1")
 			elseif x == 0 then
 				if isNpcOnCell(9,9) then
-					return talkToNpcOnCell(9,9) or moveToMap("Lavender Town") or moveToCell(27,0)
+					return talkToNpcOnCell(9,9) or moveToMap("Lavender Town")
 				end
 			end
 		elseif getMapName() == "Rock Tunnel 1" then
@@ -3217,6 +3217,24 @@ function Route38()
 	elseif isNpcOnCell(31,9) then		
 	log("---Headbutting tree no."..hbuttcount.." ---")
 		return talkToNpcOnCell(31,9)
+	elseif isNpcOnCell(19,9) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(19,9)
+	elseif isNpcOnCell(21,9) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(21,9)
+	elseif isNpcOnCell(23,9) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(23,9)
+	elseif isNpcOnCell(25,9) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(25,9)
+	elseif isNpcOnCell(27,9) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(27,9)
+	elseif isNpcOnCell(17,17) then		
+	log("---Headbutting tree no."..hbuttcount.." ---")
+		return talkToNpcOnCell(17,17)
 	else
 		log("---"..getMapName().." Cleared... Moving to next Map---")
 		moveToMap("Route 39")
@@ -3245,9 +3263,9 @@ end
 function fswipe()
         if getActivePokemonNumber() == 1 then
             return sendPokemon(falseswiper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
-        elseif ( getActivePokemonNumber() == falseswiper ) and ( getOpponentHealth() > 1 ) then
+        elseif ( getActivePokemonNumber() == falseswiper ) and ( getOpponentHealthPercent() > 10 ) then
             return weakAttack() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
-        elseif getOpponentHealth() == 1 then
+        elseif getOpponentHealthPercent() <= 10 then
             return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3)  or sendAnyPokemon() or attack() or run()
 	else
             return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or attack() or run()
