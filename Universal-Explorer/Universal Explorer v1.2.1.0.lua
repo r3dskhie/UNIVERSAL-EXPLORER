@@ -173,6 +173,8 @@ function onPathAction()
   elseif getPokemonHealthPercent(falseswiper) <= 50 then
 	log("--- Your false swiper is in danger... Giving him potions ---")
 	return useItemOnPokemon("Hyper Potion", falseswiper) or useItemOnPokemon("Super Potion", falseswiper) or useItemOnPokemon("Potion", falseswiper)
+  elseif getRemainingPowerPoints(falseswiper, "False Swipe") < 1 then
+	return useItemOnPokemon("Elixir", falseswiper)
   elseif isPokemonUsable(falseswiper) then
     	if getMapName() == "Pallet Town" then
   			if isNpcOnCell(28, 22) then
