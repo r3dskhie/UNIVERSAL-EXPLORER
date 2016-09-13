@@ -165,9 +165,8 @@ function onPathAction()
 		log("---------------------------")
 		return useItem(mount)
   elseif isNpcVisible("PokeStop") then
-	r = 1
 	log("--- Robbing Mr. Clown! ---")
-	return talkToNpc("PokeStop") or moveToCell(27,0)
+	return talkToNpc("PokeStop") or moveToCell(28,0)
   elseif not isPokemonUsable(falseswiper) then
 	return useItemOnPokemon("Revive", falseswiper)
   elseif getPokemonHealthPercent(falseswiper) <= 50 then
@@ -845,16 +844,16 @@ function onPathAction()
 			x = 1
 			if r == 0 then
 				moveToCell(93,33)
-			elseif r >= 1 then
+			elseif r == 1 then
 				moveToCell(86,33)
 			end
 		elseif getMapName() == "Route 10" then
 			r = 1
 			if x == 1 then
-				return moveToMap("Rock Tunnel 1")
+				return moveToMap("Rock Tunnel 1") or moveToCell(28,0)
 			elseif x == 0 then
 				if isNpcOnCell(9,9) then
-					return talkToNpcOnCell(9,9) or moveToMap("Lavender Town")
+					return talkToNpcOnCell(9,9) or moveToMap("Lavender Town") or moveToCell(28,0)
 				end
 			end
 		elseif getMapName() == "Rock Tunnel 1" then
