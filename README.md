@@ -42,6 +42,7 @@
 | 09-11-2016 9:00 pm| Universal Explorer v1.2.0.8 | Pokestops adjusted - *not tested yet* |
 | 09-12-2016 7:00 pm| Universal Explorer v1.2.0.9 | Pokestops adjusted - *tested* |
 | 09-13-2016 7:30 am| Universal Explorer v1.2.1.0 | Route 38 trees added |
+| 09-13-2016 6:30 pm| Universal Explorer v1.2.1.1 | Finally Route 10 Pokestops are finally fixed |
 
 **UPDATE PLAN**
 
