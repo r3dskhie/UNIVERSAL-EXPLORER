@@ -805,6 +805,7 @@ function onPathAction()
 			end
 		elseif getMapName() == "Cerulean City" then
 			z = 1
+			r = 0
 			if pc == 0 then
 				if isNpcOnCell(44,8) then
 				
