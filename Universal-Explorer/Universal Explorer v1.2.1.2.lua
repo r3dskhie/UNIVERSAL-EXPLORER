@@ -165,6 +165,7 @@ function onPathAction()
 		log("---------------------------")
 		return useItem(mount)
   elseif isNpcVisible("PokeStop") then
+  	r = 1
 	log("--- Robbing Mr. Clown! ---")
 	return talkToNpc("PokeStop") or moveToCell(28,0)
   elseif not isPokemonUsable(falseswiper) then
