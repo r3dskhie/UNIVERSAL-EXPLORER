@@ -14,7 +14,7 @@
 **FEATURES:**
 
 - [x] Kanto Region - 100% done
-- [ ] Love Island - 0% done
+- [ ] Love Island - 90% done
 - [x] Johto Region - 100% done
 - [ ] Mt. Silver - 5% done
 - [x] Hoenn Excavation Site - 100% done
