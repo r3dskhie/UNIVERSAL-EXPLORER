@@ -168,13 +168,15 @@ function onPathAction()
   	r = 1
 	log("--- Robbing Mr. Clown! ---")
 	return talkToNpc("PokeStop") or moveToCell(28,0)
-  elseif not isPokemonUsable(falseswiper) then
+  elseif (( fswipeOn or advanceCatchOn ) and not isPokemonUsable(falseswiper)) or (( sleepOn or advanceCatchOn ) and not isPokemonUsable(sleeper)) then
 	return useItemOnPokemon("Revive", falseswiper)
-  elseif getPokemonHealthPercent(falseswiper) <= 50 then
+  elseif (( fswipeOn or advanceCatchOn ) and getPokemonHealthPercent(falseswiper) <= 50) or (( sleepOn or advanceCatchOn ) and getPokemonHealthPercent(sleeper) <= 50) then
 	log("--- Your false swiper is in danger... Giving him potions ---")
 	return useItemOnPokemon("Hyper Potion", falseswiper) or useItemOnPokemon("Super Potion", falseswiper) or useItemOnPokemon("Potion", falseswiper)
-  elseif getRemainingPowerPoints(falseswiper, "False Swipe") < 1 then
+  elseif ( fswipeOn or advanceCatchOn ) and getRemainingPowerPoints(falseswiper, "False Swipe") < 1 then
 	return useItemOnPokemon("Elixir", falseswiper)
+  elseif ( sleepOn or advanceCatchOn ) and getRemainingPowerPoints(sleeper, sleepmove) < 1 then
+	return useItemOnPokemon("Elixir", sleeper)
   elseif isPokemonUsable(falseswiper) then
     	if getMapName() == "Pallet Town" then
   			if isNpcOnCell(28, 22) then
