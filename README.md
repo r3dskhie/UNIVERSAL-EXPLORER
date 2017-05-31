@@ -29,19 +29,6 @@
 + Happy botting!
 
 
-**CHANGELOG:**
-
-| Date/Time | Version | Changes |
-| :---         |     :---:      | :---         |
-| 08-26-2016 | N/A | Johto Safari All in One Catcher Script
-| 08-26-2016 | N/A |   Added Kanto Safari Script from https://proshine-bot.com/thread-1145.html
-| 08-26-2016 | N/A |   Hoenn Safari  ETA: Unknown
-| 08-27-2016 | N/A |   Johto Safari Script Swapping method fixed
-| 08-27-2016 | N/A |   Hoenn Safari Released
-| 09-17-2016 | N/A | Adjusted the script for getRemainingPP code
-| 09-17-2016 | N/A | Hoenn and Johto Safari Script Bug fixes
-| 05-31-2017 | N/A | Added MeltWS Pathfinder
-| 05-31-2017 | N/A | Kanto Safari code recoded
 
 
 **UPDATE PLAN**
