@@ -33,17 +33,16 @@
 
 | Date/Time | Version | Changes |
 | :---         |     :---:      | :---         |
-| 09-09-2016 9:00 am | Universal Explorer v1.2 | Fixed a bug of Poke Stops Rob in Cerulean City |
-| 09-09-2016 9:30 am| Universal Explorer v1.2.0.1 | Fixed a bug of Poke Stops Rob in Route 10 |
-| 09-09-2016 8:15 pm| Universal Explorer v1.2.0.2 | Route 10 bug fixes - *not tested yet* |
-| 09-10-2016 4:30 pm| Universal Explorer v1.2.0.3 | Route 10 bug fixes - *tested* |
-| 09-10-2016 4:35 pm| Universal Explorer v1.2.0.4 | Route 46 added - *not tested yet* |
-| 09-10-2016 5:50 pm| Universal Explorer v1.2.0.5 | Route 46 added - *tested* |
-| 09-11-2016 9:00 pm| Universal Explorer v1.2.0.8 | Pokestops adjusted - *not tested yet* |
-| 09-12-2016 7:00 pm| Universal Explorer v1.2.0.9 | Pokestops adjusted - *tested* |
-| 09-13-2016 7:30 am| Universal Explorer v1.2.1.0 | Route 38 trees added |
-| 09-13-2016 6:30 pm| Universal Explorer v1.2.1.1 | Finally Route 10 Pokestops are fixed |
-| 09-16-2016 12:30 pm| Universal Explorer v1.2.1.4 | Adjusted the healing of pokemons |
+| 08-26-2016 | N/A | Johto Safari All in One Catcher Script
+| 08-26-2016 | N/A |   Added Kanto Safari Script from https://proshine-bot.com/thread-1145.html
+| 08-26-2016 | N/A |   Hoenn Safari  ETA: Unknown
+| 08-27-2016 | N/A |   Johto Safari Script Swapping method fixed
+| 08-27-2016 | N/A |   Hoenn Safari Released
+| 09-17-2016 | N/A | Adjusted the script for getRemainingPP code
+| 09-17-2016 | N/A | Hoenn and Johto Safari Script Bug fixes
+| 05-31-2017 | N/A | Added MeltWS Pathfinder
+| 05-31-2017 | N/A | Kanto Safari code recoded
+
 
 **UPDATE PLAN**
 
